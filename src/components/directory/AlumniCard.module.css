@@ -1,0 +1,155 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition:
+    transform 0.28s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.28s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 20px 40px rgba(0, 48, 135, 0.12),
+    0 8px 16px rgba(0, 48, 135, 0.08),
+    0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* Photo zone */
+.photoWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #f0f4fd;
+  flex-shrink: 0;
+}
+
+.photo {
+  transition: transform 0.28s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card:hover .photo {
+  transform: scale(1.04);
+}
+
+.photoPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #003087 0%, #1a4db5 100%);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+/* Body zone */
+.body {
+  flex: 1;
+  padding: 18px 18px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meta {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9ca3af;
+}
+
+.name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.3;
+  margin: 2px 0 0;
+}
+
+.title {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.company {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #003087;
+  margin: 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.footerDot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #d1d5db;
+  flex-shrink: 0;
+}
+
+/* CTA zone — occupies space always, revealed on hover */
+.cta {
+  padding: 12px 18px;
+  border-top: 1px solid #f3f4f6;
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity 0.22s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.05s,
+    transform 0.22s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.05s;
+}
+
+.card:hover .cta {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ctaLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 8px 0;
+  background: #003087;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.15s ease;
+}
+
+.ctaLink:hover {
+  background: #1a4db5;
+}

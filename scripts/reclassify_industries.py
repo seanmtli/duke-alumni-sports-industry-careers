@@ -1,0 +1,225 @@
+#!/usr/bin/env python3
+import csv
+import sys
+
+COMPANY_MAP = {
+    "Athletes Unlimited": "League",
+    "Amazon Web Services (AWS)": "Big Tech",
+    "Minnesota Timberwolves": "Team",
+    "Bluestone Equity Partners": "VC/PE",
+    "Influence Sports & Media": "Agency",
+    "East Coast Pro": "Startup",
+    "Robertson Consulting Services": "Consulting",
+    "United Soccer League (USL)": "League",
+    "CAS": "Agency",
+    "Winston & Strawn LLP": "Other",
+    "Ice Miller": "Agency",
+    "North Carolina Courage": "Team",
+    "National Basketball Association (NBA)": "League",
+    "Minnesota Twins": "Team",
+    "Universal Tennis": "Startup",
+    "USC Athletics": "University",
+    "Snaplistings": "Startup",
+    "Shine Consulting LLC": "Consulting",
+    "Diahmanbaseball": "Startup",
+    "UC Davis": "University",
+    "National Football League (NFL)": "League",
+    "Association of International Certified Professional Accountants": "Agency",
+    "Teamworks": "Startup",
+    "Valleys To Peaks": "Startup",
+    "Sasquatch Books": "Media",
+    "Benedict College": "University",
+    "US Olympic Committee": "League",
+    "AC Grand Rapids": "Team",
+    "The Sporting News": "Media",
+    "National Hockey League (NHL)": "League",
+    "Tickets.com": "Startup",
+    "Waterville Valley Resort": "Other",
+    "BetMGM": "Sports Betting",
+    "PepsiCo": "Brand",
+    "CBS Sports": "Media",
+    "Goldbelly": "Startup",
+    "(USTA) United States Tennis Association": "League",
+    "Boca Grove Golf and Tennis Club": "Other",
+    "generation adidas international": "Brand",
+    "Relevent Sports Group": "Agency",
+    "New York Jets": "Team",
+    "Jet.com": "Startup",
+    "Philadelphia Insurance Companies": "Other",
+    "Houston Astros": "Team",
+    "Twenty2 Sports LLC": "Agency",
+    "Duke University": "University",
+    "North Carolina Central University": "University",
+    "College of Charleston Athletic Fund": "University",
+    "Snowflake Inc": "Big Tech",
+    "FedEx Dataworks": "Big Tech",
+    "University of Miami": "University",
+    "Major League Baseball (MLB)": "League",
+    "Collateral Opportunities, LLC": "Startup",
+    "Doculingo": "Startup",
+    "Super Age": "Startup",
+    "FL Club Holdings LLC (dba The Fall Line)": "Other",
+    "Utah Jazz": "Team",
+    "Google": "Big Tech",
+    "LEARFIELD": "Agency",
+    "Texas Christian University": "University",
+    "On Location": "Agency",
+    "EverPass Media": "Startup",
+    "Monmouth University": "University",
+    "Talkdesk": "Startup",
+    "URL Collective": "Media",
+    "Intrepid Sports Group": "Agency",
+    "Next League": "Consulting",
+    "Goldring Strategies": "Consulting",
+    "NBA TV": "Media",
+    "The Rowing Network": "Media",
+    "Memphis Grizzlies": "Team",
+    "Charlotte Sports Foundation": "Non-Profit",
+    "INFRA": "Startup",
+    "Holland & Knight LLP": "Other",
+    "Golden State Warriors": "Team",
+    "BSN SPORTS": "Agency",
+    "NHL": "League",
+    "New Jersey Judiciary Essex County": "Other",
+    "Portland Trail Blazers @ the Rose Quarter": "Team",
+    "McKinsey & Company": "Consulting",
+    "Sportradar": "Startup",
+    "Miami Dolphins": "Team",
+    "Indian Health Service": "Other",
+    "Ropes and Gray LLP": "Other",
+    "San Francisco 49ers": "Team",
+    "Lippincott": "Consulting",
+    "Kings League": "League",
+    "Alenda Partners": "Startup",
+    "Kaneka North America": "Other",
+    "Greenock Morton Football Club": "Team",
+    "Trion High School": "University",
+    "NASCAR": "League",
+    "DraftKings Inc.": "Sports Betting",
+    "Harris Blitzer Sports & Entertainment": "Team",
+    "University of Maryland Baltimore County": "University",
+    "Keen Consulting": "Consulting",
+    "FIFA": "League",
+    "Major League Baseball": "League",
+    "University of Notre Dame": "University",
+    "318 Foundation, Inc": "Non-Profit",
+    "Eli Sports Ventures": "Startup",
+    "New York Football Giants": "Team",
+    "Holderness & Bourne": "Startup",
+    "ai.io": "Startup",
+    "adidas": "Brand",
+    "Leverage Agency": "Agency",
+    "Lega Nazionale Dilettanti": "Team",
+    "Southern California Golf Associatoin": "League",
+    "DIRECTV": "Media",
+    "Round Finance": "Startup",
+    "TNT Sports": "Media",
+    "Elevate": "Consulting",
+    "Pat Tillman Foundation": "Non-Profit",
+    "Baltimore Ravens": "Team",
+    "CONCACAF": "League",
+    "Los Angeles Dodgers": "Team",
+    "72andSunny": "Agency",
+    "Highly Educated Not Rich Yet, LLC": "Startup",
+    "Rylynn Consulting, LLC": "Consulting",
+    "Freelance": "Consulting",
+    "PARITY | A Group 1001 Company": "Startup",
+    "San Francisco Giants": "Team",
+    "Leap Event Technology": "Startup",
+    "Palmetto": "Startup",
+    "1848 Ventures, backed by Westfield": "Startup",
+    "Crowell & Moring": "Other",
+    "Jones Day": "Other",
+    "Web.com Tour": "League",
+    "Imaging Diagnostic Systems": "Other",
+    "Wilson Sporting Goods Co.": "Brand",
+    "Playmakers by SportsTechX": "Startup",
+    "Optimum Sports": "Agency",
+    "ATP Flight School": "Other",
+    "University of Arizona": "University",
+    "1V1 Entertainment": "Media",
+    "PGA Tour, Inc.": "League",
+    "Portland Timbers": "Team",
+    "Seattle Kraken": "Team",
+    "IMG Academy": "University",
+    "Boston Red Sox": "Team",
+    "Boys & Girls Club of Paterson and Passaic": "Non-Profit",
+    "St. John's University": "University",
+    "Knight Commission on Intercollegiate Athletics": "Non-Profit",
+    "SB Nation": "Media",
+    "Columbia University": "University",
+    "Creator Match": "Agency",
+    "Vintage Velma": "Other",
+    "Crux Football": "Startup",
+    "Pittsburgh Pirates": "Team",
+    "Amazon": "Big Tech",
+    "Carolina Hurricanes": "Team",
+    "Paramount": "Media",
+    "Rising for Justice": "Non-Profit",
+    "Duke Blue Devils Athletics": "University",
+    "Northwestern University": "University",
+    "FocalSport": "Startup",
+    "TurnkeyZRG and ZRG Partners": "Consulting",
+    "Washington Spirit": "Team",
+    "ConvergeSports by Deloitte": "Consulting",
+    "Apple": "Big Tech",
+    "New York Mets": "Team",
+    "San Antonio Spurs": "Team",
+    "Seattle Seahawks": "Team",
+    "New York Giants": "Team",
+    "CAA Brand Consulting": "Agency",
+    "Real": "Startup",
+    "FanDuel": "Sports Betting",
+    "PwC": "Consulting",
+    "MLBPA": "League",
+    "Charlotte Hornets": "Team",
+    "Columbia Law School": "University",
+    "MELD": "Consulting",
+    # New additions
+    "CAA": "Agency",
+    "SportsMEDIA Technology": "Startup",
+    "Yahoo Media Group": "Media",
+    "IMG": "Agency",
+    "NIL TV": "Startup",
+    "Dude Perfect": "Media",
+    "Playfly Sports Properties": "Agency",
+    "Redbird Capital Partners": "VC/PE",
+    "Sportico": "Media",
+}
+
+CSV_PATH = "/Users/seali/Documents/projects/dukesports/duke_sports_alumni.csv"
+
+with open(CSV_PATH, newline="", encoding="utf-8") as f:
+    reader = csv.reader(f)
+    rows = list(reader)
+
+header = rows[0]
+industries_col = header.index("Industries")
+company_col = header.index("Current Company (LinkedIn)")
+
+unmatched = []
+
+for i, row in enumerate(rows[1:], start=2):
+    if len(row) <= company_col:
+        continue
+    company = row[company_col].strip()
+    if not company:
+        row[industries_col] = "Other"
+        continue
+    company_type = COMPANY_MAP.get(company)
+    if company_type:
+        row[industries_col] = company_type
+    else:
+        unmatched.append((i, row[0] if row else "?", company, row[industries_col] if len(row) > industries_col else ""))
+
+with open(CSV_PATH, "w", newline="", encoding="utf-8") as f:
+    writer = csv.writer(f)
+    writer.writerows(rows)
+
+print(f"Done. Updated {len(rows)-1} rows.")
+if unmatched:
+    print(f"\nUnmatched companies ({len(unmatched)} rows) — Industries left unchanged:")
+    for line_num, name, company, orig_industry in unmatched:
+        print(f"  Row {line_num}: {name} @ '{company}' (was: '{orig_industry}')")
+else:
+    print("All companies matched.")
