@@ -1,5 +1,4 @@
-import alumniData from '@/data/alumni.json';
-import type { Alumni } from '@/types/alumni';
+import { getAlumni } from '@/lib/getAlumni';
 import { DirectoryClient } from '@/components/directory/DirectoryClient';
 
 export const metadata = {
@@ -7,6 +6,5 @@ export const metadata = {
 };
 
 export default function DirectoryPage() {
-  const alumni = alumniData.alumni as Alumni[];
-  return <DirectoryClient initialData={alumni} />;
+  return <DirectoryClient initialData={getAlumni()} />;
 }
