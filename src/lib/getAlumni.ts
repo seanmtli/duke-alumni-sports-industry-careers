@@ -36,14 +36,29 @@ function buildHeadshotMap(): Map<string, string> {
 }
 
 /**
- * Load all alumni with headshot_url resolved to a LOCAL file when present,
- * otherwise null. The stale external (LinkedIn) URLs in alumni.json are
- * intentionally ignored — they are expired/blocked and never load.
+ * Resolve a headshot to a usable URL, in priority order:
+ *   1. A local file in public/headshots/ (highest priority).
+ *   2. A stable external URL from alumni.json (e.g. a Crustdata S3 permalink).
+ *   3. null — render initials.
+ *
+ * Raw LinkedIn CDN URLs (media.licdn.com) are short-lived signed URLs that
+ * expire and never load, so they are ignored. Re-hosted permalinks (Crustdata
+ * S3) are stable and used directly.
+ */
+function resolveHeadshot(localPath: string | undefined, jsonUrl: string | null): string | null {
+  if (localPath) return localPath;
+  if (jsonUrl && !jsonUrl.includes('media.licdn.com')) return jsonUrl;
+  return null;
+}
+
+/**
+ * Load all alumni with headshot_url resolved to a local file or a stable
+ * external permalink when present, otherwise null.
  */
 export function getAlumni(): Alumni[] {
   const headshots = buildHeadshotMap();
   return (alumniData.alumni as Alumni[]).map((a) => ({
     ...a,
-    headshot_url: headshots.get(a.id) ?? null,
+    headshot_url: resolveHeadshot(headshots.get(a.id), a.headshot_url),
   }));
 }
