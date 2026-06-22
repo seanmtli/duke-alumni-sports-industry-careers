@@ -93,7 +93,6 @@ export function getFuseInstance(alumni: Alumni[]): Fuse<Alumni> {
         { name: 'current_company', weight: 1.5 },
         { name: 'current_title', weight: 1 },
         { name: 'location', weight: 0.8 },
-        { name: 'sub_industries', weight: 0.6 },
       ],
       threshold: 0.2,
       includeScore: true,
@@ -116,8 +115,15 @@ export function filterAlumni(
       : [...alumni];
 
   // Step 2: Filter dimensions — AND between dims, OR within
-  if (filters.companyTypes.length > 0) {
-    results = results.filter((a) => filters.companyTypes.includes(a.company_type));
+  if (filters.orgCategories.length > 0) {
+    results = results.filter(
+      (a) => a.org_category != null && filters.orgCategories.includes(a.org_category)
+    );
+  }
+  if (filters.sportsFunctions.length > 0) {
+    results = results.filter((a) =>
+      a.sports_functions?.some((f) => filters.sportsFunctions.includes(f))
+    );
   }
   if (filters.schools.length > 0) {
     results = results.filter((a) => filters.schools.includes(a.school));
@@ -126,11 +132,11 @@ export function filterAlumni(
     results = results.filter((a) => filters.locations.includes(extractLocation(a.location)));
   }
 
-  // Step 3: Grad year range — always applied
+  // Step 3: Grad year range — undated profiles always pass
   results = results.filter(
     (a) =>
-      a.grad_year >= filters.gradYearRange[0] &&
-      a.grad_year <= filters.gradYearRange[1]
+      a.grad_year == null ||
+      (a.grad_year >= filters.gradYearRange[0] && a.grad_year <= filters.gradYearRange[1])
   );
 
   return results;
@@ -145,8 +151,8 @@ export function sortAlumni(alumni: Alumni[], sort: SortConfig): Alumni[] {
       aVal = a.name.toLowerCase();
       bVal = b.name.toLowerCase();
     } else if (sort.field === 'grad_year') {
-      aVal = a.grad_year;
-      bVal = b.grad_year;
+      aVal = a.grad_year ?? 0;
+      bVal = b.grad_year ?? 0;
     } else {
       aVal = a.added_date;
       bVal = b.added_date;

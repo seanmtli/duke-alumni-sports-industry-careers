@@ -1,9 +1,15 @@
 'use client';
 
 import type { FilterState } from '@/types/alumni';
-import { DEFAULT_FILTERS } from '@/types/alumni';
+import { ORG_CATEGORY_LABELS, SPORTS_FUNCTION_LABELS } from '@/lib/constants';
 
 const SCHOOL_DISPLAY: Partial<Record<string, string>> = { Other: 'Other School' };
+
+const CHIP_LABELS: Record<string, string> = {
+  ...ORG_CATEGORY_LABELS,
+  ...SPORTS_FUNCTION_LABELS,
+  Other: 'Other School',
+};
 
 interface FilterChipsProps {
   filters: FilterState;
@@ -16,7 +22,8 @@ export function FilterChips({ filters, onRemove, onClearAll, activeCount }: Filt
   if (activeCount === 0) return null;
 
   const chips: { key: keyof FilterState; value: string }[] = [
-    ...filters.companyTypes.map((v) => ({ key: 'companyTypes' as const, value: v })),
+    ...filters.orgCategories.map((v) => ({ key: 'orgCategories' as const, value: v })),
+    ...filters.sportsFunctions.map((v) => ({ key: 'sportsFunctions' as const, value: v })),
     ...filters.schools.map((v) => ({ key: 'schools' as const, value: v })),
     ...filters.locations.map((v) => ({ key: 'locations' as const, value: v })),
   ];
@@ -28,7 +35,7 @@ export function FilterChips({ filters, onRemove, onClearAll, activeCount }: Filt
           key={`${key}-${value}`}
           className="inline-flex items-center gap-1 text-xs bg-[#dce6f7] text-[#003087] font-medium px-2.5 py-1 rounded-full"
         >
-          {key === 'schools' ? (SCHOOL_DISPLAY[value] ?? value) : value}
+          {key === 'schools' ? (SCHOOL_DISPLAY[value] ?? value) : (CHIP_LABELS[value] ?? value)}
           <button
             onClick={() => onRemove(key, value)}
             className="ml-0.5 hover:text-[#001a5c] transition-colors"

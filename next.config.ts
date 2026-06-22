@@ -10,6 +10,11 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'crustdata-media.s3.us-east-2.amazonaws.com',
+        pathname: '/person/**',
+      },
+      {
+        protocol: 'https',
         hostname: 'cdn.nba.com',
       },
       {

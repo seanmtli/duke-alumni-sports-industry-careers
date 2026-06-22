@@ -55,3 +55,7 @@ src/data/submissions.json
 # claude code instructions
 CLAUDE.md
 AGENTS.md
+
+# python
+__pycache__/
+*.pyc

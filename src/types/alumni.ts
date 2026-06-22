@@ -13,6 +13,38 @@ export type CompanyType =
   | 'Sports Betting'
   | 'Other';
 
+// --- New 2-axis taxonomy (mirrors Supabase reference tables) ---
+
+// Axis 1 — organization category (one per person)
+export type OrgCategory =
+  | 'leagues_governing'
+  | 'teams_clubs'
+  | 'betting_gaming'
+  | 'media_broadcast'
+  | 'sports_tech_data'
+  | 'big_tech_vertical'
+  | 'agencies_rep'
+  | 'investing_advisory'
+  | 'infra_experiences'
+  | 'brands_sponsors'
+  | 'collegiate'
+  | 'nonprofit_other';
+
+// Axis 2 — sports function / domain (one or more per person)
+export type SportsFunction =
+  | 'front_office'
+  | 'partnerships'
+  | 'media_content'
+  | 'ticketing_revenue'
+  | 'data_analytics'
+  | 'product_eng'
+  | 'sales_account'
+  | 'strategy_corpdev'
+  | 'marketing_fan'
+  | 'investing_deal'
+  | 'legal_rep'
+  | 'health_athlete';
+
 export type SeniorityLevel =
   | 'Entry'
   | 'Mid'
@@ -49,10 +81,17 @@ export type School =
   | 'Sanford'
   | 'Other';
 
+export interface DukeDegree {
+  school: School | string;
+  degree: string | null;
+  grad_year: number | null;
+  major: string | null;
+}
+
 export interface Alumni {
   id: string;
   name: string;
-  grad_year: number;
+  grad_year: number | null;
   school: School;
   degree: string;
   major: string;
@@ -60,6 +99,11 @@ export interface Alumni {
   current_title: string;
   company_type: CompanyType;
   sub_industries: SubIndustry[];
+  // new taxonomy (always present in exported data; optional so the admin form,
+  // which still uses the legacy fields, keeps compiling)
+  org_category?: OrgCategory | null;
+  sports_functions?: SportsFunction[];
+  all_degrees?: DukeDegree[];
   seniority_level: SeniorityLevel;
   linkedin_url: string;
   location: string;
@@ -72,7 +116,8 @@ export interface Alumni {
 }
 
 export interface FilterState {
-  companyTypes: CompanyType[];
+  orgCategories: OrgCategory[];
+  sportsFunctions: SportsFunction[];
   schools: School[];
   locations: string[];
   gradYearRange: [number, number];
@@ -88,8 +133,8 @@ export interface AlumniStats {
   totalCompanies: number;
   schoolsRepresented: number;
   citiesRepresented: number;
-  bySubIndustry: { label: string; count: number }[];
-  byCompanyType: { label: string; count: number }[];
+  bySportsFunction: { label: string; count: number }[];
+  byOrgCategory: { label: string; count: number }[];
   bySeniority: { label: string; count: number }[];
   byGradDecade: { decade: string; count: number }[];
   topCompanies: { label: string; count: number }[];
@@ -97,13 +142,15 @@ export interface AlumniStats {
 }
 
 export const DEFAULT_FILTERS: FilterState = {
-  companyTypes: [],
+  orgCategories: [],
+  sportsFunctions: [],
   schools: [],
   locations: [],
   gradYearRange: [1970, new Date().getFullYear()],
 };
 
 export function getYearsExperience(alumni: Alumni): number {
+  if (!alumni.grad_year) return 0;
   return new Date().getFullYear() - alumni.grad_year;
 }
 

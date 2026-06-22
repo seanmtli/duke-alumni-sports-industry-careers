@@ -1,8 +1,11 @@
 'use client';
 
-import type { FilterState, CompanyType, School } from '@/types/alumni';
+import type { FilterState, OrgCategory, SportsFunction, School } from '@/types/alumni';
 import type { LocationOptions } from '@/lib/filterAlumni';
-import { COMPANY_TYPES, SCHOOLS } from '@/lib/constants';
+import {
+  ORG_CATEGORIES, ORG_CATEGORY_LABELS,
+  SPORTS_FUNCTIONS, SPORTS_FUNCTION_LABELS, SCHOOLS,
+} from '@/lib/constants';
 
 interface FilterPanelProps {
   filters: FilterState;
@@ -203,10 +206,18 @@ export function FilterPanel({ filters, onChange, locationOptions }: FilterPanelP
       </div>
 
       <MultiCheckbox
-        label="Company Type"
-        options={COMPANY_TYPES}
-        selected={filters.companyTypes}
-        onToggle={(v) => toggle<CompanyType>('companyTypes', v)}
+        label="Industry"
+        options={ORG_CATEGORIES}
+        selected={filters.orgCategories}
+        onToggle={(v) => toggle<OrgCategory>('orgCategories', v)}
+        displayMap={ORG_CATEGORY_LABELS}
+      />
+      <MultiCheckbox
+        label="Sports Function"
+        options={SPORTS_FUNCTIONS}
+        selected={filters.sportsFunctions}
+        onToggle={(v) => toggle<SportsFunction>('sportsFunctions', v)}
+        displayMap={SPORTS_FUNCTION_LABELS}
       />
       <MultiCheckbox
         label="School"
