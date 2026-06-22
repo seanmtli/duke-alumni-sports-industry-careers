@@ -75,7 +75,7 @@ function AlumniForm({
         </div>
         <div>
           <label className={labelCls}>Grad Year *</label>
-          <input type="number" className={inputCls} value={form.grad_year} onChange={(e) => set('grad_year', Number(e.target.value))} />
+          <input type="number" className={inputCls} value={form.grad_year ?? ''} onChange={(e) => set('grad_year', Number(e.target.value))} />
         </div>
         <div>
           <label className={labelCls}>School</label>

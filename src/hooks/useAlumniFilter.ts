@@ -21,7 +21,6 @@ export function useAlumniFilter(initialData: Alumni[]) {
         { name: 'current_company', weight: 1.5 },
         { name: 'current_title', weight: 1 },
         { name: 'location', weight: 0.8 },
-        { name: 'sub_industries', weight: 0.6 },
       ],
       threshold: 0.2,
       includeScore: true,
@@ -40,7 +39,8 @@ export function useAlumniFilter(initialData: Alumni[]) {
   }
 
   const activeFilterCount =
-    filters.companyTypes.length +
+    filters.orgCategories.length +
+    filters.sportsFunctions.length +
     filters.schools.length +
     filters.locations.length;
 

@@ -40,8 +40,12 @@ export default function StatsPage() {
       </div>
 
       <div className="grid lg:grid-cols-2 gap-6">
-        <Section title="By Company Type">
-          <HorizontalBarChart data={stats.byCompanyType} height={stats.byCompanyType.length * 44} />
+        <Section title="By Industry">
+          <HorizontalBarChart data={stats.byOrgCategory} height={stats.byOrgCategory.length * 44} />
+        </Section>
+
+        <Section title="By Sports Function">
+          <HorizontalBarChart data={stats.bySportsFunction} height={stats.bySportsFunction.length * 44} />
         </Section>
 
         <Section title="By Graduation Decade">

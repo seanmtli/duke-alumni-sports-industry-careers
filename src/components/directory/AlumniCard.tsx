@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import type { Alumni } from '@/types/alumni';
+import { SPORTS_FUNCTION_LABELS, SPORTS_FUNCTION_COLORS } from '@/lib/constants';
 import styles from './AlumniCard.module.css';
 
 interface AlumniCardProps {
@@ -26,7 +27,12 @@ export function AlumniCard({ alumni }: AlumniCardProps) {
     location,
     headshot_url,
     sports_league_affiliation,
+    sports_functions,
   } = alumni;
+
+  const schoolLabel = school === 'Other' ? 'Duke' : school;
+  const yearLabel = grad_year ? ` ’${String(grad_year).slice(-2)}` : '';
+  const topFunctions = (sports_functions ?? []).slice(0, 2);
 
   return (
     <div className={styles.card}>
@@ -48,12 +54,36 @@ export function AlumniCard({ alumni }: AlumniCardProps) {
       {/* Body zone */}
       <div className={styles.body}>
         <p className={styles.meta}>
-          {school === 'Other' ? 'Duke' : school} &rsquo;{String(grad_year).slice(-2)}
+          {schoolLabel}{yearLabel}
           {sports_league_affiliation ? ` · ${sports_league_affiliation}` : ''}
         </p>
         <h3 className={styles.name}>{name}</h3>
         <p className={styles.title}>{current_title}</p>
-        <p className={styles.company}>{current_company}</p>
+        {current_company ? <p className={styles.company}>{current_company}</p> : null}
+
+        {topFunctions.length > 0 && (
+          <div className={styles.tags}>
+            {topFunctions.map((fn) => {
+              const color = SPORTS_FUNCTION_COLORS[fn];
+              return (
+                <span
+                  key={fn}
+                  style={{
+                    backgroundColor: color?.bg ?? '#f3f4f6',
+                    color: color?.text ?? '#374151',
+                    fontSize: 10,
+                    fontWeight: 600,
+                    padding: '2px 7px',
+                    borderRadius: 9999,
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  {SPORTS_FUNCTION_LABELS[fn] ?? fn}
+                </span>
+              );
+            })}
+          </div>
+        )}
 
         <div className={styles.footer}>
           <span>{location}</span>
