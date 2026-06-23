@@ -193,6 +193,37 @@
       ]
     },
     {
+      "id": "adam-grossman-2002",
+      "name": "Adam Grossman",
+      "grad_year": 2002,
+      "school": "Trinity",
+      "degree": "BA",
+      "major": "Public Policy",
+      "current_company": "Fenway Sports Group",
+      "current_title": "Managing Director",
+      "company_type": "VC/PE",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/grossmanadam",
+      "location": "Greater Boston",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/6752412eac022cc810bd3024b56fc955000400434615f333cd48faad71207ec7.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-23",
+      "last_verified": null,
+      "org_category": "investing_advisory",
+      "sports_functions": [
+        "investing_deal"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "BA",
+          "grad_year": 2002,
+          "major": "Public Policy"
+        }
+      ]
+    },
+    {
       "id": "cd-120626545",
       "name": "Adam Hawk",
       "grad_year": 2018,
@@ -636,6 +667,37 @@
           "school": "Trinity",
           "degree": "AB",
           "grad_year": 2023,
+          "major": null
+        }
+      ]
+    },
+    {
+      "id": "ali-curtis-2001",
+      "name": "Ali Curtis",
+      "grad_year": 2001,
+      "school": "Other",
+      "degree": "(1) Political Science  (2) Sociology (3) Markets & Mgmt (minor)",
+      "major": "",
+      "current_company": "Major League Soccer",
+      "current_title": "President, MLS NEXT",
+      "company_type": "League",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/ali-curtis-5582a318",
+      "location": "New York, New York",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/0d74f89db2cc24a1ed46b5d7a1943fb9bc392ac933f3caf7f32b89bc09f55cfc.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-23",
+      "last_verified": null,
+      "org_category": "leagues_governing",
+      "sports_functions": [
+        "front_office"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "(1) Political Science  (2) Sociology (3) Markets & Mgmt (minor)",
+          "grad_year": 2001,
           "major": null
         }
       ]
@@ -2260,6 +2322,38 @@
           "degree": null,
           "grad_year": null,
           "major": "Economics"
+        }
+      ]
+    },
+    {
+      "id": "ben-berchuck",
+      "name": "Ben Berchuck",
+      "grad_year": null,
+      "school": "Other",
+      "degree": "",
+      "major": "",
+      "current_company": "Range Sports",
+      "current_title": "SVP, Media Consulting",
+      "company_type": "Agency",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/berchuck",
+      "location": "New York, New York",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/9a255c5760ebfab53166558c3b974038a002be64cf0fd13f30c7c7bdaade353f.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-23",
+      "last_verified": null,
+      "org_category": "agencies_rep",
+      "sports_functions": [
+        "strategy_corpdev",
+        "media_content"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": null,
+          "grad_year": null,
+          "major": null
         }
       ]
     },
@@ -3997,6 +4091,37 @@
       ]
     },
     {
+      "id": "chip-krotee",
+      "name": "Chip Krotee",
+      "grad_year": null,
+      "school": "Fuqua",
+      "degree": "Master of Business Administration - MBA",
+      "major": "Finance, General",
+      "current_company": "DSA Labs",
+      "current_title": "Founder",
+      "company_type": "Startup",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/chip-krotee-200429109",
+      "location": "New York City Metropolitan Area",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/b6db99aa4d5b322a501814bb44ddc96f228b73ff2302294e9f0717fedd1249fb.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-23",
+      "last_verified": null,
+      "org_category": "sports_tech_data",
+      "sports_functions": [
+        "product_eng"
+      ],
+      "all_degrees": [
+        {
+          "school": "Fuqua",
+          "degree": "Master of Business Administration - MBA",
+          "grad_year": null,
+          "major": "Finance, General"
+        }
+      ]
+    },
+    {
       "id": "cd-23571531",
       "name": "Chloe Maleski, LMSW, CMPC, NBHWC",
       "grad_year": 2015,
@@ -4026,6 +4151,30 @@
           "major": "International Comparative Studies"
         }
       ]
+    },
+    {
+      "id": "chris-blivin",
+      "name": "Chris Blivin",
+      "grad_year": null,
+      "school": "Other",
+      "degree": "",
+      "major": "",
+      "current_company": "Major League Soccer",
+      "current_title": "VP, Consumer Products (Gaming, Collectibles & Emerging Technology)",
+      "company_type": "League",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "",
+      "location": "",
+      "headshot_url": null,
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-23",
+      "last_verified": null,
+      "org_category": "leagues_governing",
+      "sports_functions": [
+        "front_office"
+      ],
+      "all_degrees": []
     },
     {
       "id": "chris-dearwester-2020",
@@ -5690,6 +5839,37 @@
       ]
     },
     {
+      "id": "davin-bialow-2019",
+      "name": "Davin Bialow",
+      "grad_year": 2019,
+      "school": "Trinity",
+      "degree": "Bachelor’s Degree",
+      "major": "Political Science; Economics minor",
+      "current_company": "Legends",
+      "current_title": "Associate Director, Finance & Strategy",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/davin-bialow-30800a127",
+      "location": "New York, New York",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/61ba41317db812308a4c8f2a7fe2a30527ea709d60b6e9abcfecc3f16cd9b345.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-23",
+      "last_verified": null,
+      "org_category": "infra_experiences",
+      "sports_functions": [
+        "strategy_corpdev"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor’s Degree",
+          "grad_year": 2019,
+          "major": "Political Science; Economics minor"
+        }
+      ]
+    },
+    {
       "id": "deanna-molina-2001",
       "name": "Deanna Molina",
       "grad_year": 2001,
@@ -5782,6 +5962,37 @@
           "degree": "Bachelor of Science (BSc) with Distinction",
           "grad_year": 2013,
           "major": "Computer Science, Biology, Computational Biology and Bioinformatics"
+        }
+      ]
+    },
+    {
+      "id": "devon-sinha-2023",
+      "name": "Devon Sinha",
+      "grad_year": 2023,
+      "school": "Trinity",
+      "degree": "Bachelor of Science - BS",
+      "major": "Computer Science",
+      "current_company": "Blitz",
+      "current_title": "Co-Founder & CEO",
+      "company_type": "Startup",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/devonsinha",
+      "location": "San Francisco Bay Area",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/a2096fb9b41aa08dfc14e1ce3ad2dfc3d427335552abb2099c074fc1f3e53ff0.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-23",
+      "last_verified": null,
+      "org_category": "sports_tech_data",
+      "sports_functions": [
+        "product_eng"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor of Science - BS",
+          "grad_year": 2023,
+          "major": "Computer Science"
         }
       ]
     },
@@ -6034,6 +6245,37 @@
       ]
     },
     {
+      "id": "cd-117722478",
+      "name": "Doug Perlman",
+      "grad_year": 1990,
+      "school": "Trinity",
+      "degree": "Bachelor of Arts (B.A.)",
+      "major": "Political Science and Government",
+      "current_company": "Sports Media Advisors",
+      "current_title": "Founder & CEO",
+      "company_type": "VC/PE",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/doug-perlman-0405877",
+      "location": "New Canaan, Connecticut",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/e88d98aa53b3d5f0ae9db4d3486400da154e2c8afd3299bad231b217c4aff4c5.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": "investing_advisory",
+      "sports_functions": [
+        "investing_deal"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor of Arts (B.A.)",
+          "grad_year": 1990,
+          "major": "Political Science and Government"
+        }
+      ]
+    },
+    {
       "id": "cd-2518165",
       "name": "Dr Soubir Bhatt",
       "grad_year": 2023,
@@ -6215,6 +6457,38 @@
           "degree": "Bachelor of Science - BS",
           "grad_year": 2004,
           "major": "Neuroscience"
+        }
+      ]
+    },
+    {
+      "id": "dwight-dipasquale-2014",
+      "name": "Dwight DiPasquale",
+      "grad_year": 2014,
+      "school": "Trinity",
+      "degree": "Bachelor of Science (B.S.), Evolutionary Anthropology",
+      "major": "Evolutionary Anthropology",
+      "current_company": "Fanatics",
+      "current_title": "Director, VIP Strategy & Growth",
+      "company_type": "Startup",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/dwightdipasquale",
+      "location": "New York, New York",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/cf86a2b507ba9984d8e2482a266911ffed789321891f4578a982586d7b22e637.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-23",
+      "last_verified": null,
+      "org_category": "sports_tech_data",
+      "sports_functions": [
+        "strategy_corpdev",
+        "marketing_fan"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor of Science (B.S.), Evolutionary Anthropology",
+          "grad_year": 2014,
+          "major": "Evolutionary Anthropology"
         }
       ]
     },
@@ -7278,6 +7552,37 @@
           "degree": "Bachelor's degree",
           "grad_year": 2021,
           "major": "Major: Public Policy Analysis, Certificate: Markets and Management"
+        }
+      ]
+    },
+    {
+      "id": "cd-112408823",
+      "name": "Ezra Kucharz",
+      "grad_year": 1997,
+      "school": "Other",
+      "degree": "MS",
+      "major": "Biomedical Engineering with concentration in Medical Informatics",
+      "current_company": "SailGP",
+      "current_title": "Sports & Media Executive",
+      "company_type": "VC/PE",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/ezrakucharz",
+      "location": "New York, New York",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/f14c94af783467162eab8ebcdceec835c417b3722cfd88bc5797915c1d18ec8c.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": "investing_advisory",
+      "sports_functions": [
+        "media_content"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "MS",
+          "grad_year": 1997,
+          "major": "Biomedical Engineering with concentration in Medical Informatics"
         }
       ]
     },
@@ -9484,6 +9789,37 @@
           "degree": "AB",
           "grad_year": 1994,
           "major": null
+        }
+      ]
+    },
+    {
+      "id": "jared-garten-2017",
+      "name": "Jared Garten",
+      "grad_year": 2017,
+      "school": "Trinity",
+      "degree": "Bachelor of Science (B.S.)",
+      "major": "Economics (Finance Concentration)",
+      "current_company": "Fanatics",
+      "current_title": "Director, M&A",
+      "company_type": "Startup",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/jared-garten-553aa398",
+      "location": "New York, New York",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/c53a959dab622e667a7c9b2a2a4be38f8070e679fb26929aeae80c6e77ecd2cd.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-23",
+      "last_verified": null,
+      "org_category": "sports_tech_data",
+      "sports_functions": [
+        "investing_deal"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor of Science (B.S.)",
+          "grad_year": 2017,
+          "major": "Economics (Finance Concentration)"
         }
       ]
     },
@@ -12742,6 +13078,49 @@
           "degree": "AB",
           "grad_year": 2018,
           "major": null
+        }
+      ]
+    },
+    {
+      "id": "laura-gentile-1994",
+      "name": "Laura Gentile",
+      "grad_year": 1994,
+      "school": "Trinity",
+      "degree": "Bachelor",
+      "major": "English and Political Science",
+      "current_company": "Storied Sports",
+      "current_title": "Co-Founder & Co-CEO",
+      "company_type": "VC/PE",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/gentilelaura",
+      "location": "Old Greenwich, Connecticut",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/f1f89011eee752c4f1f71363b07af3a841736e086a7103d4c3099cc6e273af5d.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-23",
+      "last_verified": null,
+      "org_category": "investing_advisory",
+      "sports_functions": [
+        "investing_deal"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor",
+          "grad_year": 1994,
+          "major": "English and Political Science"
+        },
+        {
+          "school": "General",
+          "degree": "Bachelor of Arts - BA",
+          "grad_year": 1994,
+          "major": "English and Political Science, Women's Studies"
+        },
+        {
+          "school": "General",
+          "degree": "Bachelor's degree",
+          "grad_year": null,
+          "major": "English Language and Literature/Letters"
         }
       ]
     },
@@ -16012,6 +16391,30 @@
       ]
     },
     {
+      "id": "omer-atesmen",
+      "name": "Omer Atesmen",
+      "grad_year": null,
+      "school": "Other",
+      "degree": "",
+      "major": "",
+      "current_company": "Snow League",
+      "current_title": "CEO",
+      "company_type": "League",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "",
+      "location": "",
+      "headshot_url": null,
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-23",
+      "last_verified": null,
+      "org_category": "leagues_governing",
+      "sports_functions": [
+        "front_office"
+      ],
+      "all_degrees": []
+    },
+    {
       "id": "parker-poliakoff-2014",
       "name": "Parker Poliakoff",
       "grad_year": 2014,
@@ -16326,6 +16729,37 @@
           "degree": "Certificate",
           "grad_year": null,
           "major": "Computer Programming"
+        }
+      ]
+    },
+    {
+      "id": "cd-2584534",
+      "name": "Peter Land",
+      "grad_year": 1983,
+      "school": "Trinity",
+      "degree": "Bachelor of Arts, cum laude",
+      "major": "",
+      "current_company": "",
+      "current_title": "Sports Industry Executive & Advisor",
+      "company_type": "VC/PE",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/peter-a-land",
+      "location": "New York, New York",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/a327e8c4770e06c0ee256c9cec901999dd8e02b96b9c7561d964f3530fa01012.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": "investing_advisory",
+      "sports_functions": [
+        "investing_deal"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor of Arts, cum laude",
+          "grad_year": 1983,
+          "major": null
         }
       ]
     },
@@ -19766,6 +20200,30 @@
       ]
     },
     {
+      "id": "tejas-srinivasan",
+      "name": "Tejas Srinivasan",
+      "grad_year": null,
+      "school": "Other",
+      "degree": "",
+      "major": "",
+      "current_company": "Blitz",
+      "current_title": "Co-Founder",
+      "company_type": "Startup",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "",
+      "location": "",
+      "headshot_url": null,
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-23",
+      "last_verified": null,
+      "org_category": "sports_tech_data",
+      "sports_functions": [
+        "product_eng"
+      ],
+      "all_degrees": []
+    },
+    {
       "id": "cd-218160101",
       "name": "Terrell Anderson, MEM",
       "grad_year": 2024,
@@ -21325,7 +21783,7 @@
     }
   ],
   "meta": {
-    "last_updated": "2026-06-21",
-    "total_count": 679
+    "last_updated": "2026-06-23",
+    "total_count": 694
   }
 }
