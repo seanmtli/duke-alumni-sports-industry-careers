@@ -4153,30 +4153,6 @@
       ]
     },
     {
-      "id": "chris-blivin",
-      "name": "Chris Blivin",
-      "grad_year": null,
-      "school": "Other",
-      "degree": "",
-      "major": "",
-      "current_company": "Major League Soccer",
-      "current_title": "VP, Consumer Products (Gaming, Collectibles & Emerging Technology)",
-      "company_type": "League",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "",
-      "location": "",
-      "headshot_url": null,
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-23",
-      "last_verified": null,
-      "org_category": "leagues_governing",
-      "sports_functions": [
-        "front_office"
-      ],
-      "all_degrees": []
-    },
-    {
       "id": "chris-dearwester-2020",
       "name": "Chris Dearwester",
       "grad_year": 2020,
@@ -4492,6 +4468,37 @@
           "degree": "BS",
           "grad_year": 2010,
           "major": "Psychology (Major) and Evolutionary Anthropology (Minor)"
+        }
+      ]
+    },
+    {
+      "id": "cd-32103498",
+      "name": "Christopher Blivin",
+      "grad_year": 2015,
+      "school": "Other",
+      "degree": "Master of Engineering Management",
+      "major": "Marketing and Business Strategy",
+      "current_company": "Major League Soccer",
+      "current_title": "VP, Consumer Products (Gaming, Collectibles & Emerging Technology)",
+      "company_type": "League",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/chrisblivin",
+      "location": "Brooklyn, New York",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/76b098ad57bb3d321dfca5a616ce9180b52b53f00b88bc0b99fdeebcb0357d58.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": "leagues_governing",
+      "sports_functions": [
+        "marketing_fan"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Master of Engineering Management",
+          "grad_year": 2015,
+          "major": "Marketing and Business Strategy"
         }
       ]
     },
@@ -7563,7 +7570,7 @@
       "degree": "MS",
       "major": "Biomedical Engineering with concentration in Medical Informatics",
       "current_company": "SailGP",
-      "current_title": "Sports & Media Executive",
+      "current_title": "Board Member",
       "company_type": "VC/PE",
       "sub_industries": [],
       "seniority_level": "Mid",
@@ -16391,30 +16398,6 @@
       ]
     },
     {
-      "id": "omer-atesmen",
-      "name": "Omer Atesmen",
-      "grad_year": null,
-      "school": "Other",
-      "degree": "",
-      "major": "",
-      "current_company": "Snow League",
-      "current_title": "CEO",
-      "company_type": "League",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "",
-      "location": "",
-      "headshot_url": null,
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-23",
-      "last_verified": null,
-      "org_category": "leagues_governing",
-      "sports_functions": [
-        "front_office"
-      ],
-      "all_degrees": []
-    },
-    {
       "id": "parker-poliakoff-2014",
       "name": "Parker Poliakoff",
       "grad_year": 2014,
@@ -20200,20 +20183,20 @@
       ]
     },
     {
-      "id": "tejas-srinivasan",
+      "id": "tejas-srinivasan-2023",
       "name": "Tejas Srinivasan",
-      "grad_year": null,
-      "school": "Other",
-      "degree": "",
-      "major": "",
+      "grad_year": 2023,
+      "school": "Trinity",
+      "degree": "Bachelor of Science - BS",
+      "major": "Computer Science, Statistics, Innovation and Entrepreneurship Certificate",
       "current_company": "Blitz",
       "current_title": "Co-Founder",
       "company_type": "Startup",
       "sub_industries": [],
       "seniority_level": "Mid",
-      "linkedin_url": "",
-      "location": "",
-      "headshot_url": null,
+      "linkedin_url": "https://www.linkedin.com/in/tejassrinivasan",
+      "location": "San Francisco Bay Area",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/0bee0c6a4fd1a55d0dd1bf846f0a2085de8105572bb77b892c4aa39ca178787c.jpg",
       "sports_league_affiliation": null,
       "added_date": "2026-06-23",
       "last_verified": null,
@@ -20221,7 +20204,14 @@
       "sports_functions": [
         "product_eng"
       ],
-      "all_degrees": []
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor of Science - BS",
+          "grad_year": 2023,
+          "major": "Computer Science, Statistics, Innovation and Entrepreneurship Certificate"
+        }
+      ]
     },
     {
       "id": "cd-218160101",
@@ -21784,6 +21774,6 @@
   ],
   "meta": {
     "last_updated": "2026-06-23",
-    "total_count": 694
+    "total_count": 693
   }
 }
