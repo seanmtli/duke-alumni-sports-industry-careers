@@ -1,18 +1,31 @@
 'use client';
 
 import { useState } from 'react';
-import type { CompanyType, SeniorityLevel, School } from '@/types/alumni';
-import { COMPANY_TYPES, SENIORITY_LEVELS, SCHOOLS, REACH_OUT_FOR_OPTIONS } from '@/lib/constants';
+import type { OrgCategory, SeniorityLevel, School, SportsFunction } from '@/types/alumni';
+import {
+  ORG_CATEGORIES, ORG_CATEGORY_LABELS,
+  SPORTS_FUNCTIONS, SPORTS_FUNCTION_LABELS,
+  SENIORITY_LEVELS, SCHOOLS, REACH_OUT_FOR_OPTIONS,
+} from '@/lib/constants';
+
+type DegreeInput = {
+  school: School;
+  grad_year: number;
+  degree: string;
+  major: string;
+};
+
+function emptyDegree(): DegreeInput {
+  return { school: 'Trinity', grad_year: new Date().getFullYear(), degree: '', major: '' };
+}
 
 const INITIAL_FORM = {
   name: '',
-  grad_year: new Date().getFullYear(),
-  school: 'Trinity' as School,
-  degree: '',
-  major: '',
+  degrees: [emptyDegree()] as DegreeInput[],
   current_title: '',
   current_company: '',
-  company_type: 'Startup' as CompanyType,
+  org_category: '' as OrgCategory | '',
+  sports_functions: [] as SportsFunction[],
   seniority_level: 'Mid' as SeniorityLevel,
   linkedin_url: '',
   location: '',
@@ -48,6 +61,30 @@ export default function SubmitPage() {
     );
   }
 
+  function toggleSportsFunction(fn: SportsFunction) {
+    set(
+      'sports_functions',
+      form.sports_functions.includes(fn)
+        ? form.sports_functions.filter((f) => f !== fn)
+        : [...form.sports_functions, fn]
+    );
+  }
+
+  function setDegree<K extends keyof DegreeInput>(index: number, key: K, value: DegreeInput[K]) {
+    set(
+      'degrees',
+      form.degrees.map((d, i) => (i === index ? { ...d, [key]: value } : d))
+    );
+  }
+
+  function addDegree() {
+    set('degrees', [...form.degrees, emptyDegree()]);
+  }
+
+  function removeDegree(index: number) {
+    set('degrees', form.degrees.filter((_, i) => i !== index));
+  }
+
   function validateLinkedIn() {
     if (!form.linkedin_url) {
       setLinkedInError('LinkedIn URL is required');
@@ -65,6 +102,7 @@ export default function SubmitPage() {
     form.name.trim() &&
     form.current_title.trim() &&
     form.current_company.trim() &&
+    Number.isInteger(form.degrees[0]?.grad_year) &&
     form.linkedin_url &&
     isValidLinkedIn(form.linkedin_url);
 
@@ -79,13 +117,21 @@ export default function SubmitPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name: form.name,
-          grad_year: form.grad_year,
-          school: form.school,
-          degree: form.degree,
-          major: form.major,
+          // Primary degree stays flat for existing consumers.
+          grad_year: form.degrees[0].grad_year,
+          school: form.degrees[0].school,
+          degree: form.degrees[0].degree,
+          major: form.degrees[0].major,
+          all_degrees: form.degrees.map((d) => ({
+            school: d.school,
+            degree: d.degree || null,
+            grad_year: Number.isInteger(d.grad_year) ? d.grad_year : null,
+            major: d.major || null,
+          })),
           current_title: form.current_title,
           current_company: form.current_company,
-          company_type: form.company_type,
+          org_category: form.org_category || null,
+          sports_functions: form.sports_functions,
           seniority_level: form.seniority_level,
           linkedin_url: form.linkedin_url,
           location: form.location,
@@ -146,18 +192,6 @@ export default function SubmitPage() {
             />
           </div>
           <div>
-            <label className={labelCls}>Grad Year *</label>
-            <input
-              type="number"
-              className={inputCls}
-              value={form.grad_year}
-              onChange={(e) => set('grad_year', Number(e.target.value))}
-              min={1838}
-              max={new Date().getFullYear() + 5}
-              required
-            />
-          </div>
-          <div>
             <label className={labelCls}>Current Title *</label>
             <input
               className={inputCls}
@@ -198,34 +232,80 @@ export default function SubmitPage() {
           </div>
         </div>
 
-        {/* Optional profile fields */}
+        {/* Duke degrees — supports multiple (e.g. undergrad + MBA) */}
+        <div>
+          <label className={labelCls}>Duke Degree(s) *</label>
+          <div className="space-y-3 mt-1">
+            {form.degrees.map((deg, i) => (
+              <div key={i} className="border border-gray-200 rounded-lg p-4 relative">
+                {form.degrees.length > 1 && (
+                  <button
+                    type="button"
+                    onClick={() => removeDegree(i)}
+                    className="absolute top-2 right-2 text-xs text-gray-400 hover:text-red-500"
+                    aria-label="Remove degree"
+                  >
+                    Remove
+                  </button>
+                )}
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className={labelCls}>School</label>
+                    <select
+                      className={inputCls}
+                      value={deg.school}
+                      onChange={(e) => setDegree(i, 'school', e.target.value as School)}
+                    >
+                      {SCHOOLS.map((s) => <option key={s}>{s}</option>)}
+                    </select>
+                  </div>
+                  <div>
+                    <label className={labelCls}>Grad Year{i === 0 ? ' *' : ''}</label>
+                    <input
+                      type="number"
+                      className={inputCls}
+                      value={deg.grad_year}
+                      onChange={(e) => setDegree(i, 'grad_year', Number(e.target.value))}
+                      min={1838}
+                      max={new Date().getFullYear() + 5}
+                      required={i === 0}
+                    />
+                  </div>
+                  <div>
+                    <label className={labelCls}>Degree</label>
+                    <input
+                      className={inputCls}
+                      value={deg.degree}
+                      onChange={(e) => setDegree(i, 'degree', e.target.value)}
+                      placeholder="AB, BS, MBA…"
+                      maxLength={100}
+                    />
+                  </div>
+                  <div>
+                    <label className={labelCls}>Major</label>
+                    <input
+                      className={inputCls}
+                      value={deg.major}
+                      onChange={(e) => setDegree(i, 'major', e.target.value)}
+                      placeholder="Computer Science"
+                      maxLength={100}
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <button
+            type="button"
+            onClick={addDegree}
+            className="mt-2 text-xs font-semibold text-[#003087] hover:underline"
+          >
+            + Add another Duke degree
+          </button>
+        </div>
+
+        {/* Other optional fields */}
         <div className="grid sm:grid-cols-2 gap-4">
-          <div>
-            <label className={labelCls}>School</label>
-            <select className={inputCls} value={form.school} onChange={(e) => set('school', e.target.value as School)}>
-              {SCHOOLS.map((s) => <option key={s}>{s}</option>)}
-            </select>
-          </div>
-          <div>
-            <label className={labelCls}>Degree</label>
-            <input
-              className={inputCls}
-              value={form.degree}
-              onChange={(e) => set('degree', e.target.value)}
-              placeholder="AB, BS, MBA…"
-              maxLength={100}
-            />
-          </div>
-          <div>
-            <label className={labelCls}>Major</label>
-            <input
-              className={inputCls}
-              value={form.major}
-              onChange={(e) => set('major', e.target.value)}
-              placeholder="Computer Science"
-              maxLength={100}
-            />
-          </div>
           <div>
             <label className={labelCls}>Location</label>
             <input
@@ -237,13 +317,16 @@ export default function SubmitPage() {
             />
           </div>
           <div>
-            <label className={labelCls}>Company Type</label>
+            <label className={labelCls}>Industry</label>
             <select
               className={inputCls}
-              value={form.company_type}
-              onChange={(e) => set('company_type', e.target.value as CompanyType)}
+              value={form.org_category}
+              onChange={(e) => set('org_category', e.target.value as OrgCategory | '')}
             >
-              {COMPANY_TYPES.map((t) => <option key={t}>{t}</option>)}
+              <option value="">Select…</option>
+              {ORG_CATEGORIES.map((c) => (
+                <option key={c} value={c}>{ORG_CATEGORY_LABELS[c]}</option>
+              ))}
             </select>
           </div>
           <div>
@@ -255,6 +338,30 @@ export default function SubmitPage() {
             >
               {SENIORITY_LEVELS.map((s) => <option key={s}>{s}</option>)}
             </select>
+          </div>
+        </div>
+
+        {/* Sports function — one or more, mirrors the directory filter */}
+        <div>
+          <label className={labelCls}>Sports Function</label>
+          <div className="flex flex-wrap gap-2 mt-1">
+            {SPORTS_FUNCTIONS.map((fn) => {
+              const selected = form.sports_functions.includes(fn);
+              return (
+                <button
+                  key={fn}
+                  type="button"
+                  onClick={() => toggleSportsFunction(fn)}
+                  className={`text-xs px-3 py-1.5 rounded-full border transition-colors ${
+                    selected
+                      ? 'bg-[#003087] text-white border-[#003087]'
+                      : 'bg-white text-gray-600 border-gray-200 hover:border-[#003087]'
+                  }`}
+                >
+                  {SPORTS_FUNCTION_LABELS[fn]}
+                </button>
+              );
+            })}
           </div>
         </div>
 

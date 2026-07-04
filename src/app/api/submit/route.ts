@@ -1,12 +1,15 @@
 import { promises as fs } from 'fs';
 import path from 'path';
-import { SCHOOLS, COMPANY_TYPES, SENIORITY_LEVELS, REACH_OUT_FOR_OPTIONS } from '@/lib/constants';
-import type { Submission, School, CompanyType, SeniorityLevel } from '@/types/alumni';
+import { SCHOOLS, ORG_CATEGORIES, SPORTS_FUNCTIONS, SENIORITY_LEVELS, REACH_OUT_FOR_OPTIONS } from '@/lib/constants';
+import type {
+  Submission, School, OrgCategory, SportsFunction, SeniorityLevel, DukeDegree,
+} from '@/types/alumni';
 
 const FILE = path.join(process.cwd(), 'src/data/submissions.json');
 
 const VALID_SCHOOLS = new Set<string>(SCHOOLS);
-const VALID_COMPANY_TYPES = new Set<string>(COMPANY_TYPES);
+const VALID_ORG_CATEGORIES = new Set<string>(ORG_CATEGORIES);
+const VALID_SPORTS_FUNCTIONS = new Set<string>(SPORTS_FUNCTIONS);
 const VALID_SENIORITY = new Set<string>(SENIORITY_LEVELS);
 const VALID_REACH_OUT_FOR = new Set<string>(REACH_OUT_FOR_OPTIONS);
 
@@ -63,15 +66,42 @@ export async function POST(request: Request) {
     const schoolInput = typeof b.school === 'string' ? b.school : '';
     const school: School = VALID_SCHOOLS.has(schoolInput) ? (schoolInput as School) : 'Other';
 
-    const companyTypeInput = typeof b.company_type === 'string' ? b.company_type : '';
-    const company_type: CompanyType = VALID_COMPANY_TYPES.has(companyTypeInput)
-      ? (companyTypeInput as CompanyType)
-      : 'Other';
+    const orgInput = typeof b.org_category === 'string' ? b.org_category : '';
+    const org_category: OrgCategory | null = VALID_ORG_CATEGORIES.has(orgInput)
+      ? (orgInput as OrgCategory)
+      : null;
+
+    const sports_functions: SportsFunction[] = Array.isArray(b.sports_functions)
+      ? ([...new Set(
+          b.sports_functions.filter((f) => typeof f === 'string' && VALID_SPORTS_FUNCTIONS.has(f))
+        )] as SportsFunction[])
+      : [];
 
     const seniorityInput = typeof b.seniority_level === 'string' ? b.seniority_level : '';
     const seniority_level: SeniorityLevel = VALID_SENIORITY.has(seniorityInput)
       ? (seniorityInput as SeniorityLevel)
       : 'Mid';
+
+    // Duke degrees: sanitize each entry, cap the list, and always keep at least
+    // the primary degree derived from the flat fields.
+    const degree = sanitizeStr(b.degree, 100);
+    const major = sanitizeStr(b.major, 100);
+    let all_degrees: DukeDegree[] = Array.isArray(b.all_degrees)
+      ? b.all_degrees.slice(0, 6).map((d): DukeDegree => {
+          const o = d && typeof d === 'object' ? (d as Record<string, unknown>) : {};
+          const schoolStr = typeof o.school === 'string' ? o.school : '';
+          const yr = Number(o.grad_year);
+          return {
+            school: VALID_SCHOOLS.has(schoolStr) ? (schoolStr as School) : 'Other',
+            degree: sanitizeStr(o.degree, 100) || null,
+            grad_year: Number.isInteger(yr) && yr >= 1838 && yr <= maxYear ? yr : null,
+            major: sanitizeStr(o.major, 100) || null,
+          };
+        })
+      : [];
+    if (all_degrees.length === 0) {
+      all_degrees = [{ school, degree: degree || null, grad_year, major: major || null }];
+    }
 
     // reach_out_for: only accept values from the known options list
     const reach_out_for: string[] = Array.isArray(b.reach_out_for)
@@ -84,11 +114,13 @@ export async function POST(request: Request) {
       name,
       grad_year,
       school,
-      degree: sanitizeStr(b.degree, 100),
-      major: sanitizeStr(b.major, 100),
+      degree,
+      major,
+      all_degrees,
       current_company,
       current_title,
-      company_type,
+      org_category,
+      sports_functions,
       seniority_level,
       linkedin_url,
       location: sanitizeStr(b.location, 100),
