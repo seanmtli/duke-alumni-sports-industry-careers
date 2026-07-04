@@ -133,66 +133,6 @@
       ]
     },
     {
-      "id": "cd-79727790",
-      "name": "Adam Cole",
-      "grad_year": null,
-      "school": "Trinity",
-      "degree": "Banchelors",
-      "major": "Buisness",
-      "current_company": "",
-      "current_title": "",
-      "company_type": "Other",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/adam-cole-08925b300",
-      "location": "New York City Metropolitan Area",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/275815c12dd21584686063cda355cc6b5b7f652d0fac1ef7be4856c28e08c4be.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": null,
-      "sports_functions": [],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Banchelors",
-          "grad_year": null,
-          "major": "Buisness"
-        }
-      ]
-    },
-    {
-      "id": "cd-118604225",
-      "name": "Adam Grisham",
-      "grad_year": 2012,
-      "school": "Other",
-      "degree": "Associate's degree",
-      "major": "Sports Studies",
-      "current_company": "Major League Baseball (MLB)",
-      "current_title": "1st base",
-      "company_type": "League",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/adam-grisham-7964034b",
-      "location": "Mooresville, North Carolina",
-      "headshot_url": null,
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "leagues_governing",
-      "sports_functions": [
-        "front_office"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Associate's degree",
-          "grad_year": 2012,
-          "major": "Sports Studies"
-        }
-      ]
-    },
-    {
       "id": "adam-grossman-2002",
       "name": "Adam Grossman",
       "grad_year": 2002,
@@ -356,104 +296,6 @@
       ]
     },
     {
-      "id": "cd-30708781",
-      "name": "Aditya Srivastava",
-      "grad_year": 2021,
-      "school": "Other",
-      "degree": "Certificate",
-      "major": "Sports & Society",
-      "current_company": "Major League Baseball (MLB)",
-      "current_title": "Sports Merchandise Management",
-      "company_type": "League",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/adityaatl",
-      "location": "Atlanta Metropolitan Area",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/b89da3801bcff6139aa4e89d5241cb90a24543af2b5c73891291f1a455b9655c.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "leagues_governing",
-      "sports_functions": [
-        "front_office"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Certificate",
-          "grad_year": 2021,
-          "major": "Sports & Society"
-        }
-      ]
-    },
-    {
-      "id": "adrienne-castro-2016",
-      "name": "Adrienne Castro",
-      "grad_year": 2016,
-      "school": "Trinity",
-      "degree": "AB",
-      "major": "",
-      "current_company": "Super Age",
-      "current_title": "Project, Partnerships & Commercial Operations Manager",
-      "company_type": "Startup",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/adriennecastro",
-      "location": "Brooklyn, New York",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/ec82375cc0bca1d6432304e1168d6cf10889ed20526126e86dbaba8122951f41.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-04-08",
-      "last_verified": "2026-04-08",
-      "org_category": "sports_tech_data",
-      "sports_functions": [
-        "partnerships",
-        "front_office"
-      ],
-      "all_degrees": [
-        {
-          "school": "Trinity",
-          "degree": "AB",
-          "grad_year": 2016,
-          "major": null
-        }
-      ]
-    },
-    {
-      "id": "cd-117984783",
-      "name": "Afraaz Malick",
-      "grad_year": 2026,
-      "school": "Other",
-      "degree": "Minor",
-      "major": "Chemistry",
-      "current_company": "",
-      "current_title": "Medical Scribe & Assistant",
-      "company_type": "Other",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/afraaz-malick",
-      "location": "Houston, Texas",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/69d522929c9ce37941a3523c472db7dbf38d071cb68f0b37ed4e4b0df607f67d.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": null,
-      "sports_functions": [],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Minor",
-          "grad_year": 2026,
-          "major": "Chemistry"
-        },
-        {
-          "school": "General",
-          "degree": "Bachelor of Arts - BA",
-          "grad_year": 2026,
-          "major": "Computer Science"
-        }
-      ]
-    },
-    {
       "id": "cd-14047026",
       "name": "Alana Beard",
       "grad_year": 2004,
@@ -604,37 +446,6 @@
           "degree": "BA",
           "grad_year": 2001,
           "major": null
-        }
-      ]
-    },
-    {
-      "id": "cd-97151930",
-      "name": "Alexander Wang",
-      "grad_year": 2025,
-      "school": "Trinity",
-      "degree": "Bachelor's degree",
-      "major": "Double Major in Economics and Political Science, Minor in Psychology",
-      "current_company": "U.S. Soccer Federation",
-      "current_title": "Soccer Referee",
-      "company_type": "League",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/alexanderwang",
-      "location": "New York City Metropolitan Area",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/655f63dee71d3a3860adb416d3406b47373fbc94201be519f9b9dfb36c746aed.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "leagues_governing",
-      "sports_functions": [
-        "front_office"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Bachelor's degree",
-          "grad_year": 2025,
-          "major": "Double Major in Economics and Political Science, Minor in Psychology"
         }
       ]
     },
@@ -792,68 +603,6 @@
       ]
     },
     {
-      "id": "ally-perez-2020",
-      "name": "Ally Perez",
-      "grad_year": 2020,
-      "school": "Trinity",
-      "degree": "AB",
-      "major": "",
-      "current_company": "Jones Day",
-      "current_title": "Associate",
-      "company_type": "Non-Profit",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/alyssalaurenperez",
-      "location": "New York, New York",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/ac6641eb4d8b6bc7fa79b1ee93f7683988301be816bdb9ebd6fe3ab1edcee46f.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-04-08",
-      "last_verified": "2026-04-08",
-      "org_category": "nonprofit_other",
-      "sports_functions": [
-        "front_office"
-      ],
-      "all_degrees": [
-        {
-          "school": "Trinity",
-          "degree": "AB",
-          "grad_year": 2020,
-          "major": null
-        }
-      ]
-    },
-    {
-      "id": "alyssa-williams-2018",
-      "name": "Alyssa Williams",
-      "grad_year": 2018,
-      "school": "Other",
-      "degree": "",
-      "major": "",
-      "current_company": "Ropes and Gray LLP",
-      "current_title": "Associate",
-      "company_type": "Non-Profit",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/alyssa-williams24",
-      "location": "Boston, Massachusetts",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/2095cd5c7fb7cced372b44e7ff25a6ccbe9b736ee2ecebd4e466a2c55646f514.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-04-08",
-      "last_verified": "2026-04-08",
-      "org_category": "nonprofit_other",
-      "sports_functions": [
-        "front_office"
-      ],
-      "all_degrees": [
-        {
-          "school": "Other",
-          "degree": null,
-          "grad_year": 2018,
-          "major": null
-        }
-      ]
-    },
-    {
       "id": "cd-932901",
       "name": "Amanda Jones Norwood",
       "grad_year": 2008,
@@ -881,35 +630,6 @@
           "degree": "BA",
           "grad_year": 2008,
           "major": "Economics"
-        }
-      ]
-    },
-    {
-      "id": "cd-87694982",
-      "name": "Amanda Truelove",
-      "grad_year": 2012,
-      "school": "Trinity",
-      "degree": "Bachelor of Science - BS",
-      "major": "Psychology & Education",
-      "current_company": "tvdsb.ca",
-      "current_title": "Teacher",
-      "company_type": "Other",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/amanda-truelove-204a74155",
-      "location": "London, Ontario",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/01bf1bbd34f67ab84d3442676b5ab7ff810be7ca127fbc0cd9622a4ba6afffab.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": null,
-      "sports_functions": [],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Bachelor of Science - BS",
-          "grad_year": 2012,
-          "major": "Psychology & Education"
         }
       ]
     },
@@ -1195,37 +915,6 @@
       ]
     },
     {
-      "id": "cd-121608652",
-      "name": "Andrew Wright",
-      "grad_year": 2024,
-      "school": "Other",
-      "degree": "Machine Learning Foundations for Product Managers",
-      "major": "",
-      "current_company": "Nike",
-      "current_title": "Senior Product Manager - Data and Artificial Intelligence",
-      "company_type": "Brand",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/andrewwrightnike",
-      "location": "Beaverton, Oregon",
-      "headshot_url": "https://media.licdn.com/dms/image/v2/C5603AQH3VoUqzuC_cg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1534775857993?e=1744848000&v=beta&t=VX_H2y8_lSfzzH8ElfV2DsEWiGxc6sqMIc5Op_YCjh0",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "brands_sponsors",
-      "sports_functions": [
-        "product_eng"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Machine Learning Foundations for Product Managers",
-          "grad_year": 2024,
-          "major": null
-        }
-      ]
-    },
-    {
       "id": "andrew-yaffe-2008",
       "name": "Andrew Yaffe",
       "grad_year": 2008,
@@ -1315,37 +1004,6 @@
           "degree": "B.A.",
           "grad_year": 2013,
           "major": "Visual and Media Studies, Information Science and Information Studies"
-        }
-      ]
-    },
-    {
-      "id": "cd-172844683",
-      "name": "Anna Damone, MBA",
-      "grad_year": 2021,
-      "school": "Fuqua",
-      "degree": "",
-      "major": "CareFirst Navigating Healthcare Certificate",
-      "current_company": "Under Armour",
-      "current_title": "Lead, North Americas Marketing, Wholesale",
-      "company_type": "Brand",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/annadamone",
-      "location": "Baltimore, Maryland",
-      "headshot_url": null,
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "brands_sponsors",
-      "sports_functions": [
-        "marketing_fan"
-      ],
-      "all_degrees": [
-        {
-          "school": "Fuqua",
-          "degree": null,
-          "grad_year": 2021,
-          "major": "CareFirst Navigating Healthcare Certificate"
         }
       ]
     },
@@ -1535,43 +1193,6 @@
           "degree": "Bachelor of Arts (B.A.)",
           "grad_year": 2001,
           "major": "Cultural Anthropology, Marketing"
-        }
-      ]
-    },
-    {
-      "id": "cd-52419758",
-      "name": "Audreya Menendez",
-      "grad_year": 2020,
-      "school": "Other",
-      "degree": "B.S. Statistics",
-      "major": "Minor in Computer Science and Certificate in Markets & Management Studies",
-      "current_company": "DraftKings",
-      "current_title": "Senior Product Manager",
-      "company_type": "Sports Betting",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/ACoAAB9-SfMBMCls1A2haaoRmcc9C2mL1HhZido",
-      "location": "Charlotte, North Carolina",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/24e9428e08ec9a8235456dee2760bfe25d7801deff8fede2a2d47d8fd6fe8739.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "betting_gaming",
-      "sports_functions": [
-        "product_eng"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "B.S. Statistics",
-          "grad_year": 2020,
-          "major": "Minor in Computer Science and Certificate in Markets & Management Studies"
-        },
-        {
-          "school": "Fuqua",
-          "degree": "Master of Management",
-          "grad_year": 2021,
-          "major": null
         }
       ]
     },
@@ -1900,7 +1521,7 @@
       "school": "Other",
       "degree": "",
       "major": "Economics",
-      "current_company": "",
+      "current_company": "One Fitness",
       "current_title": "Founder",
       "company_type": "Other",
       "sub_industries": [],
@@ -2234,37 +1855,6 @@
           "degree": "BS",
           "grad_year": 2023,
           "major": "Economics"
-        }
-      ]
-    },
-    {
-      "id": "cd-122308119",
-      "name": "Blade Clarke",
-      "grad_year": 2023,
-      "school": "Other",
-      "degree": "Economics",
-      "major": "",
-      "current_company": "U.S. Soccer Federation",
-      "current_title": "Manager, Soccer Growth",
-      "company_type": "League",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/ACoAAC1GGioBRLBWrKe5hb_4VWbYNvDXfKBcqnY",
-      "location": "Atlanta, Georgia",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/5d2af7fc419e16aebb2e4c01a4b4946d4b39c960da6d5256b0a1ce12ee718be9.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "leagues_governing",
-      "sports_functions": [
-        "marketing_fan"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Economics",
-          "grad_year": 2023,
-          "major": null
         }
       ]
     },
@@ -2792,7 +2382,7 @@
       "school": "Other",
       "degree": "Political Science",
       "major": "",
-      "current_company": "National Basketball Association (NBA)",
+      "current_company": "Spurs Sports & Entertainment",
       "current_title": "Senior Vice-President, Global Partnerships",
       "company_type": "League",
       "sub_industries": [],
@@ -2825,7 +2415,7 @@
       "school": "Fuqua",
       "degree": "Master of Management Studies",
       "major": "",
-      "current_company": "greenhouse.io",
+      "current_company": "Penn Interactive",
       "current_title": "Senior Director Product Management, Trading Models",
       "company_type": "Other",
       "sub_industries": [],
@@ -2843,37 +2433,6 @@
           "school": "Fuqua",
           "degree": "Master of Management Studies",
           "grad_year": 2016,
-          "major": null
-        }
-      ]
-    },
-    {
-      "id": "brinda-dasharathy-2018",
-      "name": "Brinda  Dasharathy",
-      "grad_year": 2018,
-      "school": "Fuqua",
-      "degree": "MBA",
-      "major": "",
-      "current_company": "Amazon",
-      "current_title": "Global Implementation",
-      "company_type": "Big Tech",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/brindash",
-      "location": "New York, New York",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/d72e7f7cc23f15d60478b9efed4ce8191804059dafa75b7d47ec3c124eea3146.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-04-08",
-      "last_verified": "2026-04-08",
-      "org_category": "big_tech_vertical",
-      "sports_functions": [
-        "sales_account"
-      ],
-      "all_degrees": [
-        {
-          "school": "Fuqua",
-          "degree": "MBA",
-          "grad_year": 2018,
           "major": null
         }
       ]
@@ -3040,37 +2599,6 @@
       ]
     },
     {
-      "id": "cd-108580578",
-      "name": "Camden Chin",
-      "grad_year": 2026,
-      "school": "Trinity",
-      "degree": "Bachelor of Science - BS",
-      "major": "Computer Science and Visual Media Studies",
-      "current_company": "perplexity.ai",
-      "current_title": "Campus Ambassador",
-      "company_type": "Other",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/camden-chin",
-      "location": "Los Angeles, California",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/fbe049e5085a7d8f1e87ceb761691b4e7d7734aee4e0f2c11a03c597fe55b9d9.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": null,
-      "sports_functions": [
-        "media_content"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Bachelor of Science - BS",
-          "grad_year": 2026,
-          "major": "Computer Science and Visual Media Studies"
-        }
-      ]
-    },
-    {
       "id": "cameron-hammel-2017",
       "name": "Cameron Hammel",
       "grad_year": 2017,
@@ -3161,37 +2689,6 @@
           "degree": "Sociology",
           "grad_year": 2021,
           "major": "Markets and Managment Certificate (MMS)"
-        }
-      ]
-    },
-    {
-      "id": "cd-119138256",
-      "name": "Carol Vergis",
-      "grad_year": 2021,
-      "school": "Other",
-      "degree": "Certificate",
-      "major": "Nonprofit Management",
-      "current_company": "duke.edu",
-      "current_title": "Executive Director, Athletics Resource Acquisition/Premium Events & Sales",
-      "company_type": "Other",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/carolvergis",
-      "location": "Durham, North Carolina",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/1f8aab517d9eef1c269f540a421e1354b296539b7447a6373629dd4a18658fed.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": null,
-      "sports_functions": [
-        "sales_account"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Certificate",
-          "grad_year": 2021,
-          "major": "Nonprofit Management"
         }
       ]
     },
@@ -4072,47 +3569,6 @@
       ]
     },
     {
-      "id": "cd-78040749",
-      "name": "Chris Thurstone",
-      "grad_year": 1992,
-      "school": "Trinity",
-      "degree": "BS",
-      "major": "Physics",
-      "current_company": "goarmyreservedocs.com",
-      "current_title": "Lieutenant Colonel",
-      "company_type": "Other",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/chris-thurstone-4309168",
-      "location": "Denver, Colorado",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/6db90427a4dd461792a64a5088b043374ff12cb433db6744bf76f212dd2b5258.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": null,
-      "sports_functions": [],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": null,
-          "grad_year": null,
-          "major": null
-        },
-        {
-          "school": "General",
-          "degree": "BS",
-          "grad_year": 1992,
-          "major": "Physics"
-        },
-        {
-          "school": "General",
-          "degree": "Bachelor of Science - BS",
-          "grad_year": 1998,
-          "major": "Physics"
-        }
-      ]
-    },
-    {
       "id": "christie-kaestner-2011",
       "name": "Christie Kaestner",
       "grad_year": 2011,
@@ -4171,37 +3627,6 @@
           "degree": "Bachelor of Arts - BA",
           "grad_year": null,
           "major": "Visual and Media Studies"
-        }
-      ]
-    },
-    {
-      "id": "christina-hennessy-vucich-2015",
-      "name": "Christina Hennessy (Vucich)",
-      "grad_year": 2015,
-      "school": "Trinity",
-      "degree": "AB",
-      "major": "",
-      "current_company": "Jet.com",
-      "current_title": "Category Specialist",
-      "company_type": "Startup",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/christinavucich",
-      "location": "New York City Metropolitan Area, NJ",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/9fa76c88af3d7bb048605a631291cbe5a635bfbbaeb00b8e2b0434da952f0bcc.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-04-08",
-      "last_verified": "2026-04-08",
-      "org_category": "sports_tech_data",
-      "sports_functions": [
-        "product_eng"
-      ],
-      "all_degrees": [
-        {
-          "school": "Trinity",
-          "degree": "AB",
-          "grad_year": 2015,
-          "major": null
         }
       ]
     },
@@ -4487,37 +3912,6 @@
       ]
     },
     {
-      "id": "cd-122187422",
-      "name": "Clivia T.",
-      "grad_year": null,
-      "school": "Other",
-      "degree": "Graduate certificate",
-      "major": "Data Science Business Analytics",
-      "current_company": "Nike",
-      "current_title": "Sr. Applied Analytics Manager",
-      "company_type": "Brand",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/clivia-t-2bb3322b5",
-      "location": "Portland, Oregon",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/9fdc91685cf1081b9c501bd67652bfeae22fb6df6164c24f67e0b981e0c2cfb3.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "brands_sponsors",
-      "sports_functions": [
-        "data_analytics"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Graduate certificate",
-          "grad_year": null,
-          "major": "Data Science Business Analytics"
-        }
-      ]
-    },
-    {
       "id": "coco-dana-2021",
       "name": "Coco Dana",
       "grad_year": 2021,
@@ -4733,37 +4127,6 @@
           "degree": "BSME",
           "grad_year": 1987,
           "major": "Mechanical Enginieering, Computer Science"
-        }
-      ]
-    },
-    {
-      "id": "cd-66595108",
-      "name": "Courtney (Chenault) Clark",
-      "grad_year": 2022,
-      "school": "Other",
-      "degree": "Paralegal Certificate",
-      "major": "Legal Assistant/Paralegal",
-      "current_company": "Octagon",
-      "current_title": "Senior Specialist, Contracts and Legal Operations",
-      "company_type": "Agency",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/courtney-chenault",
-      "location": "Fairfax, Virginia",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/7d3da84d178ad3310418832e9b2b86b0ec45130955474ff09991b38407e51abb.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "agencies_rep",
-      "sports_functions": [
-        "legal_rep"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Paralegal Certificate",
-          "grad_year": 2022,
-          "major": "Legal Assistant/Paralegal"
         }
       ]
     },
@@ -4987,37 +4350,6 @@
       ]
     },
     {
-      "id": "dai-jonnai-smith-2024",
-      "name": "Dai'Jonnai Smith",
-      "grad_year": 2024,
-      "school": "Medicine",
-      "degree": "",
-      "major": "",
-      "current_company": "Indian Health Service",
-      "current_title": "Occupational Therapist and Athletic Trainer",
-      "company_type": "Non-Profit",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/daijonnai",
-      "location": "Whiteriver, Arizona",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/d18d8e4c1882eb536552066a154c8651343c8fcffaa947a9eb6790348ce2af08.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-04-08",
-      "last_verified": "2026-04-08",
-      "org_category": "nonprofit_other",
-      "sports_functions": [
-        "health_athlete"
-      ],
-      "all_degrees": [
-        {
-          "school": "Medicine",
-          "degree": null,
-          "grad_year": 2024,
-          "major": null
-        }
-      ]
-    },
-    {
       "id": "cd-70334615",
       "name": "Dan  Otero",
       "grad_year": 2007,
@@ -5231,35 +4563,6 @@
           "degree": "Master of Science - MS",
           "grad_year": null,
           "major": "Data Science"
-        }
-      ]
-    },
-    {
-      "id": "cd-115765995",
-      "name": "Darren J.",
-      "grad_year": 2023,
-      "school": "Trinity",
-      "degree": "Bachelor of Science - BS",
-      "major": "",
-      "current_company": "eternalholdings.org",
-      "current_title": "Chief Executive Officer",
-      "company_type": "Other",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/darren-j-9214a5289",
-      "location": "United States",
-      "headshot_url": null,
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": null,
-      "sports_functions": [],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Bachelor of Science - BS",
-          "grad_year": 2023,
-          "major": null
         }
       ]
     },
@@ -5605,37 +4908,6 @@
       ]
     },
     {
-      "id": "deanna-molina-2001",
-      "name": "Deanna Molina",
-      "grad_year": 2001,
-      "school": "Trinity",
-      "degree": "AB",
-      "major": "",
-      "current_company": "Rylynn Consulting, LLC",
-      "current_title": "People Consultant",
-      "company_type": "VC/PE",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/deanna-mackey-molina",
-      "location": "United States, CO",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/061f58ff289587943596da4092e538ac47c7ea45e3369b6986b30a6916dfe7a0.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-04-08",
-      "last_verified": "2026-04-08",
-      "org_category": "investing_advisory",
-      "sports_functions": [
-        "strategy_corpdev"
-      ],
-      "all_degrees": [
-        {
-          "school": "Trinity",
-          "degree": "AB",
-          "grad_year": 2001,
-          "major": null
-        }
-      ]
-    },
-    {
       "id": "derek-thomas-1996",
       "name": "Derek Thomas",
       "grad_year": 1996,
@@ -5818,35 +5090,6 @@
           "school": "Trinity",
           "degree": "AB",
           "grad_year": 2015,
-          "major": null
-        }
-      ]
-    },
-    {
-      "id": "cd-932837",
-      "name": "Dharini Govindarajan",
-      "grad_year": 2017,
-      "school": "Fuqua",
-      "degree": "Master of Business Administration (M.B.A.)",
-      "major": "",
-      "current_company": "",
-      "current_title": "Board Member",
-      "company_type": "Other",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/dharini-govindarajan",
-      "location": "Portland",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/f0bb48664e2cf9b5cdd2aa113f7ee3a8d77b6bd4310ba1784ccdfcd93fac796f.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": null,
-      "sports_functions": [],
-      "all_degrees": [
-        {
-          "school": "Fuqua",
-          "degree": "Master of Business Administration (M.B.A.)",
-          "grad_year": 2017,
           "major": null
         }
       ]
@@ -6069,37 +5312,6 @@
       ]
     },
     {
-      "id": "cd-2518165",
-      "name": "Dr Soubir Bhatt",
-      "grad_year": 2023,
-      "school": "Medicine",
-      "degree": "CME",
-      "major": "Space Medicine",
-      "current_company": "tumandbum.com",
-      "current_title": "Advisory Board Member",
-      "company_type": "Other",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/soubirbhatt",
-      "location": "New York City Metropolitan Area",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/b02597774c8c70371544c270b892589517467ba7c02874ece561003638ec3f46.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": null,
-      "sports_functions": [
-        "legal_rep"
-      ],
-      "all_degrees": [
-        {
-          "school": "Medicine",
-          "degree": "CME",
-          "grad_year": 2023,
-          "major": "Space Medicine"
-        }
-      ]
-    },
-    {
       "id": "cd-79590750",
       "name": "Dr. Vanessa Brooks DPT, SCS, ATC, CSCS, NREMT",
       "grad_year": 2018,
@@ -6194,66 +5406,6 @@
       ]
     },
     {
-      "id": "cd-69047002",
-      "name": "Durham Weeks",
-      "grad_year": 2004,
-      "school": "Trinity",
-      "degree": "Bachelor of Science - BS",
-      "major": "Neuroscience",
-      "current_company": "Carolina Panthers",
-      "current_title": "Head Team Orthopedist",
-      "company_type": "Team",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/durham-weeks-a66334249",
-      "location": "United States",
-      "headshot_url": null,
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "teams_clubs",
-      "sports_functions": [
-        "front_office"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Bachelor of Science - BS",
-          "grad_year": 2004,
-          "major": "Neuroscience"
-        }
-      ]
-    },
-    {
-      "id": "cd-69000074",
-      "name": "Durham Weeks",
-      "grad_year": 2004,
-      "school": "Trinity",
-      "degree": "Bachelor of Science - BS",
-      "major": "Neuroscience",
-      "current_company": "orthocarolina.com",
-      "current_title": "Orthopedic Surgeon",
-      "company_type": "Other",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/durham-weeks-b8097010b",
-      "location": "Charlotte, North Carolina",
-      "headshot_url": null,
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": null,
-      "sports_functions": [],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Bachelor of Science - BS",
-          "grad_year": 2004,
-          "major": "Neuroscience"
-        }
-      ]
-    },
-    {
       "id": "dwight-dipasquale-2014",
       "name": "Dwight DiPasquale",
       "grad_year": 2014,
@@ -6282,37 +5434,6 @@
           "degree": "Bachelor of Science (B.S.), Evolutionary Anthropology",
           "grad_year": 2014,
           "major": "Evolutionary Anthropology"
-        }
-      ]
-    },
-    {
-      "id": "cd-1001497",
-      "name": "Dylan Ballingall",
-      "grad_year": 2020,
-      "school": "Other",
-      "degree": "Post-Graduate Certificate, Digital Media & Marketing",
-      "major": "Digital Media & Marketing",
-      "current_company": "DraftKings",
-      "current_title": "VIP Account Manager",
-      "company_type": "Sports Betting",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/dylanballingall",
-      "location": "Toronto, Ontario",
-      "headshot_url": "https://media.licdn.com/dms/image/v2/D4E03AQG4vUz7QDpn-A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720637534484?e=1730332800&v=beta&t=rV0-y2McR7fUlaW4U6Q-Z1nqijuXiRYiA2u3l2IE3Ko",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "betting_gaming",
-      "sports_functions": [
-        "sales_account"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Post-Graduate Certificate, Digital Media & Marketing",
-          "grad_year": 2020,
-          "major": "Digital Media & Marketing"
         }
       ]
     },
@@ -6566,43 +5687,6 @@
       ]
     },
     {
-      "id": "cd-38289428",
-      "name": "Emily Gantriis",
-      "grad_year": 2026,
-      "school": "Other",
-      "degree": "Master's degree",
-      "major": "Business Administration and Management, General",
-      "current_company": "bain.com",
-      "current_title": "Incoming Associate Consultant",
-      "company_type": "Other",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/emilygantriis",
-      "location": "Copenhagen Metropolitan Area",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/dd7f9a953517cc2443f66583eef1bb426d1f871877f0a40cea995a88612ee077.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": null,
-      "sports_functions": [
-        "strategy_corpdev"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Master's degree",
-          "grad_year": 2026,
-          "major": "Business Administration and Management, General"
-        },
-        {
-          "school": "Fuqua",
-          "degree": "Master's degree",
-          "grad_year": 2026,
-          "major": "Management"
-        }
-      ]
-    },
-    {
       "id": "cd-40786949",
       "name": "Emily MacDiarmid",
       "grad_year": 2022,
@@ -6669,7 +5753,7 @@
       "school": "Other",
       "degree": "Master of Statistical Science",
       "major": "",
-      "current_company": "WNBA",
+      "current_company": "Phoenix Mercury",
       "current_title": "Data Scientist",
       "company_type": "League",
       "sub_industries": [],
@@ -6940,35 +6024,6 @@
           "degree": "AB",
           "grad_year": 2003,
           "major": null
-        }
-      ]
-    },
-    {
-      "id": "cd-95554026",
-      "name": "Ethan Dennis, NREMT",
-      "grad_year": 2028,
-      "school": "Trinity",
-      "degree": "Bachelor's degree",
-      "major": "Psychology",
-      "current_company": "",
-      "current_title": "Chief Executive Officer",
-      "company_type": "Other",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/ethan-dennis-nremt-ab8962159",
-      "location": "Chicago, Illinois",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/ae1ca9768ffe557bb1c8f8769a1b386c704902d00f593387fb0e3a7faef1b9ea.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": null,
-      "sports_functions": [],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Bachelor's degree",
-          "grad_year": 2028,
-          "major": "Psychology"
         }
       ]
     },
@@ -8605,37 +7660,6 @@
       ]
     },
     {
-      "id": "cd-91231920",
-      "name": "Jacob Kim Fuqua",
-      "grad_year": 2024,
-      "school": "Fuqua",
-      "degree": "Master of Quantitative Management",
-      "major": "Business Analytics",
-      "current_company": "Los Angeles Football Club",
-      "current_title": "Student Data Analyst_Fuqua Capstone",
-      "company_type": "Team",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/jacob-kim-fuqua",
-      "location": "Santa Monica, California",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/c51f16152e103eb0d219570049833742cbe05d0901f6da617f4ac39157c97bd7.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "teams_clubs",
-      "sports_functions": [
-        "data_analytics"
-      ],
-      "all_degrees": [
-        {
-          "school": "Fuqua",
-          "degree": "Master of Quantitative Management",
-          "grad_year": 2024,
-          "major": "Business Analytics"
-        }
-      ]
-    },
-    {
       "id": "cd-52415319",
       "name": "Jacob Levitt",
       "grad_year": 2013,
@@ -8664,37 +7688,6 @@
           "degree": "B.S.",
           "grad_year": 2013,
           "major": "Economics"
-        }
-      ]
-    },
-    {
-      "id": "jacob-sanders-2018",
-      "name": "Jacob Sanders",
-      "grad_year": 2018,
-      "school": "Trinity",
-      "degree": "AB",
-      "major": "",
-      "current_company": "Trion High School",
-      "current_title": "High School Social Studies Teacher",
-      "company_type": "University",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/jacob-sanders72",
-      "location": "Greater Chattanooga, GA",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/ca58984867798c89d8d718507d25ca5c960bc454d11c9fc03b63a2ab7a585c0a.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-04-08",
-      "last_verified": "2026-04-08",
-      "org_category": "collegiate",
-      "sports_functions": [
-        "front_office"
-      ],
-      "all_degrees": [
-        {
-          "school": "Trinity",
-          "degree": "AB",
-          "grad_year": 2018,
-          "major": null
         }
       ]
     },
@@ -9034,66 +8027,6 @@
           "degree": "AB",
           "grad_year": 1996,
           "major": null
-        }
-      ]
-    },
-    {
-      "id": "james-marvel-2017",
-      "name": "James Marvel",
-      "grad_year": 2017,
-      "school": "Trinity",
-      "degree": "AB",
-      "major": "",
-      "current_company": "—",
-      "current_title": "Former Professional Baseball Player",
-      "company_type": "Non-Profit",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/james-marvel-54673a35a",
-      "location": "Raleigh, North Carolina",
-      "headshot_url": "https://media.licdn.com/dms/image/v2/D4E03AQE0RXRHaVxTIQ/profile-displayphoto-shrink_400_400/B4EZYRPdebGgAk-/0/1744045988010?e=1776902400&v=beta&t=Kxf60-Bk-P7invj0S0HET70IO-FN3ryjwScAKbaQxo4",
-      "sports_league_affiliation": null,
-      "added_date": "2026-04-08",
-      "last_verified": "2026-04-08",
-      "org_category": "nonprofit_other",
-      "sports_functions": [
-        "front_office"
-      ],
-      "all_degrees": [
-        {
-          "school": "Trinity",
-          "degree": "AB",
-          "grad_year": 2017,
-          "major": null
-        }
-      ]
-    },
-    {
-      "id": "cd-106687563",
-      "name": "James Merritt",
-      "grad_year": 2027,
-      "school": "Trinity",
-      "degree": "Bachelor's degree",
-      "major": "B.A in Political Science & Cinematic Arts",
-      "current_company": "unitedtalent.com",
-      "current_title": "Incoming 2026 Summer Intern",
-      "company_type": "Other",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/jamessmerritt",
-      "location": "Charlotte, North Carolina",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/a890640376346c8ab18ad473a5cd2677a4b6f2c0726cdb069ca07c869e445372.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": null,
-      "sports_functions": [],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Bachelor's degree",
-          "grad_year": 2027,
-          "major": "B.A in Political Science & Cinematic Arts"
         }
       ]
     },
@@ -9885,69 +8818,6 @@
           "degree": "MBA",
           "grad_year": 2005,
           "major": null
-        }
-      ]
-    },
-    {
-      "id": "cd-79587567",
-      "name": "Jeremy S.",
-      "grad_year": 2021,
-      "school": "Trinity",
-      "degree": "Bachelor of Arts - BA",
-      "major": "Public Policy, Double Minor - Economics and History",
-      "current_company": "National Basketball Association (NBA)",
-      "current_title": "Senior Manager, Team Strategy & Analytics",
-      "company_type": "League",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/ACoAABn3oW8BM0ZiYL1F6ZYB1--HwIrR7d2R9OU",
-      "location": "New York, New York",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/a9155e65fc88245ce01d6361eae77c1f8ba73670b7a6b9899c7343f4ecea4156.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "leagues_governing",
-      "sports_functions": [
-        "strategy_corpdev",
-        "data_analytics"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Bachelor of Arts - BA",
-          "grad_year": 2021,
-          "major": "Public Policy, Double Minor - Economics and History"
-        }
-      ]
-    },
-    {
-      "id": "cd-117965272",
-      "name": "Jeremy Schreck",
-      "grad_year": 2017,
-      "school": "Trinity",
-      "degree": "Bachelor of Science (B.S.)",
-      "major": "Computer Science + Electrical and Computer Engineering",
-      "current_company": "practical-pain-solutions.com",
-      "current_title": "Owner",
-      "company_type": "Other",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/jeremy-schreck",
-      "location": "Los Angeles Metropolitan Area",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/082160d5be71914005774c420259b4e5f9f697bbc250c7bd5cf8264580dce44e.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": null,
-      "sports_functions": [
-        "product_eng"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Bachelor of Science (B.S.)",
-          "grad_year": 2017,
-          "major": "Computer Science + Electrical and Computer Engineering"
         }
       ]
     },
@@ -11061,35 +9931,6 @@
       ]
     },
     {
-      "id": "cd-118608828",
-      "name": "Justin Colon",
-      "grad_year": 2026,
-      "school": "Trinity",
-      "degree": "Bachelor of Science - BS",
-      "major": "Biology, Chemistry",
-      "current_company": "phide.org",
-      "current_title": "PhiDE Member",
-      "company_type": "Other",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/justin-colon-b8632126b",
-      "location": "San Antonio, Texas",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/5a4a9cb02a2011d79cedc8722a59caf42114db656a8da1df0452684f585f57dd.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": null,
-      "sports_functions": [],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Bachelor of Science - BS",
-          "grad_year": 2026,
-          "major": "Biology, Chemistry"
-        }
-      ]
-    },
-    {
       "id": "cd-552132520",
       "name": "Justin P.",
       "grad_year": 2024,
@@ -11431,39 +10272,6 @@
           "degree": "Bachelor of Arts - BA",
           "grad_year": null,
           "major": "Psychology major, Sociology minor, Marketing and Managment certificate"
-        }
-      ]
-    },
-    {
-      "id": "cd-86861992",
-      "name": "Kate Haver",
-      "grad_year": 2027,
-      "school": "Trinity",
-      "degree": "Bachelor of Arts - BA, Economics, Visual Media Studies, Markets & Management Studies Certificate",
-      "major": "Economics, Visual Media Studies, Markets & Management Studies Certificate",
-      "current_company": "wbd.com",
-      "current_title": "Incoming Ad Sales Insights Intern",
-      "company_type": "Other",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/kate-haver-397b83279",
-      "location": "Scottsdale, Arizona",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/1383f0aea86e6c63d37bd5ebf0010bbde415902c4e1e7dc40499322b0e06c06e.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": null,
-      "sports_functions": [
-        "sales_account",
-        "media_content",
-        "data_analytics"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Bachelor of Arts - BA, Economics, Visual Media Studies, Markets & Management Studies Certificate",
-          "grad_year": 2027,
-          "major": "Economics, Visual Media Studies, Markets & Management Studies Certificate"
         }
       ]
     },
@@ -12040,37 +10848,6 @@
       ]
     },
     {
-      "id": "cd-107900632",
-      "name": "Kevin Mao",
-      "grad_year": null,
-      "school": "Trinity",
-      "degree": "Bachelor of Science - BS",
-      "major": "Computer Science",
-      "current_company": "Genius Sports",
-      "current_title": "Incoming Software Engineer Intern",
-      "company_type": "Startup",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/kevin-mao-56bbb320b",
-      "location": "Durham, North Carolina",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/48c91a52862845fd4cff158da9d16644428e534c9066114610e4a261f2d5d989.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "sports_tech_data",
-      "sports_functions": [
-        "product_eng"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Bachelor of Science - BS",
-          "grad_year": null,
-          "major": "Computer Science"
-        }
-      ]
-    },
-    {
       "id": "cd-201802291",
       "name": "Kevin Wang",
       "grad_year": 2011,
@@ -12160,37 +10937,6 @@
           "degree": "AB",
           "grad_year": 2016,
           "major": null
-        }
-      ]
-    },
-    {
-      "id": "cd-118904435",
-      "name": "Kiran Pathy",
-      "grad_year": 2027,
-      "school": "Trinity",
-      "degree": "Bachelor of Arts - BA in Political Science, Minor in Statistical Science",
-      "major": "Minor in Statistical Science",
-      "current_company": "Major League Baseball (MLB)",
-      "current_title": "Baseball Operations Intern",
-      "company_type": "League",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/kiran-pathy",
-      "location": "New York City Metropolitan Area",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/edc4024039b8a17fdca59756ba34dd2281abcbaa8f57f822e5883d9b092298fc.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "leagues_governing",
-      "sports_functions": [
-        "front_office"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Bachelor of Arts - BA in Political Science, Minor in Statistical Science",
-          "grad_year": 2027,
-          "major": "Minor in Statistical Science"
         }
       ]
     },
@@ -13020,37 +11766,6 @@
       ]
     },
     {
-      "id": "cd-102892543",
-      "name": "Lianna Carter",
-      "grad_year": 2021,
-      "school": "Other",
-      "degree": "Paralegal Studies Program",
-      "major": "",
-      "current_company": "NASCAR",
-      "current_title": "Corporate Paralegal",
-      "company_type": "League",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/lianna-carter-57b659175",
-      "location": "Charlotte Metro",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/9e72f1ab88511a7a2574e8d28ccf67f9b7c23bc62aad2f2c87860477abd871fe.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "leagues_governing",
-      "sports_functions": [
-        "legal_rep"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Paralegal Studies Program",
-          "grad_year": 2021,
-          "major": null
-        }
-      ]
-    },
-    {
       "id": "cd-125355163",
       "name": "Lily Schoen",
       "grad_year": 2023,
@@ -13444,37 +12159,6 @@
           "school": "Trinity",
           "degree": "AB",
           "grad_year": 2017,
-          "major": null
-        }
-      ]
-    },
-    {
-      "id": "maddie-nielsen-2022",
-      "name": "Maddie Nielsen",
-      "grad_year": 2022,
-      "school": "Fuqua",
-      "degree": "",
-      "major": "",
-      "current_company": "NASCAR",
-      "current_title": "Manager, Digital Product and Platform",
-      "company_type": "League",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/madeline-hurt333",
-      "location": "Charlotte, North Carolina",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/09b60f2cc434f34928be7cf1858f217dfbe828e987d53ce2952e27eee0f836d8.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-04-08",
-      "last_verified": "2026-04-08",
-      "org_category": "leagues_governing",
-      "sports_functions": [
-        "product_eng"
-      ],
-      "all_degrees": [
-        {
-          "school": "Fuqua",
-          "degree": null,
-          "grad_year": 2022,
           "major": null
         }
       ]
@@ -14630,37 +13314,6 @@
       ]
     },
     {
-      "id": "cd-117969655",
-      "name": "Michael Zhou",
-      "grad_year": null,
-      "school": "Other",
-      "degree": "",
-      "major": "ECE & CS",
-      "current_company": "DraftKings",
-      "current_title": "Incoming Software Engineering Intern",
-      "company_type": "Sports Betting",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/michaelzhou05",
-      "location": "Fairfax, Virginia",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/c71965d41d47df655555d73ada6d5381e762ace5701ac92e8e547e936d4cd189.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "betting_gaming",
-      "sports_functions": [
-        "product_eng"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": null,
-          "grad_year": null,
-          "major": "ECE & CS"
-        }
-      ]
-    },
-    {
       "id": "michelle-anumba-2016",
       "name": "Michelle Anumba",
       "grad_year": 2016,
@@ -15388,37 +14041,6 @@
       ]
     },
     {
-      "id": "cd-2678683",
-      "name": "Nelly Garces",
-      "grad_year": 2026,
-      "school": "Other",
-      "degree": "",
-      "major": "",
-      "current_company": "",
-      "current_title": "Duke Armenians",
-      "company_type": "Other",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/nellygarces",
-      "location": "Washington DC-Baltimore Area",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/569ce546ec48b47c77cca50d52012d417e3bbafc87ceede03e48992a9297776e.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": null,
-      "sports_functions": [
-        "media_content"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": null,
-          "grad_year": 2026,
-          "major": null
-        }
-      ]
-    },
-    {
       "id": "nicholas-mahaffey-2019",
       "name": "Nicholas Mahaffey",
       "grad_year": 2019,
@@ -15482,37 +14104,6 @@
       ]
     },
     {
-      "id": "cd-97191621",
-      "name": "Nicholas Trigger",
-      "grad_year": 2026,
-      "school": "Trinity",
-      "degree": "Bachelor of Engineering - BE",
-      "major": "Biomedical/Medical Engineering",
-      "current_company": "U.S. Soccer Federation",
-      "current_title": "Soccer Referee",
-      "company_type": "League",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/nicholas-trigger-7148651aa",
-      "location": "Durham, North Carolina",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/f950f41d23450d57205cf4284e20483c3ad3834a89a5bc2a15798367191cc130.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "leagues_governing",
-      "sports_functions": [
-        "product_eng"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Bachelor of Engineering - BE",
-          "grad_year": 2026,
-          "major": "Biomedical/Medical Engineering"
-        }
-      ]
-    },
-    {
       "id": "cd-118398413",
       "name": "Nick Blatchford",
       "grad_year": 1995,
@@ -15538,37 +14129,6 @@
           "degree": "Bachelor's degree",
           "grad_year": 1995,
           "major": null
-        }
-      ]
-    },
-    {
-      "id": "cd-237147487",
-      "name": "Nick Fajardo",
-      "grad_year": 2026,
-      "school": "Fuqua",
-      "degree": "Master of Business Administration - MBA",
-      "major": "Business Administration and Management, General",
-      "current_company": "National Basketball Association (NBA)",
-      "current_title": "NBA Future Sales Stars Program",
-      "company_type": "League",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/nickjfajardo",
-      "location": "Raleigh-Durham-Chapel Hill Area",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/7fff95cfb8f889dd9f8df2da0f6a7dac8d107b86526b69c48c3a6b2258674a96.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "leagues_governing",
-      "sports_functions": [
-        "sales_account"
-      ],
-      "all_degrees": [
-        {
-          "school": "Fuqua",
-          "degree": "Master of Business Administration - MBA",
-          "grad_year": 2026,
-          "major": "Business Administration and Management, General"
         }
       ]
     },
@@ -15638,35 +14198,6 @@
           "degree": "Master in Enivronmental Management",
           "grad_year": 2014,
           "major": "Environmental Economics and Policy"
-        }
-      ]
-    },
-    {
-      "id": "cd-118327537",
-      "name": "Nicole Chronis",
-      "grad_year": 2026,
-      "school": "Trinity",
-      "degree": "Bachelor's degree",
-      "major": "Public Policy Analysis, Psychology",
-      "current_company": "flowcorps.com",
-      "current_title": "Pilates Instructor",
-      "company_type": "Other",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/nicole-chronis",
-      "location": "Durham, North Carolina",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/c1cf5b41807ab7d8e806e78d4e8439114647e70ed23b3c086a784842b5d27a6c.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": null,
-      "sports_functions": [],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Bachelor's degree",
-          "grad_year": 2026,
-          "major": "Public Policy Analysis, Psychology"
         }
       ]
     },
@@ -16018,69 +14549,6 @@
       ]
     },
     {
-      "id": "cd-97061512",
-      "name": "Paul Pecen",
-      "grad_year": 2022,
-      "school": "Fuqua",
-      "degree": "",
-      "major": "Decentralized Finance (DeFi)",
-      "current_company": "key.com",
-      "current_title": "Private Client Services",
-      "company_type": "Other",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/pecen",
-      "location": "South Bend-Mishawaka Region",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/2b197de71081931f8ab17f561273a59a58bad4ea86b9a38f8bec087e9bc03c8b.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": null,
-      "sports_functions": [
-        "sales_account",
-        "investing_deal"
-      ],
-      "all_degrees": [
-        {
-          "school": "Fuqua",
-          "degree": null,
-          "grad_year": 2022,
-          "major": "Decentralized Finance (DeFi)"
-        }
-      ]
-    },
-    {
-      "id": "cd-79729282",
-      "name": "Paulina Kulupa",
-      "grad_year": null,
-      "school": "Other",
-      "degree": "Certificate",
-      "major": "Computer Programming",
-      "current_company": "StubHub",
-      "current_title": "Senior Product Associate",
-      "company_type": "Startup",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/paulina-kulupa-950912b8",
-      "location": "Limerick, County Limerick",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/7da4c95c8fc9a0e7d9057a79b29fc942657df1ebf0b78f883964455c967d0f2c.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "sports_tech_data",
-      "sports_functions": [
-        "product_eng"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Certificate",
-          "grad_year": null,
-          "major": "Computer Programming"
-        }
-      ]
-    },
-    {
       "id": "cd-2584534",
       "name": "Peter Land",
       "grad_year": 1983,
@@ -16300,38 +14768,6 @@
           "degree": "AB",
           "grad_year": 1995,
           "major": null
-        }
-      ]
-    },
-    {
-      "id": "cd-79578744",
-      "name": "Phoebe Sauer",
-      "grad_year": null,
-      "school": "Other",
-      "degree": "Certificate",
-      "major": "Business of Sport",
-      "current_company": "National Basketball Association (NBA)",
-      "current_title": "Global Partnerships & Media",
-      "company_type": "League",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/phoebesauer",
-      "location": "New York City Metropolitan Area",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/b217eea81424ed70d8d0798cf1af7a2f9bd03a24656c2c05337ee45580e9fc47.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "leagues_governing",
-      "sports_functions": [
-        "partnerships",
-        "media_content"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Certificate",
-          "grad_year": null,
-          "major": "Business of Sport"
         }
       ]
     },
@@ -16650,38 +15086,6 @@
       ]
     },
     {
-      "id": "cd-1080551",
-      "name": "Rebecca (Bex) Smith",
-      "grad_year": 2003,
-      "school": "Trinity",
-      "degree": "BA Economics",
-      "major": "Economics",
-      "current_company": "zone7.ai",
-      "current_title": "Strategic Advisor",
-      "company_type": "Other",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/ACoAAAEwEV0BrxujA0n_DPPP54EoAa6MHJGa19k",
-      "location": "United Kingdom",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/b07af521ee68a85ca5e4364beb13bcb39c9a0dded098729fe6e6d0b15aa8dd13.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": null,
-      "sports_functions": [
-        "strategy_corpdev",
-        "investing_deal"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "BA Economics",
-          "grad_year": 2003,
-          "major": "Economics"
-        }
-      ]
-    },
-    {
       "id": "rebecca-smaller-2018",
       "name": "Rebecca Smaller",
       "grad_year": 2018,
@@ -16782,37 +15186,6 @@
           "degree": "Intern",
           "grad_year": 2007,
           "major": "General Surgery"
-        }
-      ]
-    },
-    {
-      "id": "cd-121980856",
-      "name": "Rey Dos Santos",
-      "grad_year": 2016,
-      "school": "Other",
-      "degree": "Coursera Certification: Analytic Techniques for Business",
-      "major": "Excel, Tableau and MySQL",
-      "current_company": "Caesars Digital",
-      "current_title": "IT Project Manager",
-      "company_type": "Sports Betting",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/rey-dos-santos",
-      "location": "Las Vegas, Nevada",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/40eb110253d1221f77935af474470ab650eedf8c2d3cc15d93b697dc452d0408.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "betting_gaming",
-      "sports_functions": [
-        "product_eng"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Coursera Certification: Analytic Techniques for Business",
-          "grad_year": 2016,
-          "major": "Excel, Tableau and MySQL"
         }
       ]
     },
@@ -18046,37 +16419,6 @@
       ]
     },
     {
-      "id": "shannon-rowbury-2008",
-      "name": "Shannon Rowbury",
-      "grad_year": 2008,
-      "school": "Trinity",
-      "degree": "AB",
-      "major": "",
-      "current_company": "Sasquatch Books",
-      "current_title": "Published Author | Strong as a Mother",
-      "company_type": "Media",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/shannonrowbury",
-      "location": "San Francisco, California",
-      "headshot_url": "https://media.licdn.com/dms/image/v2/D5603AQGBJTE04LoDbg/profile-displayphoto-scale_400_400/B56Zujc_8_HkAk-/0/1767973847351?e=1776902400&v=beta&t=1_Fb0qOJdxw7HUDdrtE9yQ2LiikUoo-iAqqc6wIzX6I",
-      "sports_league_affiliation": null,
-      "added_date": "2026-04-08",
-      "last_verified": "2026-04-08",
-      "org_category": "media_broadcast",
-      "sports_functions": [
-        "media_content"
-      ],
-      "all_degrees": [
-        {
-          "school": "Trinity",
-          "degree": "AB",
-          "grad_year": 2008,
-          "major": null
-        }
-      ]
-    },
-    {
       "id": "cd-122569874",
       "name": "Sheila Fallon",
       "grad_year": 2009,
@@ -18238,37 +16580,6 @@
       ]
     },
     {
-      "id": "cd-2569994",
-      "name": "Shreyans Gupta",
-      "grad_year": 2026,
-      "school": "Trinity",
-      "degree": "Bachelor's degree",
-      "major": "Major in Statistics (Data Science Concentration), Minor in CS AI/ML",
-      "current_company": "National Basketball Association (NBA)",
-      "current_title": "Summer 2025 Intern",
-      "company_type": "League",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/shreyansguptaa",
-      "location": "Raleigh-Durham-Chapel Hill Area",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/1a23128c37770e221b39f9c88b860d384b3667f92ca4db2d6cef1ce5772501ee.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "leagues_governing",
-      "sports_functions": [
-        "front_office"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Bachelor's degree",
-          "grad_year": 2026,
-          "major": "Major in Statistics (Data Science Concentration), Minor in CS AI/ML"
-        }
-      ]
-    },
-    {
       "id": "cd-63410455",
       "name": "Shweta Sabade",
       "grad_year": null,
@@ -18328,35 +16639,6 @@
           "degree": "Master of Arts (M.A.)",
           "grad_year": 2018,
           "major": "Liberal Arts and Sciences/Liberal Studies"
-        }
-      ]
-    },
-    {
-      "id": "cd-4113588",
-      "name": "Siahara Shyne Mahipos - Carter",
-      "grad_year": null,
-      "school": "Medicine",
-      "degree": "",
-      "major": "",
-      "current_company": "",
-      "current_title": "Head Of Operations",
-      "company_type": "Other",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/siahara-shyne-mahipos-carter-b958871a8",
-      "location": "Texas",
-      "headshot_url": null,
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": null,
-      "sports_functions": [],
-      "all_degrees": [
-        {
-          "school": "Medicine",
-          "degree": null,
-          "grad_year": null,
-          "major": null
         }
       ]
     },
@@ -18450,35 +16732,6 @@
           "degree": "Masters",
           "grad_year": 2009,
           "major": "Engineering Management"
-        }
-      ]
-    },
-    {
-      "id": "cd-115360175",
-      "name": "Sophia Roud",
-      "grad_year": 2026,
-      "school": "Trinity",
-      "degree": "Bachelor of Science - BS",
-      "major": "Applied Science & Health Communication",
-      "current_company": "enginprogram.org",
-      "current_title": "Language Tutor",
-      "company_type": "Other",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/sophia-roud-0190a3330",
-      "location": "Durham, North Carolina",
-      "headshot_url": "https://crustdata-media.s3.amazonaws.com/person/e33e0ecb0d23a6135e6a6ad4f38fb18d6f76ed9f1a2eed21abf634053a53a0fb.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": null,
-      "sports_functions": [],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Bachelor of Science - BS",
-          "grad_year": 2026,
-          "major": "Applied Science & Health Communication"
         }
       ]
     },
@@ -19794,37 +18047,6 @@
       ]
     },
     {
-      "id": "cd-70354832",
-      "name": "Tiffany Richardson  S.",
-      "grad_year": 2026,
-      "school": "Other",
-      "degree": "Continuing Studies Program",
-      "major": "Legal Assistant/Paralegal Classroom Program",
-      "current_company": "Major League Baseball (MLB)",
-      "current_title": "Mid-Track Operator",
-      "company_type": "League",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/tiffanyrichardsonphd",
-      "location": "Minneapolis, Minnesota",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/b1665b3278a898c1bcd60eca22ce4c8a106827c7fb22c85514fabd98eea79fb4.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "leagues_governing",
-      "sports_functions": [
-        "front_office"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Continuing Studies Program",
-          "grad_year": 2026,
-          "major": "Legal Assistant/Paralegal Classroom Program"
-        }
-      ]
-    },
-    {
       "id": "cd-35701432",
       "name": "Tim Britton",
       "grad_year": 2009,
@@ -20389,37 +18611,6 @@
           "degree": "BS",
           "grad_year": 2007,
           "major": null
-        }
-      ]
-    },
-    {
-      "id": "cd-119365856",
-      "name": "Whit R.",
-      "grad_year": 2023,
-      "school": "Other",
-      "degree": "Online Learning Administration Certificate",
-      "major": "Online Learning Administration",
-      "current_company": "Nike",
-      "current_title": "Workday Recruiting and Talent Management - Engineer (Stretch)",
-      "company_type": "Brand",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/wnrandall",
-      "location": "Portland",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/2bf960890624f9fc465b599d12d89d7be85354866d8189a05edd02c9d081fa2a.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "brands_sponsors",
-      "sports_functions": [
-        "product_eng"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Online Learning Administration Certificate",
-          "grad_year": 2023,
-          "major": "Online Learning Administration"
         }
       ]
     },
@@ -20996,6 +19187,6 @@
   ],
   "meta": {
     "last_updated": "2026-07-04",
-    "total_count": 667
+    "total_count": 609
   }
 }
