@@ -6184,50 +6184,15 @@
       ]
     },
     {
-      "id": "cd-120568627",
-      "name": "Dave Harding",
-      "grad_year": 2012,
-      "school": "Trinity",
-      "degree": "Bachelor’s Degree",
-      "major": "Public Policy, Minor in Arabic",
-      "current_company": "duke.edu",
-      "current_title": "Executive Director of Blue Devil Network",
-      "company_type": "Other",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/ACoAAAgz0wgB5NMsB7YPfQdq-72_FlzOKxPgohU",
-      "location": "Raleigh-Durham-Chapel Hill Area",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/770e9d3478af04056ee5dd333ac1fdff464f867817d55fcd1b70f40c51eaa827.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": null,
-      "sports_functions": [],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Bachelor’s Degree",
-          "grad_year": 2012,
-          "major": "Public Policy, Minor in Arabic"
-        },
-        {
-          "school": "Graduate",
-          "degree": "Master’s Degree",
-          "grad_year": 2014,
-          "major": "Political Science"
-        }
-      ]
-    },
-    {
       "id": "dave-harding-jr-2014",
       "name": "Dave Harding, Jr.",
       "grad_year": 2014,
       "school": "Trinity",
       "degree": "AB",
       "major": "",
-      "current_company": "LEARFIELD",
-      "current_title": "Duke Football Analyst",
-      "company_type": "Agency",
+      "current_company": "Duke University",
+      "current_title": "Executive Director, Blue Devil Network",
+      "company_type": "University",
       "sub_industries": [],
       "seniority_level": "Mid",
       "linkedin_url": "https://www.linkedin.com/in/davehardingjr",
@@ -6236,7 +6201,7 @@
       "sports_league_affiliation": null,
       "added_date": "2026-04-08",
       "last_verified": "2026-04-08",
-      "org_category": "agencies_rep",
+      "org_category": "collegiate",
       "sports_functions": [
         "legal_rep"
       ],
@@ -23981,6 +23946,6 @@
   ],
   "meta": {
     "last_updated": "2026-07-03",
-    "total_count": 764
+    "total_count": 763
   }
 }
