@@ -201,7 +201,7 @@
       "school": "Trinity",
       "degree": "AB",
       "major": "",
-      "current_company": "Web.com Tour",
+      "current_company": "PGA TOUR",
       "current_title": "Professional Golfer",
       "company_type": "League",
       "sub_industries": [],
@@ -487,8 +487,8 @@
       "school": "Other",
       "degree": "(1) Political Science  (2) Sociology (3) Markets & Mgmt (minor)",
       "major": "",
-      "current_company": "Major League Soccer",
-      "current_title": "President, MLS NEXT",
+      "current_company": "MLS NEXT Pro",
+      "current_title": "President",
       "company_type": "League",
       "sub_industries": [],
       "seniority_level": "Mid",
@@ -1617,9 +1617,9 @@
       "school": "Trinity",
       "degree": "Bachelor of Arts - BA",
       "major": "Computer Science and Psychology",
-      "current_company": "Major League Baseball (MLB)",
+      "current_company": "Atlanta Braves",
       "current_title": "Minor League Video & Technology Trainee",
-      "company_type": "League",
+      "company_type": "Team",
       "sub_industries": [],
       "seniority_level": "Mid",
       "linkedin_url": "https://www.linkedin.com/in/benjamin-c-koch",
@@ -1628,7 +1628,7 @@
       "sports_league_affiliation": null,
       "added_date": "2026-06-22",
       "last_verified": null,
-      "org_category": "leagues_governing",
+      "org_category": "teams_clubs",
       "sports_functions": [
         "media_content"
       ],
@@ -3261,8 +3261,8 @@
       "school": "Trinity",
       "degree": "AB",
       "major": "",
-      "current_company": "Southern California Golf Associatoin",
-      "current_title": "Market & Communications Coordinator",
+      "current_company": "Southern California Golf Association",
+      "current_title": "Marketing Communications Lead",
       "company_type": "League",
       "sub_industries": [],
       "seniority_level": "Mid",
@@ -4728,9 +4728,9 @@
       "school": "Trinity",
       "degree": "Bachelor's degree",
       "major": "Political Science",
-      "current_company": "National Basketball Association (NBA)",
+      "current_company": "Brooklyn Nets",
       "current_title": "Basketball Operations Assistant",
-      "company_type": "League",
+      "company_type": "Team",
       "sub_industries": [],
       "seniority_level": "Mid",
       "linkedin_url": "https://www.linkedin.com/in/david-koch-b4bb2b1b6",
@@ -4739,7 +4739,7 @@
       "sports_league_affiliation": null,
       "added_date": "2026-06-22",
       "last_verified": null,
-      "org_category": "leagues_governing",
+      "org_category": "teams_clubs",
       "sports_functions": [
         "front_office"
       ],
@@ -4821,9 +4821,9 @@
       "school": "Other",
       "degree": "Doctor of Philosophy - PhD",
       "major": "Political Science",
-      "current_company": "National Basketball Association (NBA)",
+      "current_company": "Boston Celtics",
       "current_title": "Director of Basketball Analytics",
-      "company_type": "League",
+      "company_type": "Team",
       "sub_industries": [],
       "seniority_level": "Mid",
       "linkedin_url": "https://www.linkedin.com/in/david-sparks-38633313",
@@ -4832,7 +4832,7 @@
       "sports_league_affiliation": null,
       "added_date": "2026-06-22",
       "last_verified": null,
-      "org_category": "leagues_governing",
+      "org_category": "teams_clubs",
       "sports_functions": [
         "data_analytics"
       ],
@@ -6716,37 +6716,6 @@
           "degree": "B.A.",
           "grad_year": 1985,
           "major": "Economics"
-        }
-      ]
-    },
-    {
-      "id": "cd-44699486",
-      "name": "Gaurav Law",
-      "grad_year": 2027,
-      "school": "Other",
-      "degree": "Master's Degree",
-      "major": "Data Science",
-      "current_company": "National Basketball Association (NBA)",
-      "current_title": "Future Analytics Stars Program",
-      "company_type": "League",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/gaurav-law",
-      "location": "Glendale, California",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/750781ad25bec13b7c9f4eb9fc2c672db1d4fb6e59fc64b429455b99c9fb9980.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "leagues_governing",
-      "sports_functions": [
-        "data_analytics"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Master's Degree",
-          "grad_year": 2027,
-          "major": "Data Science"
         }
       ]
     },
@@ -9137,8 +9106,8 @@
       "school": "Trinity",
       "degree": "AB",
       "major": "",
-      "current_company": "NHL",
-      "current_title": "Business Development, Solutions",
+      "current_company": "National Hockey League (NHL)",
+      "current_title": "Senior Manager, Integrated Solutions",
       "company_type": "League",
       "sub_industries": [],
       "seniority_level": "Mid",
@@ -9253,37 +9222,6 @@
       ]
     },
     {
-      "id": "cd-97346359",
-      "name": "John McKenna, Senior Commercial Lending Exec",
-      "grad_year": 1980,
-      "school": "Fuqua",
-      "degree": "MBA",
-      "major": "Finance",
-      "current_company": "U.S. Soccer Federation",
-      "current_title": "USSF Certifed Grade Referee, & Regional Futsal Referee",
-      "company_type": "League",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/john-mckenna-senior-commercial-lending-exec-4ba2b46",
-      "location": "Newton Centre, Massachusetts",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/3a8cd3fe8d170e152c7bc7f31b7d739b6e6d2cdd2108adef8a6bab836e36e772.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "leagues_governing",
-      "sports_functions": [
-        "front_office"
-      ],
-      "all_degrees": [
-        {
-          "school": "Fuqua",
-          "degree": "MBA",
-          "grad_year": 1980,
-          "major": "Finance"
-        }
-      ]
-    },
-    {
       "id": "cd-32492171",
       "name": "John Park",
       "grad_year": null,
@@ -9322,9 +9260,9 @@
       "school": "Trinity",
       "degree": "BS",
       "major": "Economics",
-      "current_company": "National Hockey League (NHL)",
+      "current_company": "Pittsburgh Penguins",
       "current_title": "Vice President, Arena Operations",
-      "company_type": "League",
+      "company_type": "Team",
       "sub_industries": [],
       "seniority_level": "Mid",
       "linkedin_url": "https://www.linkedin.com/in/john-sodini-555a2320",
@@ -9333,7 +9271,7 @@
       "sports_league_affiliation": null,
       "added_date": "2026-06-22",
       "last_verified": null,
-      "org_category": "leagues_governing",
+      "org_category": "teams_clubs",
       "sports_functions": [
         "front_office"
       ],
@@ -10785,38 +10723,6 @@
       ]
     },
     {
-      "id": "cd-64564912",
-      "name": "Kevin Krasinski, MD, FAAOS",
-      "grad_year": 2008,
-      "school": "Other",
-      "degree": "Postgraduate Degree",
-      "major": "Orthopedic Sports Medicine Fellowship Program",
-      "current_company": "Major League Baseball (MLB)",
-      "current_title": "Orthopaedic Surgery Consultant",
-      "company_type": "League",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/kevin-krasinski-md-faaos-3659a344",
-      "location": "Burlington, North Carolina",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/b2f45de5186f50acc477408069457536b6930d1461aeab1d00864094de7a0c51.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "leagues_governing",
-      "sports_functions": [
-        "strategy_corpdev",
-        "health_athlete"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Postgraduate Degree",
-          "grad_year": 2008,
-          "major": "Orthopedic Sports Medicine Fellowship Program"
-        }
-      ]
-    },
-    {
       "id": "kevin-laforce-2004",
       "name": "Kevin LaForce",
       "grad_year": 2004,
@@ -11072,9 +10978,9 @@
       "school": "Other",
       "degree": "Doctor of Philosophy (Ph.D.)",
       "major": "Statistical Science",
-      "current_company": "Major League Baseball (MLB)",
+      "current_company": "Cleveland Guardians",
       "current_title": "Vice President, Baseball Research and Development",
-      "company_type": "League",
+      "company_type": "Team",
       "sub_industries": [],
       "seniority_level": "Mid",
       "linkedin_url": "https://www.linkedin.com/in/kyleburris",
@@ -11083,7 +10989,7 @@
       "sports_league_affiliation": null,
       "added_date": "2026-06-22",
       "last_verified": null,
-      "org_category": "leagues_governing",
+      "org_category": "teams_clubs",
       "sports_functions": [
         "front_office"
       ],
@@ -11399,9 +11305,9 @@
       "school": "Trinity",
       "degree": "Bachelor's degree",
       "major": "Psychology",
-      "current_company": "Major League Baseball (MLB)",
+      "current_company": "Atlanta Braves",
       "current_title": "Foundation Intern",
-      "company_type": "League",
+      "company_type": "Team",
       "sub_industries": [],
       "seniority_level": "Mid",
       "linkedin_url": "https://www.linkedin.com/in/21laurena",
@@ -11410,7 +11316,7 @@
       "sports_league_affiliation": null,
       "added_date": "2026-06-22",
       "last_verified": null,
-      "org_category": "leagues_governing",
+      "org_category": "teams_clubs",
       "sports_functions": [
         "front_office"
       ],
@@ -13948,9 +13854,9 @@
       "school": "Trinity",
       "degree": "Bachelor of Arts - BA",
       "major": "History, Mathematics (minor)",
-      "current_company": "Major League Baseball (MLB)",
+      "current_company": "Cleveland Guardians",
       "current_title": "Vice President, Hitting",
-      "company_type": "League",
+      "company_type": "Team",
       "sub_industries": [],
       "seniority_level": "Mid",
       "linkedin_url": "https://www.linkedin.com/in/nate-freiman-013862132",
@@ -13959,7 +13865,7 @@
       "sports_league_affiliation": null,
       "added_date": "2026-06-22",
       "last_verified": null,
-      "org_category": "leagues_governing",
+      "org_category": "teams_clubs",
       "sports_functions": [
         "front_office"
       ],
@@ -14576,37 +14482,6 @@
           "degree": "Bachelor of Arts, cum laude",
           "grad_year": 1983,
           "major": null
-        }
-      ]
-    },
-    {
-      "id": "cd-2547441",
-      "name": "Peter Vaccarella",
-      "grad_year": 2003,
-      "school": "Trinity",
-      "degree": "BS",
-      "major": "Economics, Computer Science",
-      "current_company": "National Football League (NFL)",
-      "current_title": "Player Health & Safety - Washington Commanders - IVRS Head",
-      "company_type": "League",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/petervaccarella",
-      "location": "McLean, Virginia",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/95e6b293d3b28d998397f5eafc3cfb9b8f21a7d29e7380defc43da56fc60832e.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "leagues_governing",
-      "sports_functions": [
-        "strategy_corpdev"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "BS",
-          "grad_year": 2003,
-          "major": "Economics, Computer Science"
         }
       ]
     },
@@ -16935,9 +16810,9 @@
       "school": "Other",
       "degree": "",
       "major": "",
-      "current_company": "National Basketball Association (NBA)",
+      "current_company": "Boston Celtics",
       "current_title": "Managing Partner & Co-Owner",
-      "company_type": "League",
+      "company_type": "Team",
       "sub_industries": [],
       "seniority_level": "Mid",
       "linkedin_url": "https://www.linkedin.com/in/stevepagliuca",
@@ -16946,7 +16821,7 @@
       "sports_league_affiliation": null,
       "added_date": "2026-06-22",
       "last_verified": null,
-      "org_category": "leagues_governing",
+      "org_category": "teams_clubs",
       "sports_functions": [
         "investing_deal"
       ],
@@ -17629,8 +17504,8 @@
       "school": "Trinity",
       "degree": "AB",
       "major": "",
-      "current_company": "PGA Tour, Inc.",
-      "current_title": "Manager, Player Relations & Administration",
+      "current_company": "PGA TOUR",
+      "current_title": "Manager, PGA TOUR Champions Player Relations & Administration",
       "company_type": "League",
       "sub_industries": [],
       "seniority_level": "Mid",
@@ -18084,9 +17959,9 @@
       "school": "Medicine",
       "degree": "Doctor of Physical Therapy",
       "major": "",
-      "current_company": "National Basketball Association (NBA)",
+      "current_company": "Boston Celtics",
       "current_title": "Physical Therapist",
-      "company_type": "League",
+      "company_type": "Team",
       "sub_industries": [],
       "seniority_level": "Mid",
       "linkedin_url": "https://www.linkedin.com/in/trac-norris-pt-dpt-scs-cscs-a41029248",
@@ -18095,7 +17970,7 @@
       "sports_league_affiliation": null,
       "added_date": "2026-06-22",
       "last_verified": null,
-      "org_category": "leagues_governing",
+      "org_category": "teams_clubs",
       "sports_functions": [
         "health_athlete"
       ],
@@ -18178,7 +18053,7 @@
       "degree": "Master of Science - MS",
       "major": "Statistics",
       "current_company": "National Basketball Association (NBA)",
-      "current_title": "Head Data Analyst",
+      "current_title": "Player Health Data Analyst",
       "company_type": "League",
       "sub_industries": [],
       "seniority_level": "Mid",
@@ -18455,38 +18330,6 @@
           "degree": "Master of Business Adminstration",
           "grad_year": null,
           "major": null
-        }
-      ]
-    },
-    {
-      "id": "cd-121340253",
-      "name": "Vestinia Bridges",
-      "grad_year": 1987,
-      "school": "Trinity",
-      "degree": "Bachelor of Science (BS)",
-      "major": "Chemistry",
-      "current_company": "National Basketball Association (NBA)",
-      "current_title": "Captial City Go-Go Orthopaedic Physician",
-      "company_type": "League",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/vestinia-bridges-89465572",
-      "location": "Upper Marlboro, Maryland",
-      "headshot_url": "https://crustdata-media.s3.amazonaws.com/person/00d97edc0536afbbeffe2b4163a2b37953d1208d26f6a36bbe4d48a8cc3e7d6c.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "leagues_governing",
-      "sports_functions": [
-        "investing_deal",
-        "health_athlete"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Bachelor of Science (BS)",
-          "grad_year": 1987,
-          "major": "Chemistry"
         }
       ]
     },
@@ -19187,6 +19030,6 @@
   ],
   "meta": {
     "last_updated": "2026-07-04",
-    "total_count": 609
+    "total_count": 604
   }
 }
