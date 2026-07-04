@@ -24,6 +24,18 @@ export function DirectoryClient({ initialData }: DirectoryClientProps) {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
 
+  // Derive the grad-year slider bounds from the data so no record is ever
+  // hidden by a hardcoded default range (undated profiles always pass). Upper
+  // bound keeps headroom for future-dated ("incoming") grads.
+  const yearBounds = useMemo<[number, number]>(() => {
+    const years = initialData
+      .map((a) => a.grad_year)
+      .filter((y): y is number => y != null);
+    const upper = new Date().getFullYear() + 6;
+    if (years.length === 0) return [1970, upper];
+    return [Math.min(...years), Math.max(...years, upper)];
+  }, [initialData]);
+
   const {
     filteredAlumni,
     searchQuery,
@@ -34,7 +46,7 @@ export function DirectoryClient({ initialData }: DirectoryClientProps) {
     setSortConfig,
     resetFilters,
     activeFilterCount,
-  } = useAlumniFilter(initialData);
+  } = useAlumniFilter(initialData, yearBounds);
 
   // Sync debounced input to the filter hook
   useEffect(() => {
@@ -113,6 +125,7 @@ export function DirectoryClient({ initialData }: DirectoryClientProps) {
                 filters={filters}
                 onChange={setFilters}
                 locationOptions={locationOptions}
+                yearBounds={yearBounds}
               />
             </div>
           </aside>

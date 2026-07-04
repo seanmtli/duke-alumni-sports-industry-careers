@@ -6,9 +6,13 @@ import type { Alumni, FilterState, SortConfig } from '@/types/alumni';
 import { DEFAULT_FILTERS } from '@/types/alumni';
 import { filterAlumni, sortAlumni } from '@/lib/filterAlumni';
 
-export function useAlumniFilter(initialData: Alumni[]) {
+export function useAlumniFilter(initialData: Alumni[], yearBounds?: [number, number]) {
+  const initialFilters = useMemo<FilterState>(
+    () => (yearBounds ? { ...DEFAULT_FILTERS, gradYearRange: yearBounds } : DEFAULT_FILTERS),
+    [yearBounds]
+  );
   const [searchQuery, setSearchQuery] = useState('');
-  const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS);
+  const [filters, setFilters] = useState<FilterState>(initialFilters);
   const [sortConfig, setSortConfig] = useState<SortConfig>({
     field: 'name',
     direction: 'asc',
@@ -34,7 +38,7 @@ export function useAlumniFilter(initialData: Alumni[]) {
   }, [initialData, filters, searchQuery, sortConfig]);
 
   function resetFilters() {
-    setFilters(DEFAULT_FILTERS);
+    setFilters(initialFilters);
     setSearchQuery('');
   }
 

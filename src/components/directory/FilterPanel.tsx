@@ -11,6 +11,8 @@ interface FilterPanelProps {
   filters: FilterState;
   onChange: (filters: FilterState) => void;
   locationOptions: LocationOptions;
+  /** [min, max] grad-year bounds derived from the data for the slider inputs. */
+  yearBounds?: [number, number];
 }
 
 function MultiCheckbox<T extends string>({
@@ -163,7 +165,8 @@ function LocationFilter({
   );
 }
 
-export function FilterPanel({ filters, onChange, locationOptions }: FilterPanelProps) {
+export function FilterPanel({ filters, onChange, locationOptions, yearBounds }: FilterPanelProps) {
+  const [minYear, maxYear] = yearBounds ?? [1970, new Date().getFullYear() + 6];
   function toggle<T extends string>(key: keyof FilterState, value: T) {
     const current = filters[key] as T[];
     const next = current.includes(value)
@@ -187,7 +190,7 @@ export function FilterPanel({ filters, onChange, locationOptions }: FilterPanelP
         <div className="flex items-center gap-2">
           <input
             type="number"
-            min={1970}
+            min={minYear}
             max={filters.gradYearRange[1]}
             value={filters.gradYearRange[0]}
             onChange={(e) => setGradYear(0, Number(e.target.value))}
@@ -197,7 +200,7 @@ export function FilterPanel({ filters, onChange, locationOptions }: FilterPanelP
           <input
             type="number"
             min={filters.gradYearRange[0]}
-            max={new Date().getFullYear() + 6}
+            max={maxYear}
             value={filters.gradYearRange[1]}
             onChange={(e) => setGradYear(1, Number(e.target.value))}
             className="w-20 text-sm border border-gray-200 rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-[#003087]"
