@@ -485,6 +485,67 @@
       ]
     },
     {
+      "id": "cd-14047026",
+      "name": "Alana Beard",
+      "grad_year": 2004,
+      "school": "Trinity",
+      "degree": "Bachelor of Arts - BA",
+      "major": "Sociology",
+      "current_company": "projectb.global",
+      "current_title": "Chief Basketball Officer",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/alanabeard",
+      "location": "Washington, District of Columbia",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/c3137f79a4a972ae60ffc0338e280fdcdcac347432aa4e8807cae66ae4907e78.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor of Arts - BA",
+          "grad_year": 2004,
+          "major": "Sociology"
+        }
+      ]
+    },
+    {
+      "id": "cd-69940457",
+      "name": "Alex Ellinport",
+      "grad_year": 2011,
+      "school": "Trinity",
+      "degree": "BA",
+      "major": "",
+      "current_company": "oakley.com",
+      "current_title": "Global Director of Product Strategy | Sport, Lifestyle, Collaborations",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/alex-ellinport-76b795101",
+      "location": "Costa Mesa, California",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/82c1bdf89d92e41549cd38eec049adee0dbb4e55f8d6b34c45ef09a48159f72c.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "strategy_corpdev",
+        "product_eng"
+      ],
+      "all_degrees": [
+        {
+          "school": "Trinity",
+          "degree": "BA",
+          "grad_year": 2011,
+          "major": null
+        }
+      ]
+    },
+    {
       "id": "cd-419733388",
       "name": "Alex Liu",
       "grad_year": null,
@@ -606,6 +667,37 @@
           "degree": "Bachelor of Science - BS",
           "grad_year": 2026,
           "major": "Statistics and Public Policy"
+        }
+      ]
+    },
+    {
+      "id": "cd-2612882",
+      "name": "Alexander Strauss, M.D.",
+      "grad_year": 2001,
+      "school": "Trinity",
+      "degree": "BA",
+      "major": "",
+      "current_company": "temple.edu",
+      "current_title": "Consulting Sport Psychiatrist for Temple University Athletics",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/alexstraussmd",
+      "location": "Cherry Hill, New Jersey",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/6b110bdd68d9be0572e9b91f1b985dfd415626935e5eb8254ec0e51b428465b1.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "strategy_corpdev"
+      ],
+      "all_degrees": [
+        {
+          "school": "Trinity",
+          "degree": "BA",
+          "grad_year": 2001,
+          "major": null
         }
       ]
     },
@@ -761,6 +853,35 @@
           "degree": "Bachelor of Engineering - BE",
           "grad_year": 2027,
           "major": "Electrical and Computer Engineering"
+        }
+      ]
+    },
+    {
+      "id": "cd-117542590",
+      "name": "Allegra Fritelli",
+      "grad_year": 2024,
+      "school": "Trinity",
+      "degree": "Bachelor of Science - BS",
+      "major": "Behavioral Science with Psychology Track, Minor in Economics and Chinese",
+      "current_company": "daosport.eu",
+      "current_title": "Olympic Athletes Management",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/allegra-fritelli-%E5%AE%89%E6%AC%A3",
+      "location": "Italy",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/209d5bf3963c3f8f21d03fe89ee8cbc899da4483b8f23a02b454e75bb84ccb4d.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor of Science - BS",
+          "grad_year": 2024,
+          "major": "Behavioral Science with Psychology Track, Minor in Economics and Chinese"
         }
       ]
     },
@@ -1663,6 +1784,39 @@
       ]
     },
     {
+      "id": "cd-117961499",
+      "name": "Anne Worcester",
+      "grad_year": 1982,
+      "school": "Trinity",
+      "degree": "BA, Economics",
+      "major": "Economics",
+      "current_company": "",
+      "current_title": "Board Member",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/anne-worcester",
+      "location": "Nashville, Tennessee",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/41e0730790a445c37beb65105b1bd3897d6e63083a44b4bca1024b180ee9e871.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "ticketing_revenue",
+        "strategy_corpdev",
+        "partnerships"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "BA, Economics",
+          "grad_year": 1982,
+          "major": "Economics"
+        }
+      ]
+    },
+    {
       "id": "cd-121185309",
       "name": "Annie Mulholland Patrick",
       "grad_year": 2015,
@@ -2129,6 +2283,35 @@
           "degree": "BS",
           "grad_year": 2020,
           "major": null
+        }
+      ]
+    },
+    {
+      "id": "cd-109253133",
+      "name": "Barbara Poskanzer",
+      "grad_year": 1996,
+      "school": "Fuqua",
+      "degree": "MBA",
+      "major": "international business",
+      "current_company": "",
+      "current_title": "Freelance Researcher for Olympic & Paralympic Games (2020-2024)",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/barbaraposkanzer",
+      "location": "Greater Tampa Bay Area",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/eb0065871d1308e916fae1ab99e67addddf945090a4792b5680727d306aa14a3.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [],
+      "all_degrees": [
+        {
+          "school": "Fuqua",
+          "degree": "MBA",
+          "grad_year": 1996,
+          "major": "international business"
         }
       ]
     },
@@ -2738,6 +2921,72 @@
       ]
     },
     {
+      "id": "cd-30147837",
+      "name": "Brad Sherrod, M. SM.",
+      "grad_year": 1993,
+      "school": "Trinity",
+      "degree": "Bachelor's degree",
+      "major": "History",
+      "current_company": "morehouse.edu",
+      "current_title": "Head Football Coach Morehouse College",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/brad-sherrod-m-sm-59ab3060",
+      "location": "Crowley, Texas",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/a583c987d77169f52dcf9740f650663b8f37ffa8e1aa4db384fead1b2e0c5cee.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor's degree",
+          "grad_year": 1993,
+          "major": "History"
+        },
+        {
+          "school": "General",
+          "degree": null,
+          "grad_year": null,
+          "major": null
+        }
+      ]
+    },
+    {
+      "id": "cd-35913790",
+      "name": "Braden Moore",
+      "grad_year": 2014,
+      "school": "Fuqua",
+      "degree": "Master of Business Administration (M.B.A.)",
+      "major": "Decision Sciences",
+      "current_company": "harrisblitzer.com",
+      "current_title": "Sr. Vice President, Data & Analytics",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/braden-moore-50011910",
+      "location": "Philadelphia, Pennsylvania",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/6310bc7c2ce2526684b4c17a16760e08b40a82f1ee856a53ec3977dade8bb16d.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "data_analytics"
+      ],
+      "all_degrees": [
+        {
+          "school": "Fuqua",
+          "degree": "Master of Business Administration (M.B.A.)",
+          "grad_year": 2014,
+          "major": "Decision Sciences"
+        }
+      ]
+    },
+    {
       "id": "cd-117630753",
       "name": "Bradley Hledik",
       "grad_year": null,
@@ -2864,6 +3113,76 @@
       ]
     },
     {
+      "id": "cd-93838965",
+      "name": "Brandon Putnam, MBA, MS",
+      "grad_year": null,
+      "school": "Trinity",
+      "degree": "Bachelor of Arts",
+      "major": "",
+      "current_company": "nflpa.com",
+      "current_title": "Player Marketing Manager",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/brandonputnam",
+      "location": "United States",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/8046171dc32dbc03f28325256094311ceb6ffea9202097df07b3a0b649b5e85f.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "strategy_corpdev",
+        "marketing_fan"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor of Arts",
+          "grad_year": null,
+          "major": null
+        }
+      ]
+    },
+    {
+      "id": "cd-27658854",
+      "name": "Brendan Fitzgerald",
+      "grad_year": 2009,
+      "school": "Trinity",
+      "degree": "BA",
+      "major": "English, Markets and Management",
+      "current_company": "ymugroup.com",
+      "current_title": "Head of Marketing & Media, US Sport",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/brendan-fitzgerald-b58b2515",
+      "location": "New York, New York",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/f93db07792853290f2a461e920b07ed1f66f8bc84ae9c3c04a736a262fc6e880.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "media_content",
+        "marketing_fan"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "BA",
+          "grad_year": 2009,
+          "major": "English, Markets and Management"
+        },
+        {
+          "school": "Fuqua",
+          "degree": "Master's Degree",
+          "grad_year": 2010,
+          "major": "Business"
+        }
+      ]
+    },
+    {
       "id": "brendan-szulik-2014",
       "name": "Brendan Szulik",
       "grad_year": 2014,
@@ -2922,6 +3241,38 @@
           "degree": "MBA",
           "grad_year": 2006,
           "major": null
+        }
+      ]
+    },
+    {
+      "id": "cd-79695476",
+      "name": "Brent Yoo",
+      "grad_year": 2026,
+      "school": "Other",
+      "degree": "",
+      "major": "Public Policy Analysis",
+      "current_company": "dsbconference.com",
+      "current_title": "Social Media Director",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/brent-yoo",
+      "location": "Durham, North Carolina",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/1791defac560810dc7d05248718e76b45f037bc66e5b9306de3781964e20c2c3.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "media_content",
+        "partnerships"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": null,
+          "grad_year": 2026,
+          "major": "Public Policy Analysis"
         }
       ]
     },
@@ -3052,6 +3403,35 @@
       ]
     },
     {
+      "id": "cd-3172413",
+      "name": "Brian McAfee",
+      "grad_year": 2016,
+      "school": "Fuqua",
+      "degree": "Master of Management Studies",
+      "major": "",
+      "current_company": "greenhouse.io",
+      "current_title": "Senior Director Product Management, Trading Models",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/brian-mcafee-38900283",
+      "location": "Bend, Oregon",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/bd3525395b7cdc785df95244811a26caa5b0a435cc33f9773b1696122073c1b4.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [],
+      "all_degrees": [
+        {
+          "school": "Fuqua",
+          "degree": "Master of Management Studies",
+          "grad_year": 2016,
+          "major": null
+        }
+      ]
+    },
+    {
       "id": "brinda-dasharathy-2018",
       "name": "Brinda  Dasharathy",
       "grad_year": 2018,
@@ -3177,6 +3557,37 @@
           "degree": "AB",
           "grad_year": 2022,
           "major": null
+        }
+      ]
+    },
+    {
+      "id": "cd-76794600",
+      "name": "Bryan McAleer",
+      "grad_year": 2004,
+      "school": "Trinity",
+      "degree": "Bachelor of Arts (B.A.)",
+      "major": "History",
+      "current_company": "netflix.com",
+      "current_title": "Director |  Brand Partnerships, Title Management - Sports",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/bryan-mcaleer-0164509b",
+      "location": "New York, New York",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/97f25e9cd84405c43731ebc8aed24993489a30b6ebc7e2054b55f8a80e59ceef.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "partnerships"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor of Arts (B.A.)",
+          "grad_year": 2004,
+          "major": "History"
         }
       ]
     },
@@ -3366,6 +3777,37 @@
           "degree": "Bachelor of Science - BS",
           "grad_year": 2027,
           "major": "Economics"
+        }
+      ]
+    },
+    {
+      "id": "cd-119138256",
+      "name": "Carol Vergis",
+      "grad_year": 2021,
+      "school": "Other",
+      "degree": "Certificate",
+      "major": "Nonprofit Management",
+      "current_company": "duke.edu",
+      "current_title": "Executive Director, Athletics Resource Acquisition/Premium Events & Sales",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/carolvergis",
+      "location": "Durham, North Carolina",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/1f8aab517d9eef1c269f540a421e1354b296539b7447a6373629dd4a18658fed.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "sales_account"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Certificate",
+          "grad_year": 2021,
+          "major": "Nonprofit Management"
         }
       ]
     },
@@ -3773,6 +4215,35 @@
           "degree": "Master of Business Administration (M.B.A.)",
           "grad_year": 2018,
           "major": "MBA"
+        }
+      ]
+    },
+    {
+      "id": "cd-31430106",
+      "name": "Cedric Jones",
+      "grad_year": 1982,
+      "school": "Trinity",
+      "degree": "BA",
+      "major": "History and Political Science",
+      "current_company": "brunswickschool.org",
+      "current_title": "Director of Athletics ",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/cedric-jones-0a30a923",
+      "location": "New York, New York",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/e60f514af701705ab7580eb8ddbfb6798e02efa6e677d0e974ba769314e43c0b.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "BA",
+          "grad_year": 1982,
+          "major": "History and Political Science"
         }
       ]
     },
@@ -4472,6 +4943,38 @@
       ]
     },
     {
+      "id": "cd-66640576",
+      "name": "Christine Wixted",
+      "grad_year": 2014,
+      "school": "Trinity",
+      "degree": "Bachelor of Arts (BA)-Marketing and Management Studies",
+      "major": "Sociology",
+      "current_company": "redditinc.com",
+      "current_title": "Head of Sports Content Partnerships",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/christinewixted",
+      "location": "New York, New York",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/0b1b6e824bea6957c86c4aad5696edded845d7fcf2a23174f7e594e5d143749f.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "partnerships",
+        "media_content"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor of Arts (BA)-Marketing and Management Studies",
+          "grad_year": 2014,
+          "major": "Sociology"
+        }
+      ]
+    },
+    {
       "id": "cd-32103498",
       "name": "Christopher Blivin",
       "grad_year": 2015,
@@ -4876,6 +5379,37 @@
       ]
     },
     {
+      "id": "cd-5708900",
+      "name": "Cole Rowan",
+      "grad_year": 2022,
+      "school": "Other",
+      "degree": "B.A. in Political Science with a Focus in Political Economy",
+      "major": "with Markets & Management Certificate",
+      "current_company": "Deloitte",
+      "current_title": "Consultant - Olympic, Paralympic & Major Events Practice at Deloitte",
+      "company_type": "VC/PE",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/cole-rowan-b31a94199",
+      "location": "Dallas, Texas",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/0f1c13751467f76bb4500ff008bdf2ccca2c1c576db998d13e772ea5414b2f40.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": "investing_advisory",
+      "sports_functions": [
+        "strategy_corpdev"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "B.A. in Political Science with a Focus in Political Economy",
+          "grad_year": 2022,
+          "major": "with Markets & Management Certificate"
+        }
+      ]
+    },
+    {
       "id": "cd-217665345",
       "name": "Connor F.",
       "grad_year": 2025,
@@ -4935,6 +5469,37 @@
           "degree": "Bachelor of Arts - BA, History, Markets & Management Certificate, Political Science Minor",
           "grad_year": 2021,
           "major": "History, Markets & Management Certificate, Political Science Minor"
+        }
+      ]
+    },
+    {
+      "id": "cd-207189121",
+      "name": "Corina M.",
+      "grad_year": 2006,
+      "school": "Medicine",
+      "degree": "Doctor of Physical Therapy",
+      "major": "Physical Therapy",
+      "current_company": "",
+      "current_title": "Senior Level II Physical Therapist, Licensed Athletic Trainer",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/corina-m-124a253",
+      "location": "Durham, North Carolina",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/0d35f1913b958d7ad412310837d821257d6b59b796db57e029cd1d9cea1dd4ee.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "health_athlete"
+      ],
+      "all_degrees": [
+        {
+          "school": "Medicine",
+          "degree": "Doctor of Physical Therapy",
+          "grad_year": 2006,
+          "major": "Physical Therapy"
         }
       ]
     },
@@ -5313,6 +5878,37 @@
       ]
     },
     {
+      "id": "cd-82702492",
+      "name": "Daniel Ewing",
+      "grad_year": 2005,
+      "school": "Trinity",
+      "degree": "BA",
+      "major": "African and African American Studies",
+      "current_company": "lakers.com",
+      "current_title": "Sports Scout",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/daniel-ewing-59450419",
+      "location": "Greater Houston",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/d44b5d69d9718d5bcc47c0752e2623c0a4fb05e87b679067370d02b3a730850c.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "data_analytics"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "BA",
+          "grad_year": 2005,
+          "major": "African and African American Studies"
+        }
+      ]
+    },
+    {
       "id": "cd-120067785",
       "name": "Daniel Kye",
       "grad_year": 2027,
@@ -5431,6 +6027,37 @@
           "degree": "PhD",
           "grad_year": 1988,
           "major": null
+        }
+      ]
+    },
+    {
+      "id": "cd-62455296",
+      "name": "Daniela Schneider",
+      "grad_year": 2021,
+      "school": "Trinity",
+      "degree": "Bachelor of Arts - BA",
+      "major": "International Comparative Studies, Minor in Visual Media Studies, Certificate in Journalism",
+      "current_company": "2k.com",
+      "current_title": "Global Marketing Manager, NBA",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/danielabschneider",
+      "location": "Washington, District of Columbia",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/774a3ffe631a63817c8e5b4ac19bd2b238a199b83e4e8006053bdc1518d1d3ba.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "marketing_fan"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor of Arts - BA",
+          "grad_year": 2021,
+          "major": "International Comparative Studies, Minor in Visual Media Studies, Certificate in Journalism"
         }
       ]
     },
@@ -5557,50 +6184,15 @@
       ]
     },
     {
-      "id": "cd-120568627",
-      "name": "Dave Harding",
-      "grad_year": 2012,
-      "school": "Trinity",
-      "degree": "Bachelor’s Degree",
-      "major": "Public Policy, Minor in Arabic",
-      "current_company": "duke.edu",
-      "current_title": "Executive Director of Blue Devil Network",
-      "company_type": "Other",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/ACoAAAgz0wgB5NMsB7YPfQdq-72_FlzOKxPgohU",
-      "location": "Raleigh-Durham-Chapel Hill Area",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/770e9d3478af04056ee5dd333ac1fdff464f867817d55fcd1b70f40c51eaa827.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": null,
-      "sports_functions": [],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Bachelor’s Degree",
-          "grad_year": 2012,
-          "major": "Public Policy, Minor in Arabic"
-        },
-        {
-          "school": "Graduate",
-          "degree": "Master’s Degree",
-          "grad_year": 2014,
-          "major": "Political Science"
-        }
-      ]
-    },
-    {
       "id": "dave-harding-jr-2014",
       "name": "Dave Harding, Jr.",
       "grad_year": 2014,
       "school": "Trinity",
       "degree": "AB",
       "major": "",
-      "current_company": "LEARFIELD",
-      "current_title": "Duke Football Analyst",
-      "company_type": "Agency",
+      "current_company": "Duke University",
+      "current_title": "Executive Director, Blue Devil Network",
+      "company_type": "University",
       "sub_industries": [],
       "seniority_level": "Mid",
       "linkedin_url": "https://www.linkedin.com/in/davehardingjr",
@@ -5609,7 +6201,7 @@
       "sports_league_affiliation": null,
       "added_date": "2026-04-08",
       "last_verified": "2026-04-08",
-      "org_category": "agencies_rep",
+      "org_category": "collegiate",
       "sports_functions": [
         "legal_rep"
       ],
@@ -5681,6 +6273,37 @@
           "degree": "JD",
           "grad_year": 1984,
           "major": null
+        }
+      ]
+    },
+    {
+      "id": "cd-123217329",
+      "name": "David Grandjean",
+      "grad_year": 2020,
+      "school": "Other",
+      "degree": "Validation d'un semestre",
+      "major": "Sport and society",
+      "current_company": "",
+      "current_title": "Directeur - Agent sportif",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/david-grandjean-053915a9",
+      "location": "Geneva, Geneva",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/84f89ea65d42198a0d05ea58840ace8f77306c6096c4c0f237f0d4cb5d9da83f.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "legal_rep"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Validation d'un semestre",
+          "grad_year": 2020,
+          "major": "Sport and society"
         }
       ]
     },
@@ -5877,6 +6500,37 @@
       ]
     },
     {
+      "id": "cd-79581169",
+      "name": "Davis Beischer",
+      "grad_year": 2025,
+      "school": "Trinity",
+      "degree": "Bachelor of Arts - BA",
+      "major": "Public Policy Studies",
+      "current_company": "duke.edu",
+      "current_title": "Duke Men's Basketball Director of Basketball Operations",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/davis-beischer-923595265",
+      "location": "Durham, North Carolina",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/8118a9c9fcab2740661295fa3debdb377b2d629798522f53aeefaff7e52845f2.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "front_office"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor of Arts - BA",
+          "grad_year": 2025,
+          "major": "Public Policy Studies"
+        }
+      ]
+    },
+    {
       "id": "deanna-molina-2001",
       "name": "Deanna Molina",
       "grad_year": 2001,
@@ -5969,6 +6623,66 @@
           "degree": "Bachelor of Science (BSc) with Distinction",
           "grad_year": 2013,
           "major": "Computer Science, Biology, Computational Biology and Bioinformatics"
+        }
+      ]
+    },
+    {
+      "id": "cd-118159928",
+      "name": "Derrick Heggans",
+      "grad_year": 1992,
+      "school": "Other",
+      "degree": "",
+      "major": "",
+      "current_company": "",
+      "current_title": "Managing Director, Wharton Sports Business Initiative",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/derrick-heggans-a129385",
+      "location": "Washington, District of Columbia",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/f595c93d124b06892f2fd020875efd1976ce1da9d440cd1fab38a6bf57e19d90.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "investing_deal"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": null,
+          "grad_year": 1992,
+          "major": null
+        }
+      ]
+    },
+    {
+      "id": "cd-123043775",
+      "name": "Devan Wray",
+      "grad_year": 2003,
+      "school": "Trinity",
+      "degree": "BA",
+      "major": "Sociology, Markets & Management",
+      "current_company": "calibersport.com",
+      "current_title": "Owner",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/devan-wray-14609b1",
+      "location": "Calgary, Alberta",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/bf3a667b47e48883641f2001b33b09e32ba9c8133f5243a3268796aca209aace.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "BA",
+          "grad_year": 2003,
+          "major": "Sociology, Markets & Management"
         }
       ]
     },
@@ -6155,6 +6869,35 @@
           "degree": "Bachelor of Arts - BA",
           "grad_year": 2026,
           "major": "Political Economy, Markets & Management Studies, and Public Policy Analysis"
+        }
+      ]
+    },
+    {
+      "id": "cd-38751140",
+      "name": "Dominic Elzner",
+      "grad_year": 2019,
+      "school": "Trinity",
+      "degree": "Bachelor's degree",
+      "major": "Economics",
+      "current_company": "pitt.edu",
+      "current_title": "Assistant Athletic Director, Equipment Services and Operations",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/dominic-elzner-820530175",
+      "location": "Wichita, Kansas",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/1a1111e3e23c49e070c4c4b50c1887d6dcfc538629ddda6faf91e10486c7b1de.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor's degree",
+          "grad_year": 2019,
+          "major": "Economics"
         }
       ]
     },
@@ -7059,6 +7802,35 @@
       ]
     },
     {
+      "id": "cd-126141602",
+      "name": "Emily Sparvero",
+      "grad_year": 1997,
+      "school": "Trinity",
+      "degree": "BA",
+      "major": "Economics",
+      "current_company": "utexas.edu",
+      "current_title": "Clinical Assistant Professor, Sport Management",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/emily-sparvero-b7298717",
+      "location": "Austin, Texas",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/07cbb2ee3149261714994218af42886c56ea0cf853e01dc854a33a267fa2893a.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "BA",
+          "grad_year": 1997,
+          "major": "Economics"
+        }
+      ]
+    },
+    {
       "id": "cd-32974609",
       "name": "Emma S.",
       "grad_year": 2023,
@@ -7179,38 +7951,6 @@
           "degree": "Master's degree",
           "grad_year": 2021,
           "major": "Masters of Management Studies"
-        }
-      ]
-    },
-    {
-      "id": "cd-35707277",
-      "name": "Erica Wolf",
-      "grad_year": null,
-      "school": "Other",
-      "degree": "",
-      "major": "B.A. (Cum Laude, Phi Beta Kappa)",
-      "current_company": "National Basketball Association (NBA)",
-      "current_title": "Associate Vice President, Global Partnerships & Media",
-      "company_type": "League",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/ACoAAAL34LcBUkqtSfYYJvFpIijQU5aebc2Vg6g",
-      "location": "New York City Metropolitan Area",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/8ff76ea01f25312700e141b1dac01d3bfc335c5cc70d69547f1e170152d60861.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "leagues_governing",
-      "sports_functions": [
-        "partnerships",
-        "media_content"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": null,
-          "grad_year": null,
-          "major": "B.A. (Cum Laude, Phi Beta Kappa)"
         }
       ]
     },
@@ -7497,6 +8237,37 @@
           "degree": "MS",
           "grad_year": 2023,
           "major": null
+        }
+      ]
+    },
+    {
+      "id": "cd-103778969",
+      "name": "Evan Davis",
+      "grad_year": 2003,
+      "school": "Trinity",
+      "degree": "BA",
+      "major": "Political Science and History",
+      "current_company": "rccblaw.com",
+      "current_title": "Gaming & Sports Practice Lead",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/evan-davis-a9994547",
+      "location": "Greater Philadelphia",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/2940df9a077f49151a0f47b1fe4039ba5b54de1ee9612116d95ca904373637bc.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "front_office"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "BA",
+          "grad_year": 2003,
+          "major": "Political Science and History"
         }
       ]
     },
@@ -7896,6 +8667,44 @@
           "degree": "MMS: Foundations of Business",
           "grad_year": 2021,
           "major": "Business"
+        }
+      ]
+    },
+    {
+      "id": "cd-116859209",
+      "name": "Gabe Feldman",
+      "grad_year": 1999,
+      "school": "Law",
+      "degree": "Doctor of Law (JD), Masters in Social Psychology",
+      "major": "Masters in Social Psychology",
+      "current_company": "",
+      "current_title": "Legal Analyst",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/gabe-feldman-932bbb2",
+      "location": "New Orleans, Louisiana",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/0af98c0c38685199d33e91a092000591d6b09dc75d9874faabc0f975a2908fa3.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "strategy_corpdev",
+        "legal_rep"
+      ],
+      "all_degrees": [
+        {
+          "school": "Law",
+          "degree": "Doctor of Law (JD), Masters in Social Psychology",
+          "grad_year": 1999,
+          "major": "Masters in Social Psychology"
+        },
+        {
+          "school": "General",
+          "degree": "BA, JD",
+          "grad_year": 1999,
+          "major": "Psych, Econ, Law"
         }
       ]
     },
@@ -8398,6 +9207,37 @@
       ]
     },
     {
+      "id": "cd-118231834",
+      "name": "Greg Chatzinoff",
+      "grad_year": 2011,
+      "school": "Trinity",
+      "degree": "BS",
+      "major": "Economics",
+      "current_company": "wbd.com",
+      "current_title": "Sr. Director, Business Development & Partnerships - Golf Digest",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/gregchatzinoff",
+      "location": "New York City Metropolitan Area",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/c88f139e8193674013c750a2c4164d8c60e30bfbd38ac0fb16c4f8b224eae72b.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "partnerships"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "BS",
+          "grad_year": 2011,
+          "major": "Economics"
+        }
+      ]
+    },
+    {
       "id": "cd-52421855",
       "name": "Griffin Reilly",
       "grad_year": 2020,
@@ -8807,6 +9647,35 @@
       ]
     },
     {
+      "id": "cd-31461071",
+      "name": "Holden Buchanan",
+      "grad_year": 2024,
+      "school": "Trinity",
+      "degree": "Bachelor's degree",
+      "major": "B.A. in Public Policy, Minors in Economics and Global Health",
+      "current_company": "wfu.edu",
+      "current_title": "Athletics Development Reporting Specialist",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/holdenbbuchanan",
+      "location": "Durham, North Carolina",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/4b448e840dabc28636d83415f4b83220a0d3c41abf1874687c0d5aa41f38b2b7.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor's degree",
+          "grad_year": 2024,
+          "major": "B.A. in Public Policy, Minors in Economics and Global Health"
+        }
+      ]
+    },
+    {
       "id": "cd-104653172",
       "name": "Hope Taylor",
       "grad_year": 2028,
@@ -8865,6 +9734,43 @@
           "degree": "Public Policy",
           "grad_year": null,
           "major": "Economics, Media Studies"
+        }
+      ]
+    },
+    {
+      "id": "cd-81948146",
+      "name": "Ian M. Sigalow",
+      "grad_year": 2020,
+      "school": "Law",
+      "degree": "Doctor of Law - JD",
+      "major": "",
+      "current_company": "bkse.com",
+      "current_title": "Vice President and Senior Counsel - Transactions",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/ian-m-sigalow-51443b82",
+      "location": "New York, New York",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/e77bb33e38ace6caaae744ead90b0451d1a24722cfe6977700efcfedac82c15d.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "legal_rep"
+      ],
+      "all_degrees": [
+        {
+          "school": "Law",
+          "degree": "Doctor of Law - JD",
+          "grad_year": 2020,
+          "major": null
+        },
+        {
+          "school": "Law",
+          "degree": "Doctor of Law (JD)",
+          "grad_year": null,
+          "major": "Law"
         }
       ]
     },
@@ -9331,6 +10237,35 @@
       ]
     },
     {
+      "id": "cd-82759705",
+      "name": "Jahaan Mukhi",
+      "grad_year": 2020,
+      "school": "Trinity",
+      "degree": "Bachelor of Science - BS",
+      "major": "Computer Science",
+      "current_company": "bridgeathletic.com",
+      "current_title": "Head of AI",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/jahaan-mukhi",
+      "location": "Mumbai, Maharashtra",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/165f4fdd138cee3165fea06cd20fe018344dc506bdd62bc9f82d12fe667ad075.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor of Science - BS",
+          "grad_year": 2020,
+          "major": "Computer Science"
+        }
+      ]
+    },
+    {
       "id": "cd-117891836",
       "name": "Jaime Andaluz",
       "grad_year": 2013,
@@ -9482,6 +10417,37 @@
           "degree": "AB",
           "grad_year": 2022,
           "major": null
+        }
+      ]
+    },
+    {
+      "id": "cd-34129651",
+      "name": "Jake Toffler",
+      "grad_year": 2015,
+      "school": "Trinity",
+      "degree": "Bachelor of Science (B.S.)",
+      "major": "Economics",
+      "current_company": "mets.com",
+      "current_title": "Data Scientist, Baseball Analytics",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/jake-toffler",
+      "location": "Queens, New York",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/ac655bcdde91d69447e676183bb3ffd2dbbdd6ac81c073772d0c95a78cc97afa.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "data_analytics"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor of Science (B.S.)",
+          "grad_year": 2015,
+          "major": "Economics"
         }
       ]
     },
@@ -9893,6 +10859,37 @@
       ]
     },
     {
+      "id": "cd-89908372",
+      "name": "Jason Kreis",
+      "grad_year": 1995,
+      "school": "Trinity",
+      "degree": "Bachelor of Science (B.S.)",
+      "major": "Psychology",
+      "current_company": "rsl.com",
+      "current_title": "President of Soccer Operations",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/jason-kreis-106913111",
+      "location": "Pompano Beach, Florida",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/ca05fd3188fe22b11e3ffd129308626c3dab25511f0291e51632e34f88bcc534.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "front_office"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor of Science (B.S.)",
+          "grad_year": 1995,
+          "major": "Psychology"
+        }
+      ]
+    },
+    {
       "id": "cd-109249653",
       "name": "Jason Li",
       "grad_year": null,
@@ -10013,6 +11010,38 @@
           "degree": "BS",
           "grad_year": null,
           "major": "Economics / Public Policy.  Certificate in Marketing & Management."
+        }
+      ]
+    },
+    {
+      "id": "cd-118011225",
+      "name": "Javier Wallace, PhD",
+      "grad_year": null,
+      "school": "Other",
+      "degree": "Race & Sport Postdoctoral Associate",
+      "major": "African-American/Black Studies",
+      "current_company": "",
+      "current_title": "Founder",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/javierwallace",
+      "location": "Durham, North Carolina",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/0f37e121af43d5b44e1a2cad989c4567e24dde3901a64a835fc7f557b9a95ea6.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "ticketing_revenue",
+        "media_content"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Race & Sport Postdoctoral Associate",
+          "grad_year": null,
+          "major": "African-American/Black Studies"
         }
       ]
     },
@@ -10148,6 +11177,39 @@
       ]
     },
     {
+      "id": "cd-118394069",
+      "name": "Jennie Lee",
+      "grad_year": 2009,
+      "school": "Trinity",
+      "degree": "Bachelor's Degree",
+      "major": "Sociology and Political Science",
+      "current_company": "",
+      "current_title": "Head of Business Operations",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/jennieleegolf",
+      "location": "Portland",
+      "headshot_url": null,
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "strategy_corpdev",
+        "product_eng",
+        "front_office"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor's Degree",
+          "grad_year": 2009,
+          "major": "Sociology and Political Science"
+        }
+      ]
+    },
+    {
       "id": "jennifer-dietzel-2018",
       "name": "Jennifer Dietzel",
       "grad_year": 2018,
@@ -10238,6 +11300,35 @@
           "degree": "Psychology/Economics",
           "grad_year": 2015,
           "major": "Psychology/Economics"
+        }
+      ]
+    },
+    {
+      "id": "cd-117537634",
+      "name": "Jeremy Huff",
+      "grad_year": 2000,
+      "school": "Trinity",
+      "degree": "Bachelor of Arts (B.A.)",
+      "major": "Comparative Literature",
+      "current_company": "nolimitholdings.xyz",
+      "current_title": "Founding Partner",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/jeremynlh",
+      "location": "Dongcheng District, Beijing",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/3c0ac8be4bfa6de06c6dcb5bf5e9a8f9643a92371e7437492771d01dc738b3c6.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor of Arts (B.A.)",
+          "grad_year": 2000,
+          "major": "Comparative Literature"
         }
       ]
     },
@@ -10457,6 +11548,35 @@
           "school": "Trinity",
           "degree": "AB",
           "grad_year": 2016,
+          "major": null
+        }
+      ]
+    },
+    {
+      "id": "cd-79702237",
+      "name": "Jide Akinjisola",
+      "grad_year": 2023,
+      "school": "Fuqua",
+      "degree": "MMS - Masters of Management Studies",
+      "major": "",
+      "current_company": "klutchgroup.com",
+      "current_title": "Senior Analyst, FP&A",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/jide-akinjisola-229102162",
+      "location": "New York, New York",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/e367c38285be8c122d0a94b38b8ab98dad31c53eb6b1d79a03e4b3bf9dc0136c.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [],
+      "all_degrees": [
+        {
+          "school": "Fuqua",
+          "degree": "MMS - Masters of Management Studies",
+          "grad_year": 2023,
           "major": null
         }
       ]
@@ -10710,6 +11830,35 @@
       ]
     },
     {
+      "id": "cd-30594265",
+      "name": "John Farmer",
+      "grad_year": 2001,
+      "school": "Trinity",
+      "degree": "Bachelors",
+      "major": "Sociology",
+      "current_company": "asl.org",
+      "current_title": "Athletic Director",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/john-farmer-51b3594",
+      "location": "London, England",
+      "headshot_url": null,
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelors",
+          "grad_year": 2001,
+          "major": "Sociology"
+        }
+      ]
+    },
+    {
       "id": "cd-78085864",
       "name": "John Kempczinski",
       "grad_year": 2024,
@@ -10803,33 +11952,34 @@
       ]
     },
     {
-      "id": "cd-77422490",
-      "name": "John Q Clarke",
-      "grad_year": 2018,
-      "school": "Other",
-      "degree": "",
-      "major": "",
-      "current_company": "National Hockey League (NHL)",
-      "current_title": "Senior Manager, Integrated Solutions",
-      "company_type": "League",
+      "id": "cd-32492171",
+      "name": "John Park",
+      "grad_year": null,
+      "school": "Trinity",
+      "degree": "Bachelor of Arts (BA)",
+      "major": "Cultural Anthropology",
+      "current_company": "Dallas Cowboys",
+      "current_title": "Director of Strategic Football Operations",
+      "company_type": "Team",
       "sub_industries": [],
       "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/ACoAACV1R14BoC-NqdBXFOseXtMw8g7EIsW4i8k",
-      "location": "New York, New York",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/1eb83a4876b446a47c1ebfc192b21cd1690914b792015d2706e145e0d07c16c8.jpg",
+      "linkedin_url": "https://www.linkedin.com/in/jp52",
+      "location": "Dallas-Fort Worth Metroplex",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/0aff4c1772616ade83354cc2f8f944bddf0b08dbecfbecc2beb14439930a4e5c.jpg",
       "sports_league_affiliation": null,
       "added_date": "2026-06-22",
       "last_verified": null,
-      "org_category": "leagues_governing",
+      "org_category": "teams_clubs",
       "sports_functions": [
+        "strategy_corpdev",
         "front_office"
       ],
       "all_degrees": [
         {
           "school": "General",
-          "degree": null,
-          "grad_year": 2018,
-          "major": null
+          "degree": "Bachelor of Arts (BA)",
+          "grad_year": null,
+          "major": "Cultural Anthropology"
         }
       ]
     },
@@ -11051,6 +12201,35 @@
           "degree": "Master of Business Administration - MBA",
           "grad_year": 2018,
           "major": "Master of Business Administration - MBA"
+        }
+      ]
+    },
+    {
+      "id": "cd-118502527",
+      "name": "Jordan Betts, PhD",
+      "grad_year": 2014,
+      "school": "Trinity",
+      "degree": "Bachelor of Arts - BA",
+      "major": "History",
+      "current_company": "gohuskies.com",
+      "current_title": "Associate Athletic Director for Advancement",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/jordan-betts-phd-2b230217b",
+      "location": "Seattle, Washington",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/5ba722d92512ca27c3eaa236583a3d2d43f79f1518afa52fa36f521c6ce42571.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor of Arts - BA",
+          "grad_year": 2014,
+          "major": "History"
         }
       ]
     },
@@ -11823,6 +13002,37 @@
       ]
     },
     {
+      "id": "cd-88969379",
+      "name": "Karlie Paschall Young",
+      "grad_year": 2021,
+      "school": "Other",
+      "degree": "",
+      "major": "",
+      "current_company": "playerdata.com",
+      "current_title": "Account Manager",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/karliepaschall",
+      "location": "Savannah, Georgia",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/b8132c67b154e61d6b1e8aa863d54d8df27b7b5931a4ffc5ab7fce592cf72a87.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "sales_account"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": null,
+          "grad_year": 2021,
+          "major": null
+        }
+      ]
+    },
+    {
       "id": "karon-song-2018",
       "name": "Karon Song",
       "grad_year": 2018,
@@ -12361,6 +13571,37 @@
           "degree": "B.S",
           "grad_year": 2026,
           "major": "Biology, Evolutionary Anthropology"
+        }
+      ]
+    },
+    {
+      "id": "cd-118793642",
+      "name": "Kenny Blakeney",
+      "grad_year": 1995,
+      "school": "Other",
+      "degree": "History",
+      "major": "History",
+      "current_company": "howard.edu",
+      "current_title": "Head Men’s Basketball Coach",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/kenny-blakeney-677b233a",
+      "location": "Washington DC-Baltimore Area",
+      "headshot_url": null,
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "product_eng"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "History",
+          "grad_year": 1995,
+          "major": "History"
         }
       ]
     },
@@ -13288,6 +14529,37 @@
       ]
     },
     {
+      "id": "cd-89695053",
+      "name": "Lauren Quinn",
+      "grad_year": 2011,
+      "school": "Other",
+      "degree": "Doctor of Physical Therapy",
+      "major": "Physical Therapy/Therapist",
+      "current_company": "wtatennis.com",
+      "current_title": "Manager, Performance Health Integrative Systems, Sport Sciences & Medicine",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/lauren-quinn-540111140",
+      "location": "St. Petersburg, Florida",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/2b59011f1503ed54aa6fb822cf12d4e3c3637e0ebc4a6494fb557f75d8261207.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "health_athlete"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Doctor of Physical Therapy",
+          "grad_year": 2011,
+          "major": "Physical Therapy/Therapist"
+        }
+      ]
+    },
+    {
       "id": "lauren-rosen-2017",
       "name": "Lauren Rosen",
       "grad_year": 2017,
@@ -13688,6 +14960,37 @@
       ]
     },
     {
+      "id": "cd-117868932",
+      "name": "Lincoln Wensley",
+      "grad_year": 2015,
+      "school": "Trinity",
+      "degree": "Bachelor of Arts - BA",
+      "major": "Sociology",
+      "current_company": "umass.edu",
+      "current_title": "Director of Athletic Video Production",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/lincolnwensley",
+      "location": "Northampton, Massachusetts",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/9f41b2679587eb7c885f43a293b22ba3ce30e092ca1f43c124a70432bfe8cd31.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "media_content"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor of Arts - BA",
+          "grad_year": 2015,
+          "major": "Sociology"
+        }
+      ]
+    },
+    {
       "id": "lisa-nellis-ferguson-1984",
       "name": "Lisa Nellis (Ferguson)",
       "grad_year": 1984,
@@ -13843,6 +15146,35 @@
       ]
     },
     {
+      "id": "cd-312954195",
+      "name": "Louis Clyburn",
+      "grad_year": null,
+      "school": "Trinity",
+      "degree": "Bachelor of Arts - BA",
+      "major": "Political Science and Government",
+      "current_company": "lex2.org",
+      "current_title": "Athletic Director",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/louis-clyburn-5094292a1",
+      "location": "United States",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/8c69830614a4189253eceb768861c36d00c17f82afa622a35d613ddaa751dfc5.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor of Arts - BA",
+          "grad_year": null,
+          "major": "Political Science and Government"
+        }
+      ]
+    },
+    {
       "id": "louisa-bound-2025",
       "name": "Louisa Bound",
       "grad_year": 2025,
@@ -13874,6 +15206,35 @@
       ]
     },
     {
+      "id": "cd-3215200",
+      "name": "Luis Maes",
+      "grad_year": null,
+      "school": "Other",
+      "degree": "Master's degree (MPP)",
+      "major": "Public Policy Analysis",
+      "current_company": "georgetown.edu",
+      "current_title": "Executive Director, Durban Sports Business Program",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/luis-maes-0050585",
+      "location": "Kansas City, Missouri",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/4ba93006611dbabfe6541eedfb320cf0a868c9bc6edbf474fa865e2aef3fd411.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Master's degree (MPP)",
+          "grad_year": null,
+          "major": "Public Policy Analysis"
+        }
+      ]
+    },
+    {
       "id": "cd-118508444",
       "name": "Luke Gumbert",
       "grad_year": 2027,
@@ -13899,6 +15260,35 @@
           "degree": "Economics",
           "grad_year": 2027,
           "major": "Economics, Public Policy"
+        }
+      ]
+    },
+    {
+      "id": "cd-118992811",
+      "name": "Luke Klores",
+      "grad_year": 2025,
+      "school": "Trinity",
+      "degree": "Bachelor of Arts - BA",
+      "major": "Psychology",
+      "current_company": "byucougars.com",
+      "current_title": "Graduate Assistant - Men's Basketball",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/luke-klores-248676232",
+      "location": "Provo, Utah",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/6eb1d2b6f145f2fed747fa656445d64d21a10eb47863e81a5aff77a88f8215ae.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor of Arts - BA",
+          "grad_year": 2025,
+          "major": "Psychology"
         }
       ]
     },
@@ -14272,6 +15662,35 @@
           "degree": "AB",
           "grad_year": 2018,
           "major": null
+        }
+      ]
+    },
+    {
+      "id": "cd-117830010",
+      "name": "Marshall Foley",
+      "grad_year": 1995,
+      "school": "Trinity",
+      "degree": "BA",
+      "major": "History",
+      "current_company": "northeastern.edu",
+      "current_title": "Executive Senior Associate Athletic Director",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/marshall-foley-5a8b017",
+      "location": "Boston, Massachusetts",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/a5bd21e54a3f5f1227109744de4d22b74530d016119cfea7a2ca675a00ab1a0b.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "BA",
+          "grad_year": 1995,
+          "major": "History"
         }
       ]
     },
@@ -15174,6 +16593,66 @@
       ]
     },
     {
+      "id": "cd-115744372",
+      "name": "Michael Pai",
+      "grad_year": null,
+      "school": "Fuqua",
+      "degree": "Master of Business Administration - MBA",
+      "major": "Marketing",
+      "current_company": "titleboxingclub.com",
+      "current_title": "Small Business Owner",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/michael-pai",
+      "location": "Portland",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/5ad06f38b427cf23b176077e77af9e5d900b5f588af1afda1da5d9e2e412b9d3.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "marketing_fan"
+      ],
+      "all_degrees": [
+        {
+          "school": "Fuqua",
+          "degree": "Master of Business Administration - MBA",
+          "grad_year": null,
+          "major": "Marketing"
+        }
+      ]
+    },
+    {
+      "id": "cd-118534533",
+      "name": "Michael Savarino",
+      "grad_year": 2022,
+      "school": "Trinity",
+      "degree": "Bachelor's degree",
+      "major": "",
+      "current_company": "klutchgroup.com",
+      "current_title": "Coaches & Executives Department",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/michael-savarino-73230926b",
+      "location": "New York, New York",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/3dc5f50d92dbdc720dab99f296991501d431e85f6a0853a927aea9fc6312ca2e.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor's degree",
+          "grad_year": 2022,
+          "major": null
+        }
+      ]
+    },
+    {
       "id": "michael-scheinert-2020",
       "name": "Michael Scheinert",
       "grad_year": 2020,
@@ -15352,6 +16831,37 @@
           "degree": null,
           "grad_year": 2011,
           "major": null
+        }
+      ]
+    },
+    {
+      "id": "cd-1176883",
+      "name": "Mike Leopando",
+      "grad_year": 2014,
+      "school": "Fuqua",
+      "degree": "Master of Business Administration (Daytime MBA)",
+      "major": "Strategy and Decision Sciences",
+      "current_company": "vailresortscareers.com",
+      "current_title": "Senior Director, Business Development and Revenue Optimization | Rental",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/mike-leopando-1a368114",
+      "location": "Denver, Colorado",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/f386a0beab5249ee3382dbcca90b4f5e450a58d36dfcab8429aef51229ddc594.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "ticketing_revenue"
+      ],
+      "all_degrees": [
+        {
+          "school": "Fuqua",
+          "degree": "Master of Business Administration (Daytime MBA)",
+          "grad_year": 2014,
+          "major": "Strategy and Decision Sciences"
         }
       ]
     },
@@ -15540,6 +17050,39 @@
       ]
     },
     {
+      "id": "cd-91439726",
+      "name": "Mistie Boyd",
+      "grad_year": 2006,
+      "school": "Trinity",
+      "degree": "Bachelor's degree",
+      "major": "Women's Studies",
+      "current_company": "pistons.com",
+      "current_title": "Executive Director, Athlete Engagement & Basketball Operations",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/mistie-boyd-49808916b",
+      "location": "Beaverton, Oregon",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/451ce966d7014fad9cb5982df8cd94ed71b507bafcb98b381761b5e7b6898b33.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "marketing_fan",
+        "legal_rep",
+        "front_office"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor's degree",
+          "grad_year": 2006,
+          "major": "Women's Studies"
+        }
+      ]
+    },
+    {
       "id": "mitch-heath-2016",
       "name": "Mitch Heath",
       "grad_year": 2016,
@@ -15609,6 +17152,37 @@
       ]
     },
     {
+      "id": "cd-32728542",
+      "name": "Molly Hanks Doyle",
+      "grad_year": null,
+      "school": "Other",
+      "degree": "",
+      "major": "",
+      "current_company": "",
+      "current_title": "Merchandising Manager, Branded Partnerships",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/molly-hanks-doyle-91a6a226",
+      "location": "San Francisco, California",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/6dbbf032b3f5db7ef061413732d6a0bdd7dc009dd0df56fe38b4d3b63c7da540.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "partnerships"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": null,
+          "grad_year": null,
+          "major": null
+        }
+      ]
+    },
+    {
       "id": "momin-ghaffar-2015",
       "name": "Momin Ghaffar",
       "grad_year": 2015,
@@ -15636,6 +17210,35 @@
           "degree": "BS",
           "grad_year": 2015,
           "major": null
+        }
+      ]
+    },
+    {
+      "id": "cd-115931415",
+      "name": "Monique Currie",
+      "grad_year": 2006,
+      "school": "Other",
+      "degree": "B.S.",
+      "major": "Public Policy, African American Studies",
+      "current_company": "Nike",
+      "current_title": "Lead Product Line Manager",
+      "company_type": "Brand",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/monique-currie-65235716",
+      "location": "Hillsboro, Oregon",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/769a00cd2fee07c214f787131d76ceaf358ab7850e319293f45acffdd03b546e.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": "brands_sponsors",
+      "sports_functions": [],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "B.S.",
+          "grad_year": 2006,
+          "major": "Public Policy, African American Studies"
         }
       ]
     },
@@ -16146,6 +17749,35 @@
       ]
     },
     {
+      "id": "cd-118398413",
+      "name": "Nick Blatchford",
+      "grad_year": 1995,
+      "school": "Trinity",
+      "degree": "Bachelor's degree",
+      "major": "",
+      "current_company": "UNLTD Sports Group",
+      "current_title": "Co-Founder & Partner",
+      "company_type": "VC/PE",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/nick-blatchford-b76b431",
+      "location": "New York, New York",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/50abe7dd63a1c1afdd917cd9d96019875829869c273b82edbff6184d07df6a4b.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": "investing_advisory",
+      "sports_functions": [],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor's degree",
+          "grad_year": 1995,
+          "major": null
+        }
+      ]
+    },
+    {
       "id": "cd-237147487",
       "name": "Nick Fajardo",
       "grad_year": 2026,
@@ -16518,6 +18150,35 @@
           "degree": "MBA",
           "grad_year": 2004,
           "major": null
+        }
+      ]
+    },
+    {
+      "id": "cd-118523259",
+      "name": "Patrick Johnson",
+      "grad_year": 2006,
+      "school": "Trinity",
+      "degree": "Bachelor of Arts - BA",
+      "major": "Political Science",
+      "current_company": "sbcusd.com",
+      "current_title": "Athletic Director",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/patrick-johnson-9626a22a4",
+      "location": "Highland, California",
+      "headshot_url": "https://crustdata-media.s3.amazonaws.com/person/510644d8e760bd1df159976bf01d0d67137d55ed1c5f125c9ebf0746d5274ffa.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor of Arts - BA",
+          "grad_year": 2006,
+          "major": "Political Science"
         }
       ]
     },
@@ -17126,6 +18787,35 @@
       ]
     },
     {
+      "id": "cd-118725066",
+      "name": "Rachel Curtis",
+      "grad_year": 1996,
+      "school": "Trinity",
+      "degree": "AB",
+      "major": "English",
+      "current_company": "",
+      "current_title": "Associate Director, Basketball Legacy Fund",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/rachel-curtis-b9001927",
+      "location": "Durham, North Carolina",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/e87f5b49910d1f7a5c8028fca44e552de4212a8e5db7f3de224e0ee982379c93.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "AB",
+          "grad_year": 1996,
+          "major": "English"
+        }
+      ]
+    },
+    {
       "id": "cd-78116374",
       "name": "Rachel Darius",
       "grad_year": 2022,
@@ -17188,6 +18878,43 @@
       ]
     },
     {
+      "id": "cd-105895742",
+      "name": "Rachel Rosenstein",
+      "grad_year": 2021,
+      "school": "Trinity",
+      "degree": "Bachelor of Arts - BA",
+      "major": "Sociology, Innovation and Entrepreneurship, Visual Media Studies",
+      "current_company": "espncareers.com",
+      "current_title": "Associate Manager, Brand Marketing and Consumer Products Licensing",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/rachel-rosenstein-246a7b12b",
+      "location": "New York, New York",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/a7d569f1e12ff84ab17455959c8b0628487c15debcd3aa7771d9e48e4ae05375.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "marketing_fan"
+      ],
+      "all_degrees": [
+        {
+          "school": "Fuqua",
+          "degree": "Master of Management Studies",
+          "grad_year": 2022,
+          "major": null
+        },
+        {
+          "school": "General",
+          "degree": "Bachelor of Arts - BA",
+          "grad_year": 2021,
+          "major": "Sociology, Innovation and Entrepreneurship, Visual Media Studies"
+        }
+      ]
+    },
+    {
       "id": "cd-172846049",
       "name": "Rami Jabaji",
       "grad_year": 2008,
@@ -17246,6 +18973,38 @@
           "degree": "Master of Environmental Management",
           "grad_year": 2015,
           "major": "Water Resources Management"
+        }
+      ]
+    },
+    {
+      "id": "cd-1080551",
+      "name": "Rebecca (Bex) Smith",
+      "grad_year": 2003,
+      "school": "Trinity",
+      "degree": "BA Economics",
+      "major": "Economics",
+      "current_company": "zone7.ai",
+      "current_title": "Strategic Advisor",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/ACoAAAEwEV0BrxujA0n_DPPP54EoAa6MHJGa19k",
+      "location": "United Kingdom",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/b07af521ee68a85ca5e4364beb13bcb39c9a0dded098729fe6e6d0b15aa8dd13.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "strategy_corpdev",
+        "investing_deal"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "BA Economics",
+          "grad_year": 2003,
+          "major": "Economics"
         }
       ]
     },
@@ -17542,6 +19301,39 @@
           "degree": "AB",
           "grad_year": 2012,
           "major": null
+        }
+      ]
+    },
+    {
+      "id": "cd-2762570",
+      "name": "Rob Yowell",
+      "grad_year": 1988,
+      "school": "Trinity",
+      "degree": "Bachelors",
+      "major": "English/Anthropology",
+      "current_company": "njcaa.org",
+      "current_title": "Foundation Board Member",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/geminisports",
+      "location": "Phoenix, Arizona",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/72cc1680cbb496f29412bcd1e58e6f107898eef0ac1f0895a73d120cf4d00988.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "partnerships",
+        "strategy_corpdev",
+        "sales_account"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelors",
+          "grad_year": 1988,
+          "major": "English/Anthropology"
         }
       ]
     },
@@ -18366,37 +20158,6 @@
       ]
     },
     {
-      "id": "cd-79923",
-      "name": "Sarah Hirshland",
-      "grad_year": 1997,
-      "school": "Trinity",
-      "degree": "BS",
-      "major": "Biology",
-      "current_company": "United States Olympic & Paralympic Committee",
-      "current_title": "Chief Executive Officer",
-      "company_type": "League",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/sarah-hirshland-0210803",
-      "location": "Colorado Springs, Colorado",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/3d4c4e4a977f7f960fa1095bdbd02f6a691a87b98e9b683eb470952705af24a0.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "leagues_governing",
-      "sports_functions": [
-        "front_office"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "BS",
-          "grad_year": 1997,
-          "major": "Biology"
-        }
-      ]
-    },
-    {
       "id": "sarah-hirshland-macdougall-1997",
       "name": "Sarah Hirshland (MacDougall)",
       "grad_year": 1997,
@@ -18644,6 +20405,37 @@
       ]
     },
     {
+      "id": "cd-68013241",
+      "name": "Sean Vaziri",
+      "grad_year": 2022,
+      "school": "Fuqua",
+      "degree": "Master of Business Administration - MBA",
+      "major": "",
+      "current_company": "fanaticsinc.com",
+      "current_title": "Global Director, Commercial & Go-to-Market",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/sean-vaziri",
+      "location": "New York City Metropolitan Area",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/4c815bc95df67d1d8d163be712011b5b0d23eb6843f010d77cdd99668c6cf8d8.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "marketing_fan"
+      ],
+      "all_degrees": [
+        {
+          "school": "Fuqua",
+          "degree": "Master of Business Administration - MBA",
+          "grad_year": 2022,
+          "major": null
+        }
+      ]
+    },
+    {
       "id": "cd-120210910",
       "name": "Seth Liyanapathirana",
       "grad_year": 2026,
@@ -18794,6 +20586,37 @@
           "degree": "B.A.",
           "grad_year": 2009,
           "major": "Political Science; Certificate in Marketing"
+        }
+      ]
+    },
+    {
+      "id": "cd-118841091",
+      "name": "Shelby Bumgarner",
+      "grad_year": 2025,
+      "school": "Other",
+      "degree": "",
+      "major": "",
+      "current_company": "youth.inc",
+      "current_title": "Host and Lead Digital Creator",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/shelby-bumgarner-28a833258",
+      "location": "Greater Philadelphia",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/8450c3b1107e478a1abf1864e753ad363c956759c6e51ac79af2e75a43739753.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "media_content"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": null,
+          "grad_year": 2025,
+          "major": null
         }
       ]
     },
@@ -18955,6 +20778,38 @@
           "degree": "Masters in Product Management",
           "grad_year": null,
           "major": null
+        }
+      ]
+    },
+    {
+      "id": "cd-10321374",
+      "name": "Shy Taylor",
+      "grad_year": 2018,
+      "school": "Other",
+      "degree": "Master of Arts (M.A.)",
+      "major": "Liberal Arts and Sciences/Liberal Studies",
+      "current_company": "disneycareers.com",
+      "current_title": "ESPN Sports Marketing & Sponsorships",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/shytaylor",
+      "location": "New York City Metropolitan Area",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/29c48c64cd64a9fdd021b20c465ce0d5d92b4d514b82f7c81238e709764d2374.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "partnerships",
+        "marketing_fan"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Master of Arts (M.A.)",
+          "grad_year": 2018,
+          "major": "Liberal Arts and Sciences/Liberal Studies"
         }
       ]
     },
@@ -19459,6 +21314,35 @@
       ]
     },
     {
+      "id": "cd-118718804",
+      "name": "Sue Eckstein",
+      "grad_year": 1980,
+      "school": "Trinity",
+      "degree": "BA",
+      "major": "English",
+      "current_company": "furman.edu",
+      "current_title": "Associate Athletic Director",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/sue-eckstein-50641920",
+      "location": "Greenville, South Carolina",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/7b8635ba72e11eba1187a6660da286087d56faf4aa1d26215d392b7501d8606f.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "BA",
+          "grad_year": 1980,
+          "major": "English"
+        }
+      ]
+    },
+    {
       "id": "cd-37690861",
       "name": "Sue S.",
       "grad_year": 1994,
@@ -19584,6 +21468,37 @@
           "degree": "Bachelor of Arts (B.A.)",
           "grad_year": null,
           "major": null
+        }
+      ]
+    },
+    {
+      "id": "cd-54709196",
+      "name": "Sydney Bolan",
+      "grad_year": 2021,
+      "school": "Trinity",
+      "degree": "BA in Sociology with a MMS Certificate",
+      "major": "Business",
+      "current_company": "wilson.com",
+      "current_title": "Marketing Manager",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/sydneybolan",
+      "location": "Morrisville, North Carolina",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/c76c4908853cdf1ef8b280c15534afaf789d7beb5d47929fe02071f92f105b49.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "marketing_fan"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "BA in Sociology with a MMS Certificate",
+          "grad_year": 2021,
+          "major": "Business"
         }
       ]
     },
@@ -19718,6 +21633,37 @@
       ]
     },
     {
+      "id": "cd-118356017",
+      "name": "Sylvia Jacoby",
+      "grad_year": 2026,
+      "school": "Trinity",
+      "degree": "Bachelor of Science - BS",
+      "major": "Computer Science",
+      "current_company": "disneycareers.com",
+      "current_title": "Incoming Associate Product Manager",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/sylvia-jacoby",
+      "location": "San Francisco Bay Area",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/233f95254fe2e17be78d16d90c276a6ead5d93fd3c00f2db229b1023705d4bb7.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "product_eng"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor of Science - BS",
+          "grad_year": 2026,
+          "major": "Computer Science"
+        }
+      ]
+    },
+    {
       "id": "cd-29504767",
       "name": "SɑƖ Ʈuƶƶoʟino",
       "grad_year": null,
@@ -19774,6 +21720,37 @@
           "degree": "Bachelor of Science - BS",
           "grad_year": null,
           "major": "Biology with a concentration in Marine Biology"
+        }
+      ]
+    },
+    {
+      "id": "cd-118396489",
+      "name": "Tal Smith",
+      "grad_year": 1955,
+      "school": "Trinity",
+      "degree": "Bachelor of Arts - BA",
+      "major": "Business Administration",
+      "current_company": "astros.com",
+      "current_title": "Assistant To The President",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/tal-smith-428945",
+      "location": "Houston, Texas",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/6eebbe8828bf9b023272dcbd596f349de921bae3947de6fe14686d7faa50e659.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "strategy_corpdev"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor of Arts - BA",
+          "grad_year": 1955,
+          "major": "Business Administration"
         }
       ]
     },
@@ -20059,37 +22036,6 @@
       ]
     },
     {
-      "id": "cd-38806475",
-      "name": "Taylor Ciampi, MBA",
-      "grad_year": 2012,
-      "school": "Trinity",
-      "degree": "Bachelor of Arts (B.A.)",
-      "major": "Psychology",
-      "current_company": "PGA TOUR",
-      "current_title": "Manager, PGA TOUR Champions Player Relations & Administration",
-      "company_type": "League",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/ACoAAAjTaM8B9-8PMRP3qc_hNZ_sz3KPwwtBl_c",
-      "location": "Metro Jacksonville",
-      "headshot_url": null,
-      "sports_league_affiliation": null,
-      "added_date": "2026-06-22",
-      "last_verified": null,
-      "org_category": "leagues_governing",
-      "sports_functions": [
-        "front_office"
-      ],
-      "all_degrees": [
-        {
-          "school": "General",
-          "degree": "Bachelor of Arts (B.A.)",
-          "grad_year": 2012,
-          "major": "Psychology"
-        }
-      ]
-    },
-    {
       "id": "cd-96365318",
       "name": "Taylor Elliott",
       "grad_year": 2014,
@@ -20183,6 +22129,38 @@
       ]
     },
     {
+      "id": "cd-97695291",
+      "name": "Teddy Werner",
+      "grad_year": 2003,
+      "school": "Law",
+      "degree": "Doctor of Law - JD",
+      "major": "",
+      "current_company": "fenwaysportsmanagement.com",
+      "current_title": "Senior Advisor - Strategy & Growth",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/teddy-werner-7a2581124",
+      "location": "Boston, Massachusetts",
+      "headshot_url": null,
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "strategy_corpdev",
+        "marketing_fan"
+      ],
+      "all_degrees": [
+        {
+          "school": "Law",
+          "degree": "Doctor of Law - JD",
+          "grad_year": 2003,
+          "major": null
+        }
+      ]
+    },
+    {
       "id": "tejas-srinivasan-2023",
       "name": "Tejas Srinivasan",
       "grad_year": 2023,
@@ -20241,6 +22219,43 @@
           "degree": "Masters of Engineering Management (MEM)",
           "grad_year": 2024,
           "major": null
+        }
+      ]
+    },
+    {
+      "id": "cd-118718777",
+      "name": "Terrell Smith",
+      "grad_year": null,
+      "school": "Trinity",
+      "degree": "Bachelor of Arts - BA",
+      "major": "Political Science and Government",
+      "current_company": "duke.edu",
+      "current_title": "Assistant Athletic Director, NIL/Strategy",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/terrell-smith-96972213a",
+      "location": "Durham, North Carolina",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/7d92f39066c172686b8aefed28182c33216cd36d46a18d8e79bed1e6e41c9d46.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "strategy_corpdev"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor of Arts - BA",
+          "grad_year": null,
+          "major": "Political Science and Government"
+        },
+        {
+          "school": "General",
+          "degree": "Master of Arts - MA",
+          "grad_year": null,
+          "major": "Humanities/Humanistic Studies"
         }
       ]
     },
@@ -20507,6 +22522,37 @@
       ]
     },
     {
+      "id": "cd-35701432",
+      "name": "Tim Britton",
+      "grad_year": 2009,
+      "school": "Trinity",
+      "degree": "BA",
+      "major": "English, History, Journalism",
+      "current_company": "nytimes.com",
+      "current_title": "Senior Writer",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/realtimbritton",
+      "location": "Queens, New York",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/338e74b83b06a43ac9a35f00f8e94c501225dcba7fb6a88d468508b44943bf5f.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "media_content"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "BA",
+          "grad_year": 2009,
+          "major": "English, History, Journalism"
+        }
+      ]
+    },
+    {
       "id": "cd-227467788",
       "name": "Trac Norris, PT, DPT, SCS, CSCS",
       "grad_year": 2019,
@@ -20534,6 +22580,37 @@
           "degree": "Doctor of Physical Therapy",
           "grad_year": 2019,
           "major": null
+        }
+      ]
+    },
+    {
+      "id": "cd-118357287",
+      "name": "Tracey Lesetar-Smith",
+      "grad_year": null,
+      "school": "Other",
+      "degree": "B.A.",
+      "major": "Political Science, Public Policy",
+      "current_company": "worldsevensfootball.com",
+      "current_title": "Chief of Global Events & Broadcast",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/tracey-lesetar-smith",
+      "location": "United States",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/d28b54302cdb09abad09a4404ad92f2f8879e1403ac18e5d0bfe6e368ccaf9c7.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "media_content"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "B.A.",
+          "grad_year": null,
+          "major": "Political Science, Public Policy"
         }
       ]
     },
@@ -20689,6 +22766,43 @@
           "degree": "AB",
           "grad_year": 2000,
           "major": null
+        }
+      ]
+    },
+    {
+      "id": "cd-117965069",
+      "name": "Troy Caradonna",
+      "grad_year": 2003,
+      "school": "Trinity",
+      "degree": "Bachelor of Science - BS",
+      "major": "Sociology and Anthropology",
+      "current_company": "",
+      "current_title": "Partner, Player Representative",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/troy-caradonna-b3082866",
+      "location": "Tampa, Florida",
+      "headshot_url": null,
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [
+        "legal_rep"
+      ],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor of Science - BS",
+          "grad_year": 2003,
+          "major": "Sociology and Anthropology"
+        },
+        {
+          "school": "General",
+          "degree": "Certificate",
+          "grad_year": 2003,
+          "major": "Markets and Management"
         }
       ]
     },
@@ -21648,6 +23762,35 @@
       ]
     },
     {
+      "id": "cd-118725256",
+      "name": "Zach White",
+      "grad_year": 2010,
+      "school": "Trinity",
+      "degree": "Bachelors",
+      "major": "Mathematics",
+      "current_company": "duke.edu",
+      "current_title": "Assistant Athletic Director/Iron Dukes Major Gifts",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/zach-white-74255a191",
+      "location": "Raleigh-Durham-Chapel Hill Area",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/a07713cc3e215b1d30953cac343edbfcae053783c443d1dba86187e036c3627a.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelors",
+          "grad_year": 2010,
+          "major": "Mathematics"
+        }
+      ]
+    },
+    {
       "id": "cd-52537373",
       "name": "Zachary Kramer",
       "grad_year": 2014,
@@ -21770,10 +23913,39 @@
           "major": "Statistics"
         }
       ]
+    },
+    {
+      "id": "cd-119033383",
+      "name": "Zenzi Huysmans",
+      "grad_year": 2014,
+      "school": "Trinity",
+      "degree": "Bachelor of Science (BS)",
+      "major": "Psychology",
+      "current_company": "wvu.edu",
+      "current_title": "Teaching Assistant Professor",
+      "company_type": "Other",
+      "sub_industries": [],
+      "seniority_level": "Mid",
+      "linkedin_url": "https://www.linkedin.com/in/zenzi-huysmans-83624b54",
+      "location": "Morgantown, West Virginia",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/4a33e978ba403d70caf30f08f021406fa40644b3c373c73c4dfd862821174634.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-06-22",
+      "last_verified": null,
+      "org_category": null,
+      "sports_functions": [],
+      "all_degrees": [
+        {
+          "school": "General",
+          "degree": "Bachelor of Science (BS)",
+          "grad_year": 2014,
+          "major": "Psychology"
+        }
+      ]
     }
   ],
   "meta": {
-    "last_updated": "2026-06-23",
-    "total_count": 693
+    "last_updated": "2026-07-03",
+    "total_count": 763
   }
 }
