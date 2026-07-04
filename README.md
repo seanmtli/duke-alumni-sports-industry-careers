@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Duke Sports Alumni Directory
 
-## Getting Started
+A searchable, filterable directory of Duke University alumni working across the sports industry — from pro leagues and front offices to sports tech startups, media, betting, and sports-facing roles at major tech companies.
 
-First, run the development server:
+**Live site:** [dukesportsalumni.com](https://www.dukesportsalumni.com/)
+
+---
+
+## What it is
+
+764+ verified alumni profiles, each tagged with sub-industry, seniority, company type, and location. Built as a networking and discovery tool for Duke alumni and students interested in sports careers.
+
+**Directory features:**
+- Full-text search across name, company, and title
+- Filter by sub-industry (17 categories), company type, school, grad year range, seniority, and location
+- Profile cards with LinkedIn links, role, company, and sub-industry tags
+- Stats dashboard with breakdowns by sub-industry, company type, and grad year cohort
+
+**Sub-industry taxonomy** covers: Fan Data/CDP, Ticketing, Sponsorship & Partnerships, Sports Gambling, Media & Broadcasting, Sports Analytics, Fan Experience, Venue & Event Tech, Athlete Tech, Sports at Big Tech, League/Team Front Office, VC/PE, Sports Consulting, Esports, Sports Data Infrastructure, Collegiate/Amateur Sports, and Fitness & Wellness Tech.
+
+---
+
+## Tech stack
+
+| Layer | Choice |
+|---|---|
+| Framework | Next.js 16 (App Router) |
+| UI | React 19, Tailwind CSS v4, shadcn/ui, Radix Base UI |
+| Search | Fuse.js (client-side fuzzy search) |
+| Charts | Recharts |
+| Database | Supabase (Postgres) |
+| Deployment | Vercel |
+
+---
+
+## Local development
+
+**Prerequisites:** Node.js 20+, a Supabase project, environment variables (see below).
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Required environment variables** (create a `.env.local` at the project root):
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+SUPABASE_URL=
+SUPABASE_SERVICE_KEY=
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+```
 
-## Learn More
+The directory page is statically generated at build time from the Supabase `people` table (status = `verified`). Running `npm run dev` will fetch live data from Supabase on each request in development mode.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+  app/
+    directory/     # main alumni directory
+    stats/         # summary dashboard
+    admin/         # record management (auth-gated)
+    submit/        # alumni self-submission form
+    contact/       # contact page
+  components/      # shared UI components
+  hooks/           # React hooks (filtering, search)
+  lib/             # Supabase client, utilities
+  types/           # TypeScript types
+scripts/           # data pipeline (Crustdata discovery + Supabase import)
+```
