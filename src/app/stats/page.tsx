@@ -32,10 +32,9 @@ export default function StatsPage() {
       </div>
 
       {/* KPI tiles */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+      <div className="grid grid-cols-3 gap-4 mb-8">
         <StatCard label="Alumni" value={stats.totalAlumni} />
         <StatCard label="Companies" value={stats.totalCompanies} />
-        <StatCard label="Schools" value={stats.schoolsRepresented} />
         <StatCard label="Cities" value={stats.citiesRepresented} />
       </div>
 
