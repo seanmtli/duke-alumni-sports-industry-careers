@@ -197,7 +197,7 @@ export function FilterPanel({ filters, onChange, locationOptions }: FilterPanelP
           <input
             type="number"
             min={filters.gradYearRange[0]}
-            max={new Date().getFullYear()}
+            max={new Date().getFullYear() + 6}
             value={filters.gradYearRange[1]}
             onChange={(e) => setGradYear(1, Number(e.target.value))}
             className="w-20 text-sm border border-gray-200 rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-[#003087]"

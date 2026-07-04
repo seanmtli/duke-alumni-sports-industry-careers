@@ -146,7 +146,9 @@ export const DEFAULT_FILTERS: FilterState = {
   sportsFunctions: [],
   schools: [],
   locations: [],
-  gradYearRange: [1970, new Date().getFullYear()],
+  // Upper bound extends past the current year so "incoming"/future-dated grads
+  // (e.g. current students and rising analysts) are not hidden by default.
+  gradYearRange: [1970, new Date().getFullYear() + 6],
 };
 
 export function getYearsExperience(alumni: Alumni): number {
