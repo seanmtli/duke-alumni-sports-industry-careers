@@ -90,6 +90,9 @@ export interface DukeDegree {
 
 export interface Alumni {
   id: string;
+  // Supabase `people.id` (uuid). Present on records read from the DB; used as
+  // the stable key for admin edit/delete. Absent on brand-new unsaved records.
+  person_id?: string;
   name: string;
   grad_year: number | null;
   school: School;

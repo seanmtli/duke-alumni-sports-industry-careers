@@ -1,5 +1,4 @@
-import alumniData from '@/data/alumni.json';
-import type { Alumni } from '@/types/alumni';
+import { getAlumni } from '@/lib/getAlumni';
 import { computeStats } from '@/lib/computeStats';
 import { StatCard } from '@/components/stats/StatCard';
 import { HorizontalBarChart } from '@/components/stats/HorizontalBarChart';
@@ -18,8 +17,8 @@ function Section({ title, children }: { title: string; children: React.ReactNode
   );
 }
 
-export default function StatsPage() {
-  const alumni = alumniData.alumni as Alumni[];
+export default async function StatsPage() {
+  const alumni = await getAlumni();
   const stats = computeStats(alumni);
 
   return (

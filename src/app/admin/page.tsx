@@ -7,9 +7,6 @@ import {
   SPORTS_FUNCTIONS, SPORTS_FUNCTION_LABELS,
   SENIORITY_LEVELS, SCHOOLS,
 } from '@/lib/constants';
-import initialData from '@/data/alumni.json';
-
-const ADMIN_PW = process.env.NEXT_PUBLIC_ADMIN_PASSWORD ?? 'duke2025';
 
 function slugify(name: string): string {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -247,25 +244,52 @@ export default function AdminPage() {
   const [authed, setAuthed] = useState(false);
   const [password, setPassword] = useState('');
   const [pwError, setPwError] = useState(false);
-  const [records, setRecords] = useState<Alumni[]>(initialData.alumni as Alumni[]);
+  const [records, setRecords] = useState<Alumni[]>([]);
+  const [loadingRecords, setLoadingRecords] = useState(false);
+  const [saving, setSaving] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [showAdd, setShowAdd] = useState(false);
   const [submissions, setSubmissions] = useState<Submission[]>([]);
   const [contactRequests, setContactRequests] = useState<ContactRequest[]>([]);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const isAuthed = localStorage.getItem('admin_authed') === ADMIN_PW;
-      setAuthed(isAuthed);
-      if (isAuthed) { fetchSubmissions(); void fetchContactRequests(); }
-    }
+    // Ask the server whether we already hold a valid session cookie.
+    (async () => {
+      try {
+        const res = await fetch('/api/admin/session');
+        const data = await res.json();
+        if (data.authed) {
+          setAuthed(true);
+          void loadAll();
+        }
+      } catch {
+        // stay logged out
+      }
+    })();
   }, []);
+
+  async function loadAll() {
+    await Promise.all([fetchAlumni(), fetchSubmissions(), fetchContactRequests()]);
+  }
+
+  async function fetchAlumni() {
+    setLoadingRecords(true);
+    try {
+      const res = await fetch('/api/alumni');
+      if (res.ok) {
+        const data = await res.json();
+        setRecords((data.alumni ?? []) as Alumni[]);
+      }
+    } catch {
+      // leave existing records
+    } finally {
+      setLoadingRecords(false);
+    }
+  }
 
   async function fetchSubmissions() {
     try {
-      const res = await fetch('/api/submissions', {
-        headers: { 'x-admin-password': ADMIN_PW },
-      });
+      const res = await fetch('/api/submissions');
       if (res.ok) {
         const data = await res.json();
         setSubmissions(data.submissions ?? []);
@@ -277,9 +301,7 @@ export default function AdminPage() {
 
   async function fetchContactRequests() {
     try {
-      const res = await fetch('/api/contact-requests', {
-        headers: { 'x-admin-password': ADMIN_PW },
-      });
+      const res = await fetch('/api/contact-requests');
       if (res.ok) {
         const data = await res.json();
         setContactRequests(data.requests ?? []);
@@ -292,7 +314,6 @@ export default function AdminPage() {
   async function dismissContactRequest(id: string) {
     await fetch(`/api/contact-requests?id=${encodeURIComponent(id)}`, {
       method: 'DELETE',
-      headers: { 'x-admin-password': ADMIN_PW },
     });
     setContactRequests((prev) => prev.filter((r) => r.request_id !== id));
   }
@@ -300,7 +321,6 @@ export default function AdminPage() {
   async function dismissSubmission(id: string) {
     await fetch(`/api/submissions?id=${encodeURIComponent(id)}`, {
       method: 'DELETE',
-      headers: { 'x-admin-password': ADMIN_PW },
     });
     setSubmissions((prev) => prev.filter((s) => s.submission_id !== id));
   }
@@ -331,49 +351,78 @@ export default function AdminPage() {
       added_date: today,
       last_verified: today,
     };
-    upsert(record);
-    await dismissSubmission(sub.submission_id);
+    const ok = await saveRecord(record);
+    if (ok) await dismissSubmission(sub.submission_id);
   }
 
-  function login() {
-    if (password === ADMIN_PW) {
-      localStorage.setItem('admin_authed', ADMIN_PW);
-      setAuthed(true);
-      fetchSubmissions();
-      void fetchContactRequests();
-    } else {
+  async function login() {
+    try {
+      const res = await fetch('/api/admin/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password }),
+      });
+      if (res.ok) {
+        setAuthed(true);
+        setPassword('');
+        void loadAll();
+      } else {
+        setPwError(true);
+      }
+    } catch {
       setPwError(true);
     }
   }
 
-  function upsert(record: Alumni) {
-    setRecords((prev) => {
-      const idx = prev.findIndex((r) => r.id === record.id);
-      return idx >= 0
-        ? prev.map((r) => (r.id === record.id ? record : r))
-        : [record, ...prev];
-    });
-    setEditingId(null);
-    setShowAdd(false);
+  async function logout() {
+    await fetch('/api/admin/logout', { method: 'POST' });
+    setAuthed(false);
+    setSubmissions([]);
+    setContactRequests([]);
   }
 
-  function remove(id: string) {
-    if (confirm('Remove this alumni record?')) {
-      setRecords((prev) => prev.filter((r) => r.id !== id));
+  // Persist a record to Supabase (create or update), then refresh from the DB.
+  // Returns true on success. Changes are live on the public site immediately.
+  async function saveRecord(record: Alumni): Promise<boolean> {
+    setSaving(true);
+    try {
+      const res = await fetch('/api/alumni', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(record),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        alert(`Save failed: ${data.error ?? res.status}`);
+        return false;
+      }
+      setEditingId(null);
+      setShowAdd(false);
+      await fetchAlumni();
+      return true;
+    } catch {
+      alert('Save failed: network error');
+      return false;
+    } finally {
+      setSaving(false);
     }
   }
 
-  function exportJSON() {
-    const blob = new Blob(
-      [JSON.stringify({ alumni: records, meta: { last_updated: new Date().toISOString().split('T')[0], total_count: records.length } }, null, 2)],
-      { type: 'application/json' }
-    );
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'alumni.json';
-    a.click();
-    URL.revokeObjectURL(url);
+  // Archive a record in Supabase (soft-delete). Removes it from the live site.
+  async function remove(record: Alumni) {
+    if (!record.person_id) {
+      alert('Cannot remove: record has no database id.');
+      return;
+    }
+    if (!confirm(`Remove ${record.name} from the directory?`)) return;
+    setRecords((prev) => prev.filter((r) => r.person_id !== record.person_id));
+    const res = await fetch(`/api/alumni?person_id=${encodeURIComponent(record.person_id)}`, {
+      method: 'DELETE',
+    });
+    if (!res.ok) {
+      alert('Remove failed — refreshing list.');
+      await fetchAlumni();
+    }
   }
 
   if (!authed) {
@@ -407,7 +456,10 @@ export default function AdminPage() {
       <div className="flex items-center justify-between mb-6">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Admin</h1>
-          <p className="text-sm text-gray-500 mt-0.5">{records.length} records in memory</p>
+          <p className="text-sm text-gray-500 mt-0.5">
+            {loadingRecords ? 'Loading…' : `${records.length} verified records`}
+            {saving && ' · saving…'}
+          </p>
         </div>
         <div className="flex gap-3">
           <button
@@ -417,16 +469,16 @@ export default function AdminPage() {
             + Add Alumni
           </button>
           <button
-            onClick={exportJSON}
-            className="border border-gray-200 text-gray-700 text-sm font-medium px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors"
+            onClick={logout}
+            className="border border-gray-200 text-gray-500 text-sm font-medium px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors"
           >
-            Export JSON
+            Sign Out
           </button>
         </div>
       </div>
 
-      <p className="text-xs text-amber-600 bg-amber-50 border border-amber-100 rounded-lg px-3 py-2 mb-6">
-        Changes are in memory only. Click <strong>Export JSON</strong>, then replace <code>src/data/alumni.json</code> and redeploy.
+      <p className="text-xs text-green-700 bg-green-50 border border-green-100 rounded-lg px-3 py-2 mb-6">
+        Changes save directly to the live database and appear on the site within a few seconds — no export or redeploy needed.
       </p>
 
       {submissions.length > 0 && (
@@ -542,7 +594,7 @@ export default function AdminPage() {
       {showAdd && (
         <div className="mb-6">
           <h2 className="font-semibold text-gray-800 mb-3">Add New Alumni</h2>
-          <AlumniForm onSave={upsert} onCancel={() => setShowAdd(false)} />
+          <AlumniForm onSave={saveRecord} onCancel={() => setShowAdd(false)} />
         </div>
       )}
 
@@ -550,7 +602,7 @@ export default function AdminPage() {
         {records.map((r) =>
           editingId === r.id ? (
             <div key={r.id} className="mb-4">
-              <AlumniForm initial={r} onSave={upsert} onCancel={() => setEditingId(null)} />
+              <AlumniForm initial={r} onSave={saveRecord} onCancel={() => setEditingId(null)} />
             </div>
           ) : (
             <div key={r.id} className="bg-white border border-gray-200 rounded-lg px-4 py-3 flex items-center justify-between gap-4">
@@ -562,7 +614,7 @@ export default function AdminPage() {
               </div>
               <div className="flex gap-2 flex-shrink-0">
                 <button onClick={() => { setEditingId(r.id); setShowAdd(false); }} className="text-xs text-[#003087] hover:underline">Edit</button>
-                <button onClick={() => remove(r.id)} className="text-xs text-red-500 hover:underline">Remove</button>
+                <button onClick={() => remove(r)} className="text-xs text-red-500 hover:underline">Remove</button>
               </div>
             </div>
           )
