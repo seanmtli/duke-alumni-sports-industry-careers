@@ -1,10 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import alumniData from '@/data/alumni.json';
-import type { Alumni } from '@/types/alumni';
+import { getAlumni } from '@/lib/getAlumni';
 
-export default function HomePage() {
-  const alumni = alumniData.alumni as Alumni[];
+export default async function HomePage() {
+  const alumni = await getAlumni();
   const totalAlumni = alumni.length;
   const totalCompanies = new Set(alumni.map((a) => a.current_company)).size;
 

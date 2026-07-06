@@ -1,7 +1,14 @@
 import fs from 'fs';
 import path from 'path';
-import alumniData from '@/data/alumni.json';
 import type { Alumni } from '@/types/alumni';
+import { sbSelect } from '@/lib/supabase';
+import { mapPersonToAlumni, PEOPLE_SELECT, type PeopleRow } from '@/lib/alumniMap';
+
+// Cache tag for the public alumni reads. Admin write routes call
+// revalidateTag(ALUMNI_TAG) so edits appear on the live site within seconds
+// without a rebuild/redeploy.
+export const ALUMNI_TAG = 'alumni';
+const REVALIDATE_SECONDS = 300; // safety refresh even if a tag bust is missed
 
 const HEADSHOT_DIR = path.join(process.cwd(), 'public', 'headshots');
 const SUPPORTED_EXTS = ['jpg', 'jpeg', 'png', 'webp'];
@@ -38,27 +45,37 @@ function buildHeadshotMap(): Map<string, string> {
 /**
  * Resolve a headshot to a usable URL, in priority order:
  *   1. A local file in public/headshots/ (highest priority).
- *   2. A stable external URL from alumni.json (e.g. a Crustdata S3 permalink).
+ *   2. A stable external URL from Supabase (e.g. a Crustdata S3 permalink).
  *   3. null — render initials.
  *
  * Raw LinkedIn CDN URLs (media.licdn.com) are short-lived signed URLs that
  * expire and never load, so they are ignored. Re-hosted permalinks (Crustdata
  * S3) are stable and used directly.
  */
-function resolveHeadshot(localPath: string | undefined, jsonUrl: string | null): string | null {
+function resolveHeadshot(localPath: string | undefined, dbUrl: string | null): string | null {
   if (localPath) return localPath;
-  if (jsonUrl && !jsonUrl.includes('media.licdn.com')) return jsonUrl;
+  if (dbUrl && !dbUrl.includes('media.licdn.com')) return dbUrl;
   return null;
 }
 
 /**
- * Load all alumni with headshot_url resolved to a local file or a stable
- * external permalink when present, otherwise null.
+ * Load all verified alumni straight from Supabase, mapped to the app's `Alumni`
+ * shape, with headshot_url resolved to a local file or stable permalink.
+ * Cached under ALUMNI_TAG; admin writes revalidate that tag so the live site
+ * reflects edits immediately.
  */
-export function getAlumni(): Alumni[] {
+export async function getAlumni(): Promise<Alumni[]> {
+  const rows = await sbSelect<PeopleRow>(
+    'people',
+    `select=${PEOPLE_SELECT}&status=eq.verified`,
+    { tags: [ALUMNI_TAG], revalidate: REVALIDATE_SECONDS },
+  );
+
   const headshots = buildHeadshotMap();
-  return (alumniData.alumni as Alumni[]).map((a) => ({
-    ...a,
-    headshot_url: resolveHeadshot(headshots.get(a.id), a.headshot_url),
-  }));
+  const alumni = rows.map((r) => {
+    const a = mapPersonToAlumni(r);
+    return { ...a, headshot_url: resolveHeadshot(headshots.get(a.id), a.headshot_url) };
+  });
+  alumni.sort((x, y) => x.name.toLowerCase().localeCompare(y.name.toLowerCase()));
+  return alumni;
 }

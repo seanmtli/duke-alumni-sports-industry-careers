@@ -5,6 +5,6 @@ export const metadata = {
   title: 'Directory | Duke Sports Alumni',
 };
 
-export default function DirectoryPage() {
-  return <DirectoryClient initialData={getAlumni()} />;
+export default async function DirectoryPage() {
+  return <DirectoryClient initialData={await getAlumni()} />;
 }

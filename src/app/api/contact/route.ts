@@ -1,10 +1,4 @@
-import { promises as fs } from 'fs';
-import path from 'path';
-import type { ContactRequest } from '@/types/alumni';
-
-const FILE = path.join(process.cwd(), 'src/data/contact-requests.json');
-
-let writeQueue: Promise<void> = Promise.resolve();
+import { sbInsert } from '@/lib/supabase';
 
 function sanitizeStr(v: unknown, max: number): string {
   return typeof v === 'string' ? v.trim().slice(0, max) : '';
@@ -50,41 +44,7 @@ export async function POST(request: Request) {
       return Response.json({ error: 'Message is required' }, { status: 400 });
     }
 
-    const req: ContactRequest = {
-      request_id: crypto.randomUUID(),
-      submitted_at: new Date().toISOString(),
-      name,
-      email,
-      type,
-      linkedin_url,
-      message,
-    };
-
-    const result = { outcome: 'ok' as string };
-    writeQueue = writeQueue.then(async () => {
-      const raw = await fs.readFile(FILE, 'utf-8').catch(() => '{"requests":[]}');
-      let data: { requests: ContactRequest[] };
-      try {
-        data = JSON.parse(raw) as { requests: ContactRequest[] };
-        if (!Array.isArray(data.requests)) data.requests = [];
-      } catch {
-        data = { requests: [] };
-      }
-
-      if (data.requests.length >= 500) {
-        result.outcome = 'queue_full';
-        return;
-      }
-
-      data.requests.push(req);
-      await fs.writeFile(FILE, JSON.stringify(data, null, 2));
-    });
-    await writeQueue;
-
-    if (result.outcome === 'queue_full') {
-      return Response.json({ error: 'Request queue full, please try again later' }, { status: 503 });
-    }
-
+    await sbInsert('contact_requests', { name, email, type, linkedin_url, message });
     return Response.json({ ok: true });
   } catch {
     return Response.json({ error: 'Internal server error' }, { status: 500 });
