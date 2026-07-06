@@ -66,6 +66,12 @@ export default async function HomePage() {
             >
               View Stats
             </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 border border-white/50 text-white font-medium px-7 py-3.5 rounded-lg hover:bg-white/10 transition-colors text-sm"
+            >
+              Contact
+            </Link>
           </div>
         </div>
       </section>
