@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { revalidateTag } from 'next/cache';
 import { isAdminAuthed } from '@/lib/auth';
 import { sbSelect, sbInsert, sbUpdate, sbDelete } from '@/lib/supabase';
+import { fetchHeadshotUrl } from '@/lib/crustdata';
 import {
   mapPersonToAlumni,
   PEOPLE_SELECT,
@@ -132,6 +133,18 @@ export async function POST(request: Request) {
       await sbInsert('duke_degrees', degrees.map((d) => ({ ...d, person_id: personId })));
       revalidateTag(ALUMNI_TAG, 'max');
       return NextResponse.json({ ok: true, person_id: personId });
+    }
+
+    // New records never carry a photo (the admin form has no headshot field and
+    // submissions don't collect one), so grab one from Crustdata by LinkedIn URL
+    // — the same source the batch enrich job uses. Best-effort: a miss just
+    // leaves headshot_url null and the card falls back to initials.
+    if (!peoplePatch.headshot_url && typeof peoplePatch.linkedin_url === 'string') {
+      const headshot = await fetchHeadshotUrl(peoplePatch.linkedin_url);
+      if (headshot) {
+        peoplePatch.headshot_url = headshot;
+        peoplePatch.last_enriched = 'now()';
+      }
     }
 
     // Insert a new verified person + all its degrees.
