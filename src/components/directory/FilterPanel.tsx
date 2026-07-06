@@ -1,5 +1,6 @@
 'use client';
 
+import { useMemo, useState } from 'react';
 import type { FilterState, OrgCategory, SportsFunction, School } from '@/types/alumni';
 import type { LocationOptions } from '@/lib/filterAlumni';
 import {
@@ -11,8 +12,8 @@ interface FilterPanelProps {
   filters: FilterState;
   onChange: (filters: FilterState) => void;
   locationOptions: LocationOptions;
-  /** [min, max] grad-year bounds derived from the data for the slider inputs. */
-  yearBounds?: [number, number];
+  /** Company names (ordered by count) available as filter options. */
+  companyOptions: string[];
 }
 
 function MultiCheckbox<T extends string>({
@@ -165,8 +166,80 @@ function LocationFilter({
   );
 }
 
-export function FilterPanel({ filters, onChange, locationOptions, yearBounds }: FilterPanelProps) {
-  const [minYear, maxYear] = yearBounds ?? [1970, new Date().getFullYear() + 6];
+function CompanyFilter({
+  companyOptions,
+  selected,
+  onChange,
+}: {
+  companyOptions: string[];
+  selected: string[];
+  onChange: (companies: string[]) => void;
+}) {
+  const [query, setQuery] = useState('');
+
+  function toggle(value: string) {
+    const next = selected.includes(value)
+      ? selected.filter((v) => v !== value)
+      : [...selected, value];
+    onChange(next);
+  }
+
+  // Selected companies always show first (so they stay visible while filtering),
+  // followed by options matching the search query.
+  const visible = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    const matches = q
+      ? companyOptions.filter((c) => c.toLowerCase().includes(q))
+      : companyOptions;
+    const selectedSet = new Set(selected);
+    return [
+      ...selected,
+      ...matches.filter((c) => !selectedSet.has(c)),
+    ];
+  }, [companyOptions, selected, query]);
+
+  const checkboxClass =
+    'rounded border-gray-300 text-[#003087] focus:ring-[#003087] focus:ring-offset-0 h-3.5 w-3.5 cursor-pointer flex-shrink-0';
+
+  return (
+    <div className="mb-5">
+      <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Company</p>
+      <input
+        type="text"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder="Search companies…"
+        className="w-full text-sm border border-gray-200 rounded px-2 py-1 mb-2 focus:outline-none focus:ring-1 focus:ring-[#003087]"
+      />
+      <div className="space-y-1.5 max-h-48 overflow-y-auto pr-1">
+        {visible.length === 0 ? (
+          <p className="text-xs text-gray-400 py-1">No companies match.</p>
+        ) : (
+          visible.map((company) => {
+            const checked = selected.includes(company);
+            return (
+              <label key={company} className="flex items-center gap-2 cursor-pointer group">
+                <input
+                  type="checkbox"
+                  checked={checked}
+                  onChange={() => toggle(company)}
+                  className={checkboxClass}
+                />
+                <span className={`text-sm leading-tight transition-colors ${
+                  checked ? 'text-[#003087] font-medium' : 'text-gray-600 group-hover:text-gray-900'
+                }`}>
+                  {company}
+                </span>
+              </label>
+            );
+          })
+        )}
+      </div>
+    </div>
+  );
+}
+
+export function FilterPanel({ filters, onChange, locationOptions, companyOptions }: FilterPanelProps) {
   function toggle<T extends string>(key: keyof FilterState, value: T) {
     const current = filters[key] as T[];
     const next = current.includes(value)
@@ -175,38 +248,13 @@ export function FilterPanel({ filters, onChange, locationOptions, yearBounds }: 
     onChange({ ...filters, [key]: next });
   }
 
-  function setGradYear(index: 0 | 1, value: number) {
-    const next: [number, number] = [...filters.gradYearRange] as [number, number];
-    next[index] = value;
-    onChange({ ...filters, gradYearRange: next });
-  }
-
   return (
     <aside className="w-full">
-      <div className="mb-5">
-        <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">
-          Grad Year
-        </p>
-        <div className="flex items-center gap-2">
-          <input
-            type="number"
-            min={minYear}
-            max={filters.gradYearRange[1]}
-            value={filters.gradYearRange[0]}
-            onChange={(e) => setGradYear(0, Number(e.target.value))}
-            className="w-20 text-sm border border-gray-200 rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-[#003087]"
-          />
-          <span className="text-gray-400 text-sm">–</span>
-          <input
-            type="number"
-            min={filters.gradYearRange[0]}
-            max={maxYear}
-            value={filters.gradYearRange[1]}
-            onChange={(e) => setGradYear(1, Number(e.target.value))}
-            className="w-20 text-sm border border-gray-200 rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-[#003087]"
-          />
-        </div>
-      </div>
+      <CompanyFilter
+        companyOptions={companyOptions}
+        selected={filters.companies}
+        onChange={(companies) => onChange({ ...filters, companies })}
+      />
 
       <MultiCheckbox
         label="Industry"

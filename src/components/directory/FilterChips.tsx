@@ -26,6 +26,7 @@ export function FilterChips({ filters, onRemove, onClearAll, activeCount }: Filt
     ...filters.sportsFunctions.map((v) => ({ key: 'sportsFunctions' as const, value: v })),
     ...filters.schools.map((v) => ({ key: 'schools' as const, value: v })),
     ...filters.locations.map((v) => ({ key: 'locations' as const, value: v })),
+    ...filters.companies.map((v) => ({ key: 'companies' as const, value: v })),
   ];
 
   return (

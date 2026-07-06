@@ -83,6 +83,23 @@ export function buildLocationOptions(alumni: { location: string }[]): LocationOp
   return { usCities, countries };
 }
 
+/**
+ * Derives the list of company filter options from the alumni list, ordered by
+ * how many alumni work there (descending), then alphabetically. Records with no
+ * `current_company` are skipped.
+ */
+export function buildCompanyOptions(alumni: { current_company: string }[]): string[] {
+  const counts = new Map<string, number>();
+  for (const a of alumni) {
+    const company = a.current_company?.trim();
+    if (!company) continue;
+    counts.set(company, (counts.get(company) ?? 0) + 1);
+  }
+  return [...counts.entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .map(([company]) => company);
+}
+
 let fuseInstance: Fuse<Alumni> | null = null;
 
 export function getFuseInstance(alumni: Alumni[]): Fuse<Alumni> {
@@ -131,13 +148,9 @@ export function filterAlumni(
   if (filters.locations.length > 0) {
     results = results.filter((a) => filters.locations.includes(extractLocation(a.location)));
   }
-
-  // Step 3: Grad year range — undated profiles always pass
-  results = results.filter(
-    (a) =>
-      a.grad_year == null ||
-      (a.grad_year >= filters.gradYearRange[0] && a.grad_year <= filters.gradYearRange[1])
-  );
+  if (filters.companies.length > 0) {
+    results = results.filter((a) => filters.companies.includes(a.current_company));
+  }
 
   return results;
 }

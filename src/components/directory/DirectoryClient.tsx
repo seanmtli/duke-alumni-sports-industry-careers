@@ -10,7 +10,7 @@ import { FilterPanel } from './FilterPanel';
 import { FilterChips } from './FilterChips';
 import { SortControls } from './SortControls';
 import { ResultsCount } from './ResultsCount';
-import { buildLocationOptions } from '@/lib/filterAlumni';
+import { buildLocationOptions, buildCompanyOptions } from '@/lib/filterAlumni';
 
 const PAGE_SIZE = 25;
 
@@ -24,18 +24,6 @@ export function DirectoryClient({ initialData }: DirectoryClientProps) {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
 
-  // Derive the grad-year slider bounds from the data so no record is ever
-  // hidden by a hardcoded default range (undated profiles always pass). Upper
-  // bound keeps headroom for future-dated ("incoming") grads.
-  const yearBounds = useMemo<[number, number]>(() => {
-    const years = initialData
-      .map((a) => a.grad_year)
-      .filter((y): y is number => y != null);
-    const upper = new Date().getFullYear() + 6;
-    if (years.length === 0) return [1970, upper];
-    return [Math.min(...years), Math.max(...years, upper)];
-  }, [initialData]);
-
   const {
     filteredAlumni,
     searchQuery,
@@ -46,7 +34,7 @@ export function DirectoryClient({ initialData }: DirectoryClientProps) {
     setSortConfig,
     resetFilters,
     activeFilterCount,
-  } = useAlumniFilter(initialData, yearBounds);
+  } = useAlumniFilter(initialData);
 
   // Sync debounced input to the filter hook
   useEffect(() => {
@@ -59,6 +47,7 @@ export function DirectoryClient({ initialData }: DirectoryClientProps) {
   }, [filteredAlumni]);
 
   const locationOptions = useMemo(() => buildLocationOptions(initialData), [initialData]);
+  const companyOptions = useMemo(() => buildCompanyOptions(initialData), [initialData]);
 
   const totalPages = Math.ceil(filteredAlumni.length / PAGE_SIZE);
   const pagedAlumni = filteredAlumni.slice(
@@ -109,7 +98,7 @@ export function DirectoryClient({ initialData }: DirectoryClientProps) {
         <div className="flex gap-8">
           {/* Sidebar filters — desktop */}
           <aside className="hidden lg:block w-56 flex-shrink-0">
-            <div className="sticky top-20">
+            <div className="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pr-1">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-sm font-semibold text-gray-800">Filters</h2>
                 {activeFilterCount > 0 && (
@@ -125,7 +114,7 @@ export function DirectoryClient({ initialData }: DirectoryClientProps) {
                 filters={filters}
                 onChange={setFilters}
                 locationOptions={locationOptions}
-                yearBounds={yearBounds}
+                companyOptions={companyOptions}
               />
             </div>
           </aside>
@@ -159,6 +148,7 @@ export function DirectoryClient({ initialData }: DirectoryClientProps) {
                   filters={filters}
                   onChange={setFilters}
                   locationOptions={locationOptions}
+                  companyOptions={companyOptions}
                 />
               </div>
             </div>
