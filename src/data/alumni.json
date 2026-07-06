@@ -5657,38 +5657,6 @@
       ]
     },
     {
-      "id": "cd-117989395",
-      "name": "Evan Abramson",
-      "grad_year": 2023,
-      "school": "Trinity",
-      "degree": "Bachelor of Science - BS",
-      "major": "Economics",
-      "current_company": "Real Sports",
-      "current_title": "Head of Partnerships & Growth",
-      "company_type": "Startup",
-      "sub_industries": [],
-      "seniority_level": "Senior",
-      "linkedin_url": "https://www.linkedin.com/in/evanabramson",
-      "location": "New York, New York",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/ee5b7e3a68e900f3102bde1f0b392578dbb1fa97a6cb57949b7df162830153bf.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-07-06",
-      "last_verified": "2026-07-06",
-      "org_category": "sports_tech_data",
-      "sports_functions": [
-        "partnerships",
-        "marketing_fan"
-      ],
-      "all_degrees": [
-        {
-          "school": "Trinity",
-          "degree": "Bachelor of Science - BS",
-          "grad_year": 2023,
-          "major": "Economics"
-        }
-      ]
-    },
-    {
       "id": "cd-103778969",
       "name": "Evan Davis",
       "grad_year": 2003,
@@ -6620,38 +6588,6 @@
           "degree": "AB",
           "grad_year": 2021,
           "major": null
-        }
-      ]
-    },
-    {
-      "id": "cd-114541807",
-      "name": "Harry Landis",
-      "grad_year": 2024,
-      "school": "Trinity",
-      "degree": "Bachelor of Arts - BA",
-      "major": "Economics",
-      "current_company": "Fanful",
-      "current_title": "Founder",
-      "company_type": "Startup",
-      "sub_industries": [],
-      "seniority_level": "Mid",
-      "linkedin_url": "https://www.linkedin.com/in/harry-landis-5494b7204",
-      "location": "New York, New York",
-      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/ddf1e095bf3d547b39b4d25b9f34942b01782e040aa6b4371dc363503a6ba7cc.jpg",
-      "sports_league_affiliation": null,
-      "added_date": "2026-07-06",
-      "last_verified": "2026-07-06",
-      "org_category": "sports_tech_data",
-      "sports_functions": [
-        "product_eng",
-        "marketing_fan"
-      ],
-      "all_degrees": [
-        {
-          "school": "Trinity",
-          "degree": "Bachelor of Arts - BA",
-          "grad_year": 2024,
-          "major": "Economics"
         }
       ]
     },
@@ -17041,7 +16977,7 @@
     }
   ],
   "meta": {
-    "last_updated": "2026-07-06",
-    "total_count": 542
+    "last_updated": "2026-07-04",
+    "total_count": 540
   }
 }

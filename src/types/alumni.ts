@@ -90,6 +90,9 @@ export interface DukeDegree {
 
 export interface Alumni {
   id: string;
+  // Supabase `people.id` (uuid). Present on records read from the DB; used as
+  // the stable key for admin edit/delete. Absent on brand-new unsaved records.
+  person_id?: string;
   name: string;
   grad_year: number | null;
   school: School;
@@ -168,13 +171,18 @@ export interface Submission {
   submission_id: string;
   submitted_at: string;
   name: string;
+  // Primary degree (first entry of all_degrees) — kept flat for existing consumers.
   grad_year: number;
   school: School;
   degree: string;
   major: string;
+  // Full list of Duke degrees (e.g. undergrad + MBA). Always includes the primary.
+  all_degrees: DukeDegree[];
   current_company: string;
   current_title: string;
-  company_type: CompanyType;
+  // Industry (org category) + sports functions — mirror the directory filters.
+  org_category: OrgCategory | null;
+  sports_functions: SportsFunction[];
   seniority_level: SeniorityLevel;
   linkedin_url: string;
   location: string;

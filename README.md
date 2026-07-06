@@ -8,7 +8,7 @@ A searchable, filterable directory of Duke University alumni working across the 
 
 ## What it is
 
-764+ verified alumni profiles, each tagged with sub-industry, seniority, company type, and location. Built as a networking and discovery tool for Duke alumni and students interested in sports careers.
+500+ verified alumni profiles, each tagged with sub-industry, seniority, company type, and location. Built as a networking and discovery tool for Duke alumni and students interested in sports careers.
 
 **Directory features:**
 - Full-text search across name, company, and title
