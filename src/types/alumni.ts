@@ -120,7 +120,7 @@ export interface FilterState {
   sportsFunctions: SportsFunction[];
   schools: School[];
   locations: string[];
-  gradYearRange: [number, number];
+  companies: string[];
 }
 
 export interface SortConfig {
@@ -146,9 +146,7 @@ export const DEFAULT_FILTERS: FilterState = {
   sportsFunctions: [],
   schools: [],
   locations: [],
-  // Upper bound extends past the current year so "incoming"/future-dated grads
-  // (e.g. current students and rising analysts) are not hidden by default.
-  gradYearRange: [1970, new Date().getFullYear() + 6],
+  companies: [],
 };
 
 export function getYearsExperience(alumni: Alumni): number {
