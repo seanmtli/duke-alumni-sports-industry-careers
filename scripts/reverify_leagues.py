@@ -13,6 +13,7 @@ import sys
 
 import supabase_client as sb
 import crustdata_client as cd
+from employer import pick_primary_employer
 
 BATCH = 25
 
@@ -79,7 +80,7 @@ def main():
                       or idx.get(last_seg(prof.get("linkedin_flagship_url"))))
             if not person:
                 continue
-            emp = (prof.get("current_employers") or [{}])[0] or {}
+            emp = pick_primary_employer(prof.get("current_employers"))
             fresh_co = emp.get("employer_name")
             fresh_title = emp.get("employee_title")
             dom = emp.get("domains") or emp.get("employer_company_website_domain") or []

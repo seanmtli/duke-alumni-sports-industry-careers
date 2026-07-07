@@ -1,4 +1,5 @@
 import type { Alumni, CompanyType, OrgCategory, School, SeniorityLevel, SportsFunction } from '@/types/alumni';
+import { normalizeCompany } from '@/lib/companyNormalization';
 
 // Shared mapping between the Supabase `people`(+`duke_degrees`) rows and the
 // app's flat `Alumni` shape. The site reads Supabase directly at request time
@@ -111,7 +112,7 @@ export function mapPersonToAlumni(p: PeopleRow): Alumni {
     school,
     degree: degreeStr,
     major: primary?.major ?? '',
-    current_company: p.current_company ?? '',
+    current_company: normalizeCompany(p.current_company),
     current_title: p.current_title ?? '',
     company_type: ORG_TO_COMPANY_TYPE[p.org_category ?? ''] ?? 'Other',
     sub_industries: [],
