@@ -22,6 +22,7 @@ import re
 
 import supabase_client as sb
 from classify import classify_functions, is_pure_athlete
+from employer import pick_primary_employer
 
 
 def canon_linkedin(u):
@@ -79,7 +80,7 @@ def build_candidate(prof, duke_ok, domains, net, tier, status, source):
     if not any(i in duke_ok for i in institutes if i):
         return None, "duke_guard"
 
-    cur = (prof.get("current_employers") or [{}])[0]
+    cur = pick_primary_employer(prof.get("current_employers"))
     title = cur.get("title")
     headline = prof.get("headline")
     if is_pure_athlete(title, headline):
