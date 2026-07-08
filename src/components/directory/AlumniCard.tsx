@@ -1,10 +1,14 @@
+'use client';
+
 import Image from 'next/image';
 import type { Alumni } from '@/types/alumni';
 import { SPORTS_FUNCTION_LABELS, SPORTS_FUNCTION_COLORS } from '@/lib/constants';
+import { degreeChips, formatChip } from '@/lib/degrees';
 import styles from './AlumniCard.module.css';
 
 interface AlumniCardProps {
   alumni: Alumni;
+  onOpen: () => void;
 }
 
 function getInitials(name: string): string {
@@ -16,11 +20,9 @@ function getInitials(name: string): string {
     .toUpperCase();
 }
 
-export function AlumniCard({ alumni }: AlumniCardProps) {
+export function AlumniCard({ alumni, onOpen }: AlumniCardProps) {
   const {
     name,
-    grad_year,
-    school,
     current_title,
     current_company,
     linkedin_url,
@@ -30,12 +32,28 @@ export function AlumniCard({ alumni }: AlumniCardProps) {
     sports_functions,
   } = alumni;
 
-  const schoolLabel = school === 'Other' ? 'Duke' : school;
-  const yearLabel = grad_year ? ` ’${String(grad_year).slice(-2)}` : '';
+  // Show every Duke degree — a Trinity undergrad who later did a Fuqua MBA
+  // reads "Trinity ’14 · Fuqua ’20". Cap at two chips; overflow becomes "+N".
+  const chips = degreeChips(alumni);
+  const shownChips = chips.slice(0, 2);
+  const extraChips = chips.length - shownChips.length;
+  const degreeLabel =
+    shownChips.map(formatChip).join(' · ') + (extraChips > 0 ? ` +${extraChips}` : '');
   const topFunctions = (sports_functions ?? []).slice(0, 2);
 
   return (
-    <div className={styles.card}>
+    <div
+      className={styles.card}
+      onClick={onOpen}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onOpen();
+        }
+      }}
+    >
       {/* Photo zone */}
       <div className={styles.photoWrapper}>
         {headshot_url ? (
@@ -54,7 +72,7 @@ export function AlumniCard({ alumni }: AlumniCardProps) {
       {/* Body zone */}
       <div className={styles.body}>
         <p className={styles.meta}>
-          {schoolLabel}{yearLabel}
+          {degreeLabel || 'Duke'}
           {sports_league_affiliation ? ` · ${sports_league_affiliation}` : ''}
         </p>
         <h3 className={styles.name}>{name}</h3>

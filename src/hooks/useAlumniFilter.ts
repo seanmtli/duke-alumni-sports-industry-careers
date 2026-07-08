@@ -20,7 +20,13 @@ export function useAlumniFilter(initialData: Alumni[]) {
         { name: 'name', weight: 2 },
         { name: 'current_company', weight: 1.5 },
         { name: 'current_title', weight: 1 },
+        // Past employers & roles — so searching "Coyotes" surfaces someone who
+        // has since moved on. Fuse resolves these nested array paths natively.
+        { name: 'work_history.company', weight: 1.2 },
+        { name: 'work_history.title', weight: 0.7 },
         { name: 'location', weight: 0.8 },
+        // "Fuqua" typed into the box matched nothing before.
+        { name: 'all_degrees.school', weight: 0.5 },
       ],
       threshold: 0.2,
       includeScore: true,
