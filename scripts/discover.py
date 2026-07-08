@@ -80,9 +80,9 @@ def build_candidate(prof, duke_ok, domains, net, tier, status, source):
     if not any(i in duke_ok for i in institutes if i):
         return None, "duke_guard"
 
-    cur = pick_primary_employer(prof.get("current_employers"))
-    title = cur.get("title")
     headline = prof.get("headline")
+    cur = pick_primary_employer(prof.get("current_employers"), headline)
+    title = cur.get("title")
     if is_pure_athlete(title, headline):
         return None, "athlete"
 

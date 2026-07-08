@@ -80,7 +80,7 @@ def main():
                       or idx.get(last_seg(prof.get("linkedin_flagship_url"))))
             if not person:
                 continue
-            emp = pick_primary_employer(prof.get("current_employers"))
+            emp = pick_primary_employer(prof.get("current_employers"), prof.get("headline"))
             fresh_co = emp.get("employer_name")
             fresh_title = emp.get("employee_title")
             dom = emp.get("domains") or emp.get("employer_company_website_domain") or []
