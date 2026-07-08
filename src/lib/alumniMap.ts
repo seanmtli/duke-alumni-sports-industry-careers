@@ -1,4 +1,4 @@
-import type { Alumni, CompanyType, OrgCategory, School, SeniorityLevel, SportsFunction } from '@/types/alumni';
+import type { Alumni, CompanyType, OrgCategory, Role, School, SeniorityLevel, SportsFunction } from '@/types/alumni';
 import { normalizeCompany } from '@/lib/companyNormalization';
 
 // Shared mapping between the Supabase `people`(+`duke_degrees`) rows and the
@@ -25,6 +25,7 @@ export interface PeopleRow {
   added_date: string | null;
   last_verified: string | null;
   duke_degrees?: DegreeRow[];
+  work_history?: WorkHistoryRow[];
 }
 
 export interface DegreeRow {
@@ -32,6 +33,14 @@ export interface DegreeRow {
   degree: string | null;
   grad_year: number | null;
   major: string | null;
+}
+
+export interface WorkHistoryRow {
+  company: string | null;
+  title: string | null;
+  start_date: string | null;
+  end_date: string | null;
+  is_current: boolean | null;
 }
 
 // new org_category -> representative legacy company_type (for the current UI)
@@ -76,13 +85,18 @@ export function slugify(name: string | null, year: number | null): string {
   return year ? `${s}-${year}` : s;
 }
 
-/** Earliest grad_year degree is usually the undergrad / most identifying one. */
+const UNDERGRAD_DEGREE = /\b(BA|BS|AB|BSE|Bachelor)/i;
+
+/** The most identifying degree — the earliest by grad_year (usually undergrad).
+ * When no degree carries a year (Crustdata's education end_dates are often
+ * null), prefer an undergraduate degree over a graduate one rather than falling
+ * back to the arbitrary array order. */
 function pickPrimaryDegree(degrees: DegreeRow[]): DegreeRow | null {
   const withYear = degrees.filter((d) => d.grad_year != null);
   if (withYear.length > 0) {
     return withYear.reduce((a, b) => (a.grad_year! <= b.grad_year! ? a : b));
   }
-  return degrees[0] ?? null;
+  return degrees.find((d) => UNDERGRAD_DEGREE.test(d.degree ?? '')) ?? degrees[0] ?? null;
 }
 
 function normalizeSchool(school: string | null, degreeStr: string): School {
@@ -124,20 +138,44 @@ export function mapPersonToAlumni(p: PeopleRow): Alumni {
     org_category: (p.org_category as OrgCategory) ?? null,
     sports_functions: (p.sports_functions as SportsFunction[]) ?? [],
     all_degrees: degrees.map((d) => ({
-      school: d.school ?? '',
+      // Normalize each degree's school so a raw 'General' (the parent
+      // "Duke University" entity) renders and filters as Trinity, matching how
+      // the primary `school` field is derived.
+      school: normalizeSchool(d.school ?? null, d.degree ?? ''),
       degree: d.degree,
       grad_year: d.grad_year,
       major: d.major,
     })),
+    work_history: mapWorkHistory(p.work_history),
+    bio: p.bio ?? undefined,
+    reach_out_for: p.reach_out_for ?? undefined,
     added_date: p.added_date ?? '',
     last_verified: p.last_verified ?? '',
   };
+}
+
+/** Order roles current-first, then most-recent start first. */
+function mapWorkHistory(rows: WorkHistoryRow[] | undefined): Role[] {
+  return (rows ?? [])
+    .filter((r): r is WorkHistoryRow & { company: string } => !!r.company)
+    .map((r) => ({
+      company: normalizeCompany(r.company),
+      title: r.title,
+      start_date: r.start_date,
+      end_date: r.end_date,
+      is_current: !!r.is_current,
+    }))
+    .sort((a, b) => {
+      if (a.is_current !== b.is_current) return a.is_current ? -1 : 1;
+      return (b.start_date ?? '').localeCompare(a.start_date ?? '');
+    });
 }
 
 const PEOPLE_SELECT =
   'id,crustdata_person_id,full_name,current_company,current_title,org_category,' +
   'sports_functions,seniority_level,linkedin_url,location_city,location_state,' +
   'location_country,headshot_url,sports_league_affiliation,bio,reach_out_for,' +
-  'added_date,last_verified,duke_degrees(school,degree,grad_year,major)';
+  'added_date,last_verified,duke_degrees(school,degree,grad_year,major),' +
+  'work_history(company,title,start_date,end_date,is_current)';
 
 export { PEOPLE_SELECT };

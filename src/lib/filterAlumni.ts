@@ -1,5 +1,5 @@
 import Fuse from 'fuse.js';
-import type { Alumni, FilterState, SortConfig } from '@/types/alumni';
+import type { Alumni, FilterState, School, SortConfig } from '@/types/alumni';
 
 const US_STATES = new Set([
   'AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA',
@@ -83,40 +83,37 @@ export function buildLocationOptions(alumni: { location: string }[]): LocationOp
   return { usCities, countries };
 }
 
+/** All distinct employers for one person: current company plus every past
+ * employer, normalized and deduped. The single source of truth for what the
+ * company filter matches and how options are counted. */
+export function employersOf(a: Pick<Alumni, 'current_company' | 'work_history'>): string[] {
+  const set = new Set<string>();
+  const cur = a.current_company?.trim();
+  if (cur) set.add(cur);
+  for (const r of a.work_history ?? []) {
+    const c = r.company?.trim();
+    if (c) set.add(c);
+  }
+  return [...set];
+}
+
 /**
  * Derives the list of company filter options from the alumni list, ordered by
- * how many alumni work there (descending), then alphabetically. Records with no
- * `current_company` are skipped.
+ * how many alumni are associated with each employer (current or past),
+ * descending, then alphabetically.
  */
-export function buildCompanyOptions(alumni: { current_company: string }[]): string[] {
+export function buildCompanyOptions(
+  alumni: Pick<Alumni, 'current_company' | 'work_history'>[],
+): string[] {
   const counts = new Map<string, number>();
   for (const a of alumni) {
-    const company = a.current_company?.trim();
-    if (!company) continue;
-    counts.set(company, (counts.get(company) ?? 0) + 1);
+    for (const company of employersOf(a)) {
+      counts.set(company, (counts.get(company) ?? 0) + 1);
+    }
   }
   return [...counts.entries()]
     .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
     .map(([company]) => company);
-}
-
-let fuseInstance: Fuse<Alumni> | null = null;
-
-export function getFuseInstance(alumni: Alumni[]): Fuse<Alumni> {
-  if (!fuseInstance) {
-    fuseInstance = new Fuse(alumni, {
-      keys: [
-        { name: 'name', weight: 2 },
-        { name: 'current_company', weight: 1.5 },
-        { name: 'current_title', weight: 1 },
-        { name: 'location', weight: 0.8 },
-      ],
-      threshold: 0.2,
-      includeScore: true,
-      minMatchCharLength: 2,
-    });
-  }
-  return fuseInstance;
 }
 
 export function filterAlumni(
@@ -143,13 +140,23 @@ export function filterAlumni(
     );
   }
   if (filters.schools.length > 0) {
-    results = results.filter((a) => filters.schools.includes(a.school));
+    // Match ANY of the person's Duke degrees, not just the primary one — a
+    // Trinity undergrad who later did a Fuqua MBA must appear under both.
+    results = results.filter((a) => {
+      const schools = a.all_degrees?.length
+        ? a.all_degrees.map((d) => d.school)
+        : [a.school];
+      return schools.some((s) => filters.schools.includes(s as School));
+    });
   }
   if (filters.locations.length > 0) {
     results = results.filter((a) => filters.locations.includes(extractLocation(a.location)));
   }
   if (filters.companies.length > 0) {
-    results = results.filter((a) => filters.companies.includes(a.current_company));
+    results = results.filter((a) => {
+      const pool = filters.includePastCompanies ? employersOf(a) : [a.current_company];
+      return pool.some((c) => filters.companies.includes(c));
+    });
   }
 
   return results;

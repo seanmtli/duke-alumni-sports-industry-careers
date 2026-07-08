@@ -88,6 +88,15 @@ export interface DukeDegree {
   major: string | null;
 }
 
+/** One employment stint, from the Supabase `work_history` table. */
+export interface Role {
+  company: string;
+  title: string | null;
+  start_date: string | null; // ISO date
+  end_date: string | null;   // null = current/ongoing
+  is_current: boolean;
+}
+
 export interface Alumni {
   id: string;
   // Supabase `people.id` (uuid). Present on records read from the DB; used as
@@ -107,6 +116,7 @@ export interface Alumni {
   org_category?: OrgCategory | null;
   sports_functions?: SportsFunction[];
   all_degrees?: DukeDegree[];
+  work_history?: Role[];
   seniority_level: SeniorityLevel;
   linkedin_url: string;
   location: string;
@@ -124,6 +134,9 @@ export interface FilterState {
   schools: School[];
   locations: string[];
   companies: string[];
+  /** When true, the company filter also matches past employers, not just the
+   * current one. A modifier on the `companies` dimension, not its own filter. */
+  includePastCompanies: boolean;
 }
 
 export interface SortConfig {
@@ -150,6 +163,7 @@ export const DEFAULT_FILTERS: FilterState = {
   schools: [],
   locations: [],
   companies: [],
+  includePastCompanies: true,
 };
 
 export function getYearsExperience(alumni: Alumni): number {

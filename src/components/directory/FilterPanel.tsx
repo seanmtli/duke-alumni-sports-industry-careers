@@ -170,10 +170,14 @@ function CompanyFilter({
   companyOptions,
   selected,
   onChange,
+  includePast,
+  onIncludePastChange,
 }: {
   companyOptions: string[];
   selected: string[];
   onChange: (companies: string[]) => void;
+  includePast: boolean;
+  onIncludePastChange: (value: boolean) => void;
 }) {
   const [query, setQuery] = useState('');
 
@@ -235,6 +239,17 @@ function CompanyFilter({
           })
         )}
       </div>
+      <label className="flex items-center gap-2 cursor-pointer group mt-2.5">
+        <input
+          type="checkbox"
+          checked={includePast}
+          onChange={(e) => onIncludePastChange(e.target.checked)}
+          className={checkboxClass}
+        />
+        <span className="text-xs text-gray-500 group-hover:text-gray-700 leading-tight">
+          Include past employers
+        </span>
+      </label>
     </div>
   );
 }
@@ -254,6 +269,8 @@ export function FilterPanel({ filters, onChange, locationOptions, companyOptions
         companyOptions={companyOptions}
         selected={filters.companies}
         onChange={(companies) => onChange({ ...filters, companies })}
+        includePast={filters.includePastCompanies}
+        onIncludePastChange={(includePastCompanies) => onChange({ ...filters, includePastCompanies })}
       />
 
       <MultiCheckbox
