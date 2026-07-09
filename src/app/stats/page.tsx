@@ -1,5 +1,6 @@
 import { getAlumni } from '@/lib/getAlumni';
 import { computeStats } from '@/lib/computeStats';
+import { getCompanyLogoMap } from '@/lib/companyLogos';
 import { StatCard } from '@/components/stats/StatCard';
 import { HorizontalBarChart } from '@/components/stats/HorizontalBarChart';
 import { RankedList } from '@/components/stats/RankedList';
@@ -18,8 +19,12 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 }
 
 export default async function StatsPage() {
-  const alumni = await getAlumni();
+  const [alumni, logoMap] = await Promise.all([getAlumni(), getCompanyLogoMap()]);
   const stats = computeStats(alumni);
+  const topCompaniesWithLogos = stats.topCompanies.map((c) => ({
+    ...c,
+    logo_url: logoMap.get(c.label.toLowerCase()),
+  }));
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
@@ -51,7 +56,7 @@ export default async function StatsPage() {
         </Section>
 
         <Section title="Top Companies">
-          <RankedList items={stats.topCompanies} />
+          <RankedList items={topCompaniesWithLogos} />
         </Section>
 
         <Section title="Top Cities">

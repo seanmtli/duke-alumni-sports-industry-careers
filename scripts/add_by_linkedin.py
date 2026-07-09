@@ -34,6 +34,7 @@ from employer import pick_primary_employer
 from enrich import duke_school_map, degrees_from
 from backfill_work_history import roles_for
 from add_curated import canon_linkedin
+from us_states import normalize_state
 
 
 def duke_ok(prof, duke_map):
@@ -124,7 +125,7 @@ def main():
             seg = [s.strip() for s in loc.split(",")]
             patch["location_city"] = seg[0] if seg else None
             if len(seg) >= 3:
-                patch["location_state"], patch["location_country"] = seg[-2], seg[-1]
+                patch["location_state"], patch["location_country"] = normalize_state(seg[-2]), seg[-1]
 
         if row:
             pid = row["id"]

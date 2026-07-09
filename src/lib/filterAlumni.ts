@@ -1,34 +1,13 @@
 import Fuse from 'fuse.js';
 import type { Alumni, FilterState, School, SortConfig } from '@/types/alumni';
+import { US_STATES, METRO_BUCKETS } from '@/lib/locationNormalization';
 
-const US_STATES = new Set([
-  'AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA',
-  'KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ',
-  'NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT',
-  'VA','WA','WV','WI','WY','DC',
-]);
-
-// Maps lowercased city names to their canonical filter bucket
-const US_CITY_BUCKETS: Record<string, string> = {
-  // New York metro
-  'new york': 'New York', 'brooklyn': 'New York', 'bronxville': 'New York',
-  'briarcliff manor': 'New York', 'great neck': 'New York', 'new hyde park': 'New York',
-  'long island city': 'New York', 'scarsdale': 'New York', 'east hampton': 'New York',
-  // Los Angeles metro
-  'los angeles': 'Los Angeles', 'marina del rey': 'Los Angeles',
-  'santa monica': 'Los Angeles', 'calabasas': 'Los Angeles',
-  // San Francisco Bay Area
-  'san francisco': 'San Francisco', 'los altos': 'San Francisco', 'san jose': 'San Francisco',
-  // Washington DC
-  'washington': 'Washington DC',
-  // Durham
-  'durham': 'Durham',
-  // Charlotte
-  'charlotte': 'Charlotte',
-  // Atlanta metro
-  'atlanta': 'Atlanta', 'suwanee': 'Atlanta',
-  // Miami metro
-  'miami': 'Miami', 'miami lakes': 'Miami', 'deerfield beach': 'Miami',
+// Non-suburb city names that bucket to themselves (no neighborhood variants
+// to merge, unlike the NYC/LA/SF/Atlanta/Miami entries in METRO_BUCKETS).
+const SELF_CITY_BUCKETS: Record<string, string> = {
+  'new york': 'New York', 'los angeles': 'Los Angeles', 'san francisco': 'San Francisco',
+  washington: 'Washington DC', durham: 'Durham', charlotte: 'Charlotte',
+  atlanta: 'Atlanta', miami: 'Miami',
 };
 
 // Maps last segment of non-US locations to country names
@@ -38,25 +17,19 @@ const INTL_COUNTRY_MAP: Record<string, string> = {
   '14': 'Malaysia', '24': 'India',
 };
 
-// No-comma metro area strings → bucket
-const METRO_STRING_MAP: Record<string, string> = {
-  'new york city metropolitan area': 'New York',
-  'new york metropolitan area': 'New York',
-};
-
 /** Returns the canonical location bucket for a given raw location string. */
 export function extractLocation(location: string): string {
   if (!location) return '';
 
   const lower = location.trim().toLowerCase();
-  if (METRO_STRING_MAP[lower]) return METRO_STRING_MAP[lower];
+  if (METRO_BUCKETS[lower]) return METRO_BUCKETS[lower].city;
 
   const parts = location.split(',').map((s) => s.trim());
   if (parts.length >= 2) {
     const state = parts[parts.length - 1].toUpperCase();
     if (US_STATES.has(state)) {
       const city = parts[0].toLowerCase();
-      return US_CITY_BUCKETS[city] ?? 'Other US';
+      return METRO_BUCKETS[city]?.city ?? SELF_CITY_BUCKETS[city] ?? 'Other US';
     }
     return INTL_COUNTRY_MAP[state] ?? 'International';
   }

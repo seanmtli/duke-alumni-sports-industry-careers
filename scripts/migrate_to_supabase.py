@@ -16,6 +16,7 @@ import re
 from pathlib import Path
 
 import supabase_client as sb
+from us_states import US_STATES, normalize_state
 
 REPO = Path(__file__).parent.parent
 ALUMNI = REPO / "src" / "data" / "alumni.json"
@@ -29,13 +30,6 @@ ORG_MAP = {
     "Brand": "brands_sponsors", "Sports Betting": "betting_gaming", "Startup": "sports_tech_data",
     "Other": "nonprofit_other",
 }
-
-US_STATES = {
-    "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA",
-    "ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK",
-    "OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","DC",
-}
-
 
 def canon_linkedin(u):
     if not u:
@@ -54,8 +48,9 @@ def split_location(loc):
         return None, None, None
     if ", " in loc:
         city, tail = loc.rsplit(", ", 1)
-        if tail in US_STATES:
-            return city, tail, "United States"
+        state = normalize_state(tail)
+        if state in US_STATES:
+            return city, state, "United States"
         return city, tail, None
     return loc, None, None
 
