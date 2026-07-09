@@ -21,7 +21,7 @@
     {"name": "Formula 1", "org_category": "leagues_governing", "is_sports_native": true, "domain": "formula1.com", "aliases": ["F1"]},
 
     {"name": "Madison Square Garden Sports", "org_category": "teams_clubs", "is_sports_native": true, "domain": "msgsports.com", "aliases": ["MSG Sports", "New York Knicks", "New York Rangers"]},
-    {"name": "Monumental Sports & Entertainment", "org_category": "teams_clubs", "is_sports_native": true, "domain": "monumentalsports.com", "aliases": ["Washington Wizards", "Washington Capitals", "Washington Mystics"]},
+    {"name": "Monumental Sports & Entertainment", "org_category": "teams_clubs", "is_sports_native": true, "domain": "monumentalsports.com", "aliases": ["Washington Wizards", "Washington Capitals", "Washington Mystics", "washingtonwizards.com"]},
     {"name": "Brooklyn Nets", "org_category": "teams_clubs", "is_sports_native": true, "domain": "bse.global", "aliases": ["BSE Global"]},
     {"name": "Golden State Warriors", "org_category": "teams_clubs", "is_sports_native": true, "domain": "nba.com/warriors"},
     {"name": "Los Angeles Dodgers", "org_category": "teams_clubs", "is_sports_native": true, "domain": "dodgers.com"},
@@ -35,10 +35,10 @@
     {"name": "Los Angeles Lakers", "org_category": "teams_clubs", "is_sports_native": true, "domain": "nba.com/lakers"},
     {"name": "Inter Miami CF", "org_category": "teams_clubs", "is_sports_native": true, "domain": "intermiamicf.com"},
     {"name": "Los Angeles Football Club", "org_category": "teams_clubs", "is_sports_native": true, "domain": "lafc.com", "aliases": ["LAFC"]},
-    {"name": "Harris Blitzer Sports & Entertainment", "org_category": "teams_clubs", "is_sports_native": true, "domain": "hbse.com", "aliases": ["HBSE", "Philadelphia 76ers", "New Jersey Devils"]},
+    {"name": "Harris Blitzer Sports & Entertainment", "org_category": "teams_clubs", "is_sports_native": true, "domain": "hbse.com", "aliases": ["HBSE", "Philadelphia 76ers", "New Jersey Devils", "sixers.com"]},
 
     {"name": "DraftKings", "org_category": "betting_gaming", "is_sports_native": true, "domain": "draftkings.com"},
-    {"name": "FanDuel", "org_category": "betting_gaming", "is_sports_native": true, "domain": "fanduel.com"},
+    {"name": "FanDuel", "org_category": "betting_gaming", "is_sports_native": true, "domain": "fanduel.com", "aliases": ["fanduel.careers"]},
     {"name": "Caesars Digital", "org_category": "betting_gaming", "is_sports_native": true, "domain": "caesars.com"},
     {"name": "BetMGM", "org_category": "betting_gaming", "is_sports_native": true, "domain": "betmgm.com"},
     {"name": "Fanatics Betting & Gaming", "org_category": "betting_gaming", "is_sports_native": true, "domain": "fanatics.com"},
@@ -48,7 +48,7 @@
     {"name": "Take-Two Interactive", "org_category": "betting_gaming", "is_sports_native": false, "domain": "take2games.com", "aliases": ["2K", "2K Sports"]},
     {"name": "Electronic Arts", "org_category": "betting_gaming", "is_sports_native": false, "domain": "ea.com", "aliases": ["EA Sports"]},
 
-    {"name": "ESPN", "org_category": "media_broadcast", "is_sports_native": true, "domain": "espn.com"},
+    {"name": "ESPN", "org_category": "media_broadcast", "is_sports_native": true, "domain": "espn.com", "aliases": ["espncareers.com"]},
     {"name": "NBC Sports", "org_category": "media_broadcast", "is_sports_native": true, "domain": "nbcsports.com"},
     {"name": "Fox Sports", "org_category": "media_broadcast", "is_sports_native": true, "domain": "foxsports.com"},
     {"name": "CBS Sports", "org_category": "media_broadcast", "is_sports_native": true, "domain": "cbssports.com"},
@@ -66,7 +66,7 @@
     {"name": "Hudl", "org_category": "sports_tech_data", "is_sports_native": true, "domain": "hudl.com"},
     {"name": "Catapult", "org_category": "sports_tech_data", "is_sports_native": true, "domain": "catapult.com"},
     {"name": "Teamworks", "org_category": "sports_tech_data", "is_sports_native": true, "domain": "teamworks.com"},
-    {"name": "Fanatics", "org_category": "sports_tech_data", "is_sports_native": true, "domain": "fanatics.com"},
+    {"name": "Fanatics", "org_category": "sports_tech_data", "is_sports_native": true, "domain": "fanatics.com", "aliases": ["fanaticsinc.com"]},
     {"name": "Sportlogiq", "org_category": "sports_tech_data", "is_sports_native": true, "domain": "sportlogiq.com"},
     {"name": "Zelus Analytics", "org_category": "sports_tech_data", "is_sports_native": true, "domain": "zelusanalytics.com"},
     {"name": "Cosm", "org_category": "sports_tech_data", "is_sports_native": true, "domain": "cosm.com"},
@@ -84,7 +84,7 @@
     {"name": "Snowflake", "org_category": "big_tech_vertical", "is_sports_native": false, "domain": "snowflake.com"},
     {"name": "Salesforce", "org_category": "big_tech_vertical", "is_sports_native": false, "domain": "salesforce.com"},
 
-    {"name": "CAA Sports", "org_category": "agencies_rep", "is_sports_native": true, "domain": "caa.com", "aliases": ["Creative Artists Agency"]},
+    {"name": "CAA Sports", "org_category": "agencies_rep", "is_sports_native": true, "domain": "caa.com", "aliases": ["Creative Artists Agency", "caaevolution.com"]},
     {"name": "Wasserman", "org_category": "agencies_rep", "is_sports_native": true, "domain": "teamwass.com"},
     {"name": "Excel Sports Management", "org_category": "agencies_rep", "is_sports_native": true, "domain": "excelsm.com"},
     {"name": "Octagon", "org_category": "agencies_rep", "is_sports_native": true, "domain": "octagon.com"},
@@ -113,7 +113,7 @@
     {"name": "Aramark Sports & Entertainment", "org_category": "infra_experiences", "is_sports_native": true, "domain": "aramark.com"},
 
     {"name": "Nike", "org_category": "brands_sponsors", "is_sports_native": true, "domain": "nike.com"},
-    {"name": "adidas", "org_category": "brands_sponsors", "is_sports_native": true, "domain": "adidas.com"},
+    {"name": "adidas", "org_category": "brands_sponsors", "is_sports_native": true, "domain": "adidas.com", "aliases": ["adidas-group.com"]},
     {"name": "Under Armour", "org_category": "brands_sponsors", "is_sports_native": true, "domain": "underarmour.com"},
     {"name": "Gatorade", "org_category": "brands_sponsors", "is_sports_native": true, "domain": "gatorade.com"},
     {"name": "New Balance", "org_category": "brands_sponsors", "is_sports_native": true, "domain": "newbalance.com"},
@@ -128,6 +128,58 @@
 
     {"name": "Special Olympics", "org_category": "nonprofit_other", "is_sports_native": true, "domain": "specialolympics.org"},
     {"name": "Positive Coaching Alliance", "org_category": "nonprofit_other", "is_sports_native": true, "domain": "positivecoach.org"},
-    {"name": "Laureus Sport for Good", "org_category": "nonprofit_other", "is_sports_native": true, "domain": "laureus.com"}
+    {"name": "Laureus Sport for Good", "org_category": "nonprofit_other", "is_sports_native": true, "domain": "laureus.com"},
+
+    {"name": "New York City FC", "org_category": "teams_clubs", "is_sports_native": true, "domain": "newyorkcityfc.com", "aliases": ["NYCFC"]},
+    {"name": "Washington Nationals", "org_category": "teams_clubs", "is_sports_native": true, "domain": "nationals.com"},
+    {"name": "Orlando Magic", "org_category": "teams_clubs", "is_sports_native": true, "domain": "orlandomagic.com"},
+    {"name": "Detroit Lions", "org_category": "teams_clubs", "is_sports_native": true, "domain": "detroitlions.com"},
+    {"name": "Texas Rangers", "org_category": "teams_clubs", "is_sports_native": true, "domain": "texasrangers.com"},
+    {"name": "Minnesota Twins", "org_category": "teams_clubs", "is_sports_native": true, "domain": "twinsbaseball.com"},
+    {"name": "Philadelphia Phillies", "org_category": "teams_clubs", "is_sports_native": true, "domain": "phillies.com"},
+    {"name": "New York Jets", "org_category": "teams_clubs", "is_sports_native": true, "domain": "nyjets.com"},
+    {"name": "Chicago White Sox", "org_category": "teams_clubs", "is_sports_native": true, "domain": "whitesox.com"},
+    {"name": "Baltimore Ravens", "org_category": "teams_clubs", "is_sports_native": true, "domain": "baltimoreravens.com"},
+    {"name": "LA Clippers", "org_category": "teams_clubs", "is_sports_native": true, "domain": "clippers.com"},
+    {"name": "Minnesota Timberwolves", "org_category": "teams_clubs", "is_sports_native": true, "domain": "timberwolves.com"},
+    {"name": "Toronto Blue Jays", "org_category": "teams_clubs", "is_sports_native": true, "domain": "bluejays.com"},
+    {"name": "San Francisco 49ers", "org_category": "teams_clubs", "is_sports_native": true, "domain": "49ers.com"},
+    {"name": "Indiana Fever", "org_category": "teams_clubs", "is_sports_native": true, "domain": "feverbasketball.com"},
+    {"name": "New York Mets", "org_category": "teams_clubs", "is_sports_native": true, "domain": "mets.com"},
+    {"name": "Houston Texans", "org_category": "teams_clubs", "is_sports_native": true, "domain": "houstontexans.com"},
+    {"name": "Miami Marlins", "org_category": "teams_clubs", "is_sports_native": true, "domain": "marlins.com"},
+    {"name": "Chicago Blackhawks", "org_category": "teams_clubs", "is_sports_native": true, "domain": "blackhawks.com"},
+    {"name": "Miami Dolphins", "org_category": "teams_clubs", "is_sports_native": true, "domain": "dolphins.com"},
+    {"name": "Los Angeles Rams", "org_category": "teams_clubs", "is_sports_native": true, "domain": "therams.com"},
+    {"name": "Carolina Hurricanes (club)", "org_category": "teams_clubs", "is_sports_native": true, "domain": "carolinahurricanes.com"},
+    {"name": "Los Angeles Lakers (club)", "org_category": "teams_clubs", "is_sports_native": true, "domain": "lakers.com"},
+
+    {"name": "BYU Athletics", "org_category": "collegiate", "is_sports_native": true, "domain": "byucougars.com", "aliases": ["BYU Cougars"]},
+    {"name": "USC Athletics", "org_category": "collegiate", "is_sports_native": true, "domain": "usctrojans.com", "aliases": ["USC Trojans"]},
+
+    {"name": "Premier Lacrosse League", "org_category": "leagues_governing", "is_sports_native": true, "domain": "premierlacrosseleague.com", "aliases": ["PLL"]},
+    {"name": "CONCACAF", "org_category": "leagues_governing", "is_sports_native": true, "domain": "concacaf.com"},
+    {"name": "College Football Playoff", "org_category": "leagues_governing", "is_sports_native": true, "domain": "collegefootballplayoff.com", "aliases": ["CFP"]},
+    {"name": "MLB Players Association", "org_category": "leagues_governing", "is_sports_native": true, "domain": "mlbplayers.com", "aliases": ["MLBPA"]},
+    {"name": "USA Field Hockey", "org_category": "leagues_governing", "is_sports_native": true, "domain": "usafieldhockey.com"},
+    {"name": "USA Ultimate", "org_category": "leagues_governing", "is_sports_native": true, "domain": "usaultimate.org"},
+    {"name": "NJCAA", "org_category": "leagues_governing", "is_sports_native": true, "domain": "njcaa.org"},
+    {"name": "League One Volleyball", "org_category": "leagues_governing", "is_sports_native": true, "domain": "lovb.com", "aliases": ["LOVB"]},
+    {"name": "International Olympic Committee", "org_category": "leagues_governing", "is_sports_native": true, "domain": "olympics.com", "aliases": ["IOC"]},
+    {"name": "The Football Association", "org_category": "leagues_governing", "is_sports_native": true, "domain": "thefa.com", "aliases": ["The FA"]},
+
+    {"name": "Trajektory", "org_category": "sports_tech_data", "is_sports_native": true, "domain": "trajektory.com"},
+    {"name": "Swish Analytics", "org_category": "sports_tech_data", "is_sports_native": true, "domain": "swishanalytics.com"},
+    {"name": "BaseballCloud", "org_category": "sports_tech_data", "is_sports_native": true, "domain": "baseballcloud.com"},
+    {"name": "Spiideo", "org_category": "sports_tech_data", "is_sports_native": true, "domain": "spiideo.com"},
+    {"name": "PitchCom", "org_category": "sports_tech_data", "is_sports_native": true, "domain": "pitchcomsports.com"},
+
+    {"name": "Athletes First", "org_category": "agencies_rep", "is_sports_native": true, "domain": "athletesfirst.net"},
+
+    {"name": "On Location", "org_category": "infra_experiences", "is_sports_native": true, "domain": "onlocationexp.com", "aliases": ["On Location Experiences"]},
+
+    {"name": "Mizuno", "org_category": "brands_sponsors", "is_sports_native": true, "domain": "mizunousa.com", "aliases": ["mizuno.com"]},
+    {"name": "PGA TOUR Superstore", "org_category": "brands_sponsors", "is_sports_native": true, "domain": "pgatoursuperstore.com"},
+    {"name": "U.S. Polo Assn.", "org_category": "brands_sponsors", "is_sports_native": true, "domain": "uspoloassnglobal.com"}
   ]
 }
