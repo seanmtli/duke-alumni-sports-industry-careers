@@ -21,6 +21,7 @@ import json
 import re
 
 import supabase_client as sb
+import sports_domains
 from classify import classify_functions, is_pure_athlete
 from employer import pick_primary_employer
 
@@ -49,11 +50,12 @@ def norm_name(n):
 def load_reference():
     duke = {r["entity"] for r in sb.select(
         "duke_school_entities", {"select": "entity", "include": "eq.true"})}
-    domains = {}
-    for c in sb.select("sports_companies",
-                       {"select": "name,domain,org_category,is_sports_native"}):
-        if c.get("domain"):
-            domains[c["domain"].lower()] = c
+    companies = sb.select_all(
+        "sports_companies",
+        {"select": "name,domain,aliases,org_category,is_sports_native"})
+    # Index by primary domain PLUS domain-shaped aliases, with subdomain fallback,
+    # so variants like fanduel.careers / careers.nba.com resolve. See sports_domains.
+    domains = sports_domains.build_index(companies)
     return duke, domains
 
 
@@ -87,7 +89,7 @@ def build_candidate(prof, duke_ok, domains, net, tier, status, source):
         return None, "athlete"
 
     dom = (cur.get("company_website_domain") or "").lower()
-    comp = domains.get(dom)
+    comp = sports_domains.resolve(dom, domains)
     org_cat = comp["org_category"] if comp else None
     company_name = (comp["name"] if comp else None) or cur.get("company_name") or dom or None
 
