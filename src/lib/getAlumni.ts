@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import type { Alumni } from '@/types/alumni';
 import { sbSelect } from '@/lib/supabase';
+import { isSupabaseConfigured, readRepoJson } from '@/lib/localData';
 import { mapPersonToAlumni, PEOPLE_SELECT, type PeopleRow } from '@/lib/alumniMap';
 
 // Cache tag for the public alumni reads. Admin write routes call
@@ -63,8 +64,23 @@ function resolveHeadshot(localPath: string | undefined, dbUrl: string | null): s
  * shape, with headshot_url resolved to a local file or stable permalink.
  * Cached under ALUMNI_TAG; admin writes revalidate that tag so the live site
  * reflects edits immediately.
+ *
+ * In local dev without Supabase credentials, falls back to src/data/alumni.json.
  */
 export async function getAlumni(): Promise<Alumni[]> {
+  if (!isSupabaseConfigured()) {
+    const data = readRepoJson<{ alumni: Alumni[] }>('src/data/alumni.json');
+    if (data?.alumni) {
+      const headshots = buildHeadshotMap();
+      const alumni = data.alumni.map((a) => ({
+        ...a,
+        headshot_url: resolveHeadshot(headshots.get(a.id), a.headshot_url),
+      }));
+      alumni.sort((x, y) => x.name.toLowerCase().localeCompare(y.name.toLowerCase()));
+      return alumni;
+    }
+  }
+
   const rows = await sbSelect<PeopleRow>(
     'people',
     `select=${PEOPLE_SELECT}&status=eq.verified`,

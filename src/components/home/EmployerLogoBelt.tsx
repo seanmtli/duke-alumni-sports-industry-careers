@@ -1,5 +1,7 @@
+import { CompanyLogo } from '@/components/ui/CompanyLogo';
+
 interface EmployerLogoBeltProps {
-  logos: { label: string; logo_url: string }[];
+  logos: { label: string; src: string }[];
 }
 
 /** Continuously-scrolling logo strip (Teamworks-style). Pure CSS: the track
@@ -10,17 +12,20 @@ export function EmployerLogoBelt({ logos }: EmployerLogoBeltProps) {
   const track = [...logos, ...logos];
 
   return (
-    <div className="bg-black py-10 overflow-hidden">
-      <div className="flex w-max animate-[logo-scroll_30s_linear_infinite]">
-        {track.map(({ label, logo_url }, i) => (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
+    <div className="bg-white border-y border-gray-100 py-8 overflow-hidden">
+      <div className="flex w-max items-center animate-[logo-scroll_30s_linear_infinite]">
+        {track.map(({ label, src }, i) => (
+          <div
             key={`${label}-${i}`}
-            src={logo_url}
-            alt={label}
-            title={label}
-            className="h-10 w-auto max-w-[120px] object-contain mx-10 opacity-90"
-          />
+            className="mx-10 flex h-12 w-[140px] flex-shrink-0 items-center justify-center"
+          >
+            <CompanyLogo
+              src={src}
+              alt={label}
+              title={label}
+              className="max-h-10 max-w-[120px] object-contain"
+            />
+          </div>
         ))}
       </div>
     </div>

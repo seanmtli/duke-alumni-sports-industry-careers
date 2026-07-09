@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { getAlumni } from '@/lib/getAlumni';
 import { computeStats } from '@/lib/computeStats';
 import { getCompanyLogoMap } from '@/lib/companyLogos';
+import { companyLogoSrc } from '@/lib/companyLogoUrl';
 import { EmployerLogoBelt } from '@/components/home/EmployerLogoBelt';
 
 export default async function HomePage() {
@@ -11,8 +12,9 @@ export default async function HomePage() {
   const totalCompanies = new Set(alumni.map((a) => a.current_company)).size;
   const topEmployerLogos = computeStats(alumni)
     .topCompanies.flatMap(({ label }) => {
-      const logo_url = logoMap.get(label.toLowerCase());
-      return logo_url ? [{ label, logo_url }] : [];
+      const info = logoMap.get(label.toLowerCase());
+      const src = info ? companyLogoSrc(info) : null;
+      return src ? [{ label, src }] : [];
     });
 
   return (

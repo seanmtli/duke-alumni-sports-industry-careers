@@ -1,5 +1,7 @@
+import { CompanyLogo } from '@/components/ui/CompanyLogo';
+
 interface RankedListProps {
-  items: { label: string; count: number; logo_url?: string }[];
+  items: { label: string; count: number; logo_src?: string | null }[];
   max?: number;
 }
 
@@ -9,15 +11,14 @@ export function RankedList({ items, max = 10 }: RankedListProps) {
 
   return (
     <ol className="space-y-2.5">
-      {displayed.map(({ label, count, logo_url }, i) => (
+      {displayed.map(({ label, count, logo_src }, i) => (
         <li key={label} className="flex items-center gap-3">
           <span className="text-xs font-bold text-gray-300 w-4 text-right flex-shrink-0">
             {i + 1}
           </span>
-          {logo_url && (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              src={logo_url}
+          {logo_src && (
+            <CompanyLogo
+              src={logo_src}
               alt=""
               className="w-5 h-5 rounded object-contain flex-shrink-0 bg-white border border-gray-100"
             />
