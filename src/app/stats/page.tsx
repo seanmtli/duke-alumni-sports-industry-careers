@@ -1,6 +1,7 @@
 import { getAlumni } from '@/lib/getAlumni';
 import { computeStats } from '@/lib/computeStats';
 import { getCompanyLogoMap } from '@/lib/companyLogos';
+import { companyLogoSrc } from '@/lib/companyLogoUrl';
 import { StatCard } from '@/components/stats/StatCard';
 import { HorizontalBarChart } from '@/components/stats/HorizontalBarChart';
 import { RankedList } from '@/components/stats/RankedList';
@@ -23,7 +24,7 @@ export default async function StatsPage() {
   const stats = computeStats(alumni);
   const topCompaniesWithLogos = stats.topCompanies.map((c) => ({
     ...c,
-    logo_url: logoMap.get(c.label.toLowerCase()),
+    logo_src: companyLogoSrc(logoMap.get(c.label.toLowerCase()) ?? {}),
   }));
 
   return (
