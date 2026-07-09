@@ -1,5 +1,6 @@
 import type { Alumni, CompanyType, OrgCategory, Role, School, SeniorityLevel, SportsFunction } from '@/types/alumni';
 import { normalizeCompany } from '@/lib/companyNormalization';
+import { formatLocation } from '@/lib/locationNormalization';
 
 // Shared mapping between the Supabase `people`(+`duke_degrees`) rows and the
 // app's flat `Alumni` shape. The site reads Supabase directly at request time
@@ -115,8 +116,7 @@ export function mapPersonToAlumni(p: PeopleRow): Alumni {
   const gradYear = primary?.grad_year ?? null;
   const degreeStr = primary?.degree ?? '';
   const school = normalizeSchool(primary?.school ?? null, degreeStr);
-  const location =
-    [p.location_city, p.location_state].filter(Boolean).join(', ') || p.location_country || '';
+  const location = formatLocation(p.location_city, p.location_state, p.location_country);
 
   return {
     id: p.crustdata_person_id ? `cd-${p.crustdata_person_id}` : slugify(p.full_name, gradYear),

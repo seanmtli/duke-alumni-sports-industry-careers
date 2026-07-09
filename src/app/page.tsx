@@ -1,11 +1,19 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { getAlumni } from '@/lib/getAlumni';
+import { computeStats } from '@/lib/computeStats';
+import { getCompanyLogoMap } from '@/lib/companyLogos';
+import { EmployerLogoBelt } from '@/components/home/EmployerLogoBelt';
 
 export default async function HomePage() {
-  const alumni = await getAlumni();
+  const [alumni, logoMap] = await Promise.all([getAlumni(), getCompanyLogoMap()]);
   const totalAlumni = alumni.length;
   const totalCompanies = new Set(alumni.map((a) => a.current_company)).size;
+  const topEmployerLogos = computeStats(alumni)
+    .topCompanies.flatMap(({ label }) => {
+      const logo_url = logoMap.get(label.toLowerCase());
+      return logo_url ? [{ label, logo_url }] : [];
+    });
 
   return (
     <div className="min-h-screen">
@@ -75,6 +83,8 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      <EmployerLogoBelt logos={topEmployerLogos} />
 
       {/* Stats bar */}
       <section className="bg-[#003087]">

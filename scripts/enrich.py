@@ -17,11 +17,9 @@ import re
 
 import supabase_client as sb
 import crustdata_client as cd
+from us_states import US_STATES, normalize_state
 
 BATCH = 25
-US_STATES = {"AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA","KS",
-    "KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND",
-    "OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","DC"}
 
 
 def duke_school_map():
@@ -43,11 +41,12 @@ def parse_location(prof):
         return None, None, None
     parts = [p.strip() for p in loc.split(",") if p.strip()]
     if len(parts) >= 3:        # City, State, Country
-        return parts[0], parts[-2], parts[-1]
+        return parts[0], normalize_state(parts[-2]), parts[-1]
     if len(parts) == 2:        # City, State  OR  City, Country
         city, tail = parts
-        if tail in US_STATES:
-            return city, tail, "United States"
+        state = normalize_state(tail)
+        if state in US_STATES:
+            return city, state, "United States"
         return city, None, tail
     return parts[0], None, None
 

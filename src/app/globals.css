@@ -138,3 +138,10 @@
     @apply font-sans;
   }
 }
+
+/* Home page employer logo belt (EmployerLogoBelt.tsx) — track is duplicated
+   and shifted exactly -50% so the loop point is seamless. */
+@keyframes logo-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}

@@ -3,26 +3,17 @@ import {
   ORG_CATEGORIES, ORG_CATEGORY_LABELS,
   SPORTS_FUNCTIONS, SPORTS_FUNCTION_LABELS, SENIORITY_LEVELS,
 } from './constants';
+import { METRO_BUCKETS } from './locationNormalization';
 
-const NYC_VARIANTS = new Set([
-  'new york city metropolitan area',
-  'new york metropolitan area',
-  'brooklyn, ny',
-  'bronxville, ny',
-  'briarcliff manor, ny',
-  'great neck, ny',
-  'new hyde park, ny',
-  'long island city, ny',
-  'scarsdale, ny',
-  'east hampton, ny',
-  'port washington, ny',
-]);
-
+// `a.location` is already canonical "City, ST" (see formatLocation, applied in
+// mapPersonToAlumni). Only remaining job here: merge NYC-area neighborhoods
+// into one "New York, NY" bucket for the stat, using the shared metro table.
 function normalizeStatCity(location: string): string | null {
   const trimmed = location.trim();
   if (!trimmed) return null;
-  if (NYC_VARIANTS.has(trimmed.toLowerCase())) return 'New York, NY';
-  return trimmed;
+  const [city] = trimmed.split(',').map((s) => s.trim());
+  const metro = METRO_BUCKETS[city.toLowerCase()] ?? METRO_BUCKETS[trimmed.toLowerCase()];
+  return metro ? `${metro.city}, ${metro.state}` : trimmed;
 }
 
 export function computeStats(alumni: Alumni[]): AlumniStats {
@@ -71,10 +62,12 @@ export function computeStats(alumni: Alumni[]): AlumniStats {
     .map(([decade, count]) => ({ decade, count }))
     .sort((a, b) => a.decade.localeCompare(b.decade));
 
+  // 15 (not 10) so the home page's employer-logo belt can reuse this list —
+  // RankedList's own `max` prop still caps the stats page display at 10.
   const topCompanies = Object.entries(companyCounts)
     .map(([label, count]) => ({ label, count }))
     .sort((a, b) => b.count - a.count)
-    .slice(0, 10);
+    .slice(0, 15);
 
   const topCities = Object.entries(cityCounts)
     .map(([label, count]) => ({ label, count }))

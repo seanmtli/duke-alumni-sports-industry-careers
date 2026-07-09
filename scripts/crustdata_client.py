@@ -64,3 +64,22 @@ def enrich_people(linkedin_urls, fields=None, realtime=False):
         if isinstance(data, dict) and isinstance(data.get(k), list):
             return data[k]
     return [data] if isinstance(data, dict) else []
+
+
+def enrich_companies(domains=None, names=None):
+    """Enrich up to 25 companies by domain or name. Returns a list of company
+    dicts (basic + firmographics bundle, including linkedin_logo_url)."""
+    params = {}
+    if domains:
+        params["company_domain"] = ",".join(domains)
+    if names:
+        params["company_name"] = ",".join(names)
+    if not params:
+        return []
+    data = _get("/screener/company/enrich", params)
+    if isinstance(data, list):
+        return data
+    for k in ("companies", "data", "results"):
+        if isinstance(data, dict) and isinstance(data.get(k), list):
+            return data[k]
+    return [data] if isinstance(data, dict) else []
