@@ -205,13 +205,25 @@ function CompanyFilter({
   const checkboxClass =
     'rounded border-gray-300 text-[#003087] focus:ring-[#003087] focus:ring-offset-0 h-3.5 w-3.5 cursor-pointer flex-shrink-0';
 
+  function handleQueryBlur() {
+    const q = query.trim().toLowerCase();
+    if (!q) return;
+    const match = companyOptions.find((c) => c.toLowerCase() === q);
+    if (match && !selected.includes(match)) {
+      onChange([...selected, match]);
+      setQuery('');
+    }
+  }
+
   return (
     <div className="mb-5">
-      <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Company</p>
+      <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Company</p>
+      <p className="text-xs text-gray-400 mb-2">Search employers (current and past)</p>
       <input
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
+        onBlur={handleQueryBlur}
         placeholder="Search companies…"
         className="w-full text-sm border border-gray-200 rounded px-2 py-1 mb-2 focus:outline-none focus:ring-1 focus:ring-[#003087]"
       />
