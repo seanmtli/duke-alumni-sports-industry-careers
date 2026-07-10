@@ -1,4 +1,3 @@
-import Fuse from 'fuse.js';
 import type { Alumni, FilterState, School, SortConfig } from '@/types/alumni';
 import { US_STATES, METRO_BUCKETS } from '@/lib/locationNormalization';
 
@@ -89,17 +88,33 @@ export function buildCompanyOptions(
     .map(([company]) => company);
 }
 
+/** Name-only search for the directory search bar. Company/industry/location
+ * lookups belong in the sidebar filters. */
+export function searchByName(alumni: Alumni[], query: string): Alumni[] {
+  const q = query.trim().toLowerCase();
+  if (q.length < 2) return alumni;
+
+  const tokens = q.split(/\s+/).filter(Boolean);
+
+  return alumni.filter((person) => {
+    const name = person.name.toLowerCase();
+    const nameParts = name.split(/\s+/);
+
+    if (name.includes(q)) return true;
+
+    return tokens.every((token) =>
+      nameParts.some((part) => part.startsWith(token) || part.includes(token))
+    );
+  });
+}
+
 export function filterAlumni(
   alumni: Alumni[],
   filters: FilterState,
   searchQuery: string,
-  fuse: Fuse<Alumni>
 ): Alumni[] {
-  // Step 1: Full-text search
-  let results =
-    searchQuery.trim().length >= 2
-      ? fuse.search(searchQuery).map((r) => r.item)
-      : [...alumni];
+  // Step 1: Name search only
+  let results = searchByName(alumni, searchQuery);
 
   // Step 2: Filter dimensions — AND between dims, OR within
   if (filters.orgCategories.length > 0) {
