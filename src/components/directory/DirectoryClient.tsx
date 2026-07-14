@@ -34,6 +34,7 @@ export function DirectoryClient({ initialData }: DirectoryClientProps) {
     setSortConfig,
     resetFilters,
     activeFilterCount,
+    hasSearchQuery,
   } = useAlumniFilter(initialData);
 
   // Sync debounced input to the filter hook
@@ -63,6 +64,11 @@ export function DirectoryClient({ initialData }: DirectoryClientProps) {
   function handleClearAll() {
     resetFilters();
     setRawQuery('');
+  }
+
+  function handleClearSearch() {
+    setRawQuery('');
+    setSearchQuery('');
   }
 
   return (
@@ -160,7 +166,9 @@ export function DirectoryClient({ initialData }: DirectoryClientProps) {
               <ResultsCount count={pagedAlumni.length} total={filteredAlumni.length} />
               <FilterChips
                 filters={filters}
+                searchQuery={hasSearchQuery ? searchQuery : undefined}
                 onRemove={removeFilter}
+                onClearSearch={handleClearSearch}
                 onClearAll={handleClearAll}
                 activeCount={activeFilterCount}
               />

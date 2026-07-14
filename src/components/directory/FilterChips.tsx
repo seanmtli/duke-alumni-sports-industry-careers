@@ -13,12 +13,21 @@ const CHIP_LABELS: Record<string, string> = {
 
 interface FilterChipsProps {
   filters: FilterState;
+  searchQuery?: string;
   onRemove: (key: keyof FilterState, value: string) => void;
+  onClearSearch?: () => void;
   onClearAll: () => void;
   activeCount: number;
 }
 
-export function FilterChips({ filters, onRemove, onClearAll, activeCount }: FilterChipsProps) {
+export function FilterChips({
+  filters,
+  searchQuery,
+  onRemove,
+  onClearSearch,
+  onClearAll,
+  activeCount,
+}: FilterChipsProps) {
   if (activeCount === 0) return null;
 
   const chips: { key: keyof FilterState; value: string }[] = [
@@ -29,8 +38,22 @@ export function FilterChips({ filters, onRemove, onClearAll, activeCount }: Filt
     ...filters.companies.map((v) => ({ key: 'companies' as const, value: v })),
   ];
 
+  const showSearchChip = searchQuery && searchQuery.trim().length >= 2;
+
   return (
     <div className="flex flex-wrap items-center gap-2">
+      {showSearchChip ? (
+        <span className="inline-flex items-center gap-1 text-xs bg-[#dce6f7] text-[#003087] font-medium px-2.5 py-1 rounded-full">
+          Search: &ldquo;{searchQuery.trim()}&rdquo;
+          <button
+            onClick={onClearSearch}
+            className="ml-0.5 hover:text-[#001a5c] transition-colors"
+            aria-label="Clear name search"
+          >
+            ×
+          </button>
+        </span>
+      ) : null}
       {chips.map(({ key, value }) => (
         <span
           key={`${key}-${value}`}
