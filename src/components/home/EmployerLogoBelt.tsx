@@ -23,7 +23,9 @@ export function EmployerLogoBelt({ logos }: EmployerLogoBeltProps) {
               src={src}
               alt={label}
               title={label}
-              className="max-h-10 max-w-[120px] object-contain"
+              width={160}
+              height={160}
+              className="h-10 w-auto max-w-[120px] object-contain"
             />
           </div>
         ))}

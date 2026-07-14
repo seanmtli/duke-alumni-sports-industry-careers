@@ -28,7 +28,7 @@
     {"name": "New York Yankees", "org_category": "teams_clubs", "is_sports_native": true, "domain": "yankees.com"},
     {"name": "Dallas Cowboys", "org_category": "teams_clubs", "is_sports_native": true, "domain": "dallascowboys.com"},
     {"name": "Carolina Panthers", "org_category": "teams_clubs", "is_sports_native": true, "domain": "panthers.com"},
-    {"name": "Charlotte Hornets", "org_category": "teams_clubs", "is_sports_native": true, "domain": "hornets.com"},
+    {"name": "Charlotte Hornets", "org_category": "teams_clubs", "is_sports_native": true, "domain": "charlottehornets.com", "aliases": ["Hornets", "hornets.com"]},
     {"name": "Carolina Hurricanes", "org_category": "teams_clubs", "is_sports_native": true, "domain": "nhl.com/hurricanes"},
     {"name": "Atlanta Hawks", "org_category": "teams_clubs", "is_sports_native": true, "domain": "hawks.com"},
     {"name": "Boston Celtics", "org_category": "teams_clubs", "is_sports_native": true, "domain": "nba.com/celtics"},

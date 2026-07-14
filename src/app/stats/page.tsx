@@ -1,6 +1,6 @@
 import { getAlumni } from '@/lib/getAlumni';
 import { computeStats } from '@/lib/computeStats';
-import { getCompanyLogoMap } from '@/lib/companyLogos';
+import { getCompanyDomainMap } from '@/lib/companyLogos';
 import { companyLogoSrc } from '@/lib/companyLogoUrl';
 import { StatCard } from '@/components/stats/StatCard';
 import { HorizontalBarChart } from '@/components/stats/HorizontalBarChart';
@@ -20,11 +20,15 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 }
 
 export default async function StatsPage() {
-  const [alumni, logoMap] = await Promise.all([getAlumni(), getCompanyLogoMap()]);
+  const [alumni, domainMap] = await Promise.all([getAlumni(), getCompanyDomainMap()]);
   const stats = computeStats(alumni);
   const topCompaniesWithLogos = stats.topCompanies.map((c) => ({
     ...c,
-    logo_src: companyLogoSrc(logoMap.get(c.label.toLowerCase()) ?? {}),
+    logo_src: companyLogoSrc({
+      name: c.label,
+      domain: domainMap.get(c.label.toLowerCase()) ?? null,
+      size: 64,
+    }),
   }));
 
   return (
