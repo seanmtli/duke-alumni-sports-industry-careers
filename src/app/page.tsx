@@ -2,18 +2,21 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { getAlumni } from '@/lib/getAlumni';
 import { computeStats } from '@/lib/computeStats';
-import { getCompanyLogoMap } from '@/lib/companyLogos';
+import { getCompanyDomainMap } from '@/lib/companyLogos';
 import { companyLogoSrc } from '@/lib/companyLogoUrl';
 import { EmployerLogoBelt } from '@/components/home/EmployerLogoBelt';
 
 export default async function HomePage() {
-  const [alumni, logoMap] = await Promise.all([getAlumni(), getCompanyLogoMap()]);
+  const [alumni, domainMap] = await Promise.all([getAlumni(), getCompanyDomainMap()]);
   const totalAlumni = alumni.length;
   const totalCompanies = new Set(alumni.map((a) => a.current_company)).size;
   const topEmployerLogos = computeStats(alumni)
     .topCompanies.flatMap(({ label }) => {
-      const info = logoMap.get(label.toLowerCase());
-      const src = info ? companyLogoSrc(info) : null;
+      const src = companyLogoSrc({
+        name: label,
+        domain: domainMap.get(label.toLowerCase()) ?? null,
+        size: 160,
+      });
       return src ? [{ label, src }] : [];
     });
 

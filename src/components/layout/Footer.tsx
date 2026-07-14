@@ -11,6 +11,14 @@ export function Footer() {
           <Link href="/contact" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
             Contact / Request Removal
           </Link>
+          <a
+            href="https://logo.dev"
+            target="_blank"
+            rel="noreferrer"
+            className="text-xs text-gray-400 hover:text-gray-600 transition-colors"
+          >
+            Logos by Logo.dev
+          </a>
           <p className="text-xs text-gray-400">
             Not affiliated with Duke University
           </p>

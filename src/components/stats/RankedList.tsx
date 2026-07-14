@@ -20,6 +20,8 @@ export function RankedList({ items, max = 10 }: RankedListProps) {
             <CompanyLogo
               src={logo_src}
               alt=""
+              width={40}
+              height={40}
               className="w-5 h-5 rounded object-contain flex-shrink-0 bg-white border border-gray-100"
             />
           )}

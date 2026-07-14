@@ -51,7 +51,10 @@ SUPABASE_URL=
 SUPABASE_SERVICE_KEY=
 NEXT_PUBLIC_SUPABASE_URL=
 NEXT_PUBLIC_SUPABASE_ANON_KEY=
+NEXT_PUBLIC_LOGO_DEV_PUBLISHABLE_KEY=
 ```
+
+`NEXT_PUBLIC_LOGO_DEV_PUBLISHABLE_KEY` is your Logo.dev publishable key (`pk_…`). It powers employer logos on the home page belt and stats page via `img.logo.dev`. See `.env.example`.
 
 The directory page is statically generated at build time from the Supabase `people` table (status = `verified`). Running `npm run dev` will fetch live data from Supabase on each request in development mode.
 
