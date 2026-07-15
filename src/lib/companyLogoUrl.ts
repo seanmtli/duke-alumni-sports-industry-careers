@@ -14,6 +14,13 @@ function cleanDomain(raw: string): string {
   return raw.trim().replace(/^https?:\/\//, '').replace(/\/.*$/, '').toLowerCase();
 }
 
+/** Publishable Logo.dev key (safe for client-side). Prefer env override;
+ * fallback keeps production logos working if Vercel env isn't configured. */
+const LOGO_DEV_PUBLISHABLE_KEY =
+  process.env.NEXT_PUBLIC_LOGO_DEV_PUBLISHABLE_KEY ||
+  process.env.NEXT_PUBLIC_LOGO_DEV_TOKEN ||
+  'pk_PmbLeHdhSe-eJj0gnwTaeA';
+
 /** Build a Logo.dev CDN URL for a company logo.
  * Prefer domain (most reliable); fall back to company name.
  * Docs: https://www.logo.dev/docs/logo-images/introduction
@@ -23,9 +30,7 @@ export function companyLogoSrc(info: {
   domain?: string | null;
   size?: number;
 }): string | null {
-  const token =
-    process.env.NEXT_PUBLIC_LOGO_DEV_PUBLISHABLE_KEY ||
-    process.env.NEXT_PUBLIC_LOGO_DEV_TOKEN;
+  const token = LOGO_DEV_PUBLISHABLE_KEY;
   if (!token) return null;
 
   const name = info.name?.trim() || '';
