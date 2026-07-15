@@ -29,7 +29,7 @@ A searchable, filterable directory of Duke University alumni working across the 
 | Search | Fuse.js (client-side fuzzy search) |
 | Charts | Recharts |
 | Database | Supabase (Postgres) |
-| Deployment | Vercel |
+| Deployment | Railway |
 
 ---
 
