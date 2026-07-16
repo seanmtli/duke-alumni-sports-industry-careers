@@ -12,7 +12,7 @@ interface FilterPanelProps {
   filters: FilterState;
   onChange: (filters: FilterState) => void;
   locationOptions: LocationOptions;
-  /** Company names (ordered by count) available as filter options. */
+  /** Company names (alphabetical) available as filter options. */
   companyOptions: string[];
 }
 

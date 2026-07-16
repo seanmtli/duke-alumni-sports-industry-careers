@@ -69,23 +69,17 @@ export function employersOf(a: Pick<Alumni, 'current_company' | 'work_history'>)
   return [...set];
 }
 
-/**
- * Derives the list of company filter options from the alumni list, ordered by
- * how many alumni are associated with each employer (current or past),
- * descending, then alphabetically.
- */
+/** Derives the list of company filter options from the alumni list, sorted alphabetically. */
 export function buildCompanyOptions(
   alumni: Pick<Alumni, 'current_company' | 'work_history'>[],
 ): string[] {
-  const counts = new Map<string, number>();
+  const names = new Set<string>();
   for (const a of alumni) {
     for (const company of employersOf(a)) {
-      counts.set(company, (counts.get(company) ?? 0) + 1);
+      names.add(company);
     }
   }
-  return [...counts.entries()]
-    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
-    .map(([company]) => company);
+  return [...names].sort((a, b) => a.localeCompare(b));
 }
 
 /** Name-only search for the directory search bar. Company/industry/location
