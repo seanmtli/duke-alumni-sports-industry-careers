@@ -17,6 +17,7 @@
 
 // raw name (lowercased) -> canonical display name
 const CANONICAL_COMPANY: Record<string, string> = {
+  'aramark': 'Aramark Sports & Entertainment',
   'draftkings inc.': 'DraftKings',
   'caa': 'CAA Sports',
   'convergesports by deloitte': 'Deloitte',
