@@ -87,10 +87,18 @@ export async function getAlumni(): Promise<Alumni[]> {
     { tags: [ALUMNI_TAG], revalidate: REVALIDATE_SECONDS },
   );
 
+  // Lazy import avoids a circular dependency with getClubs → getAlumni.
+  const { getAffiliationsByPersonId } = await import('@/lib/getClubs');
+  const affils = await getAffiliationsByPersonId();
+
   const headshots = buildHeadshotMap();
   const alumni = rows.map((r) => {
     const a = mapPersonToAlumni(r);
-    return { ...a, headshot_url: resolveHeadshot(headshots.get(a.id), a.headshot_url) };
+    a.headshot_url = resolveHeadshot(headshots.get(a.id), a.headshot_url);
+    if (r.id && affils.has(r.id)) {
+      a.clubs = affils.get(r.id);
+    }
+    return a;
   });
   alumni.sort((x, y) => x.name.toLowerCase().localeCompare(y.name.toLowerCase()));
   return alumni;

@@ -30,6 +30,7 @@ export function AlumniCard({ alumni, onOpen }: AlumniCardProps) {
     headshot_url,
     sports_league_affiliation,
     sports_functions,
+    clubs,
   } = alumni;
 
   // Show every Duke degree — a Trinity undergrad who later did a Fuqua MBA
@@ -40,6 +41,7 @@ export function AlumniCard({ alumni, onOpen }: AlumniCardProps) {
   const degreeLabel =
     shownChips.map(formatChip).join(' · ') + (extraChips > 0 ? ` +${extraChips}` : '');
   const topFunctions = (sports_functions ?? []).slice(0, 2);
+  const clubBadges = (clubs ?? []).slice(0, 3);
 
   return (
     <div
@@ -67,6 +69,15 @@ export function AlumniCard({ alumni, onOpen }: AlumniCardProps) {
         ) : (
           <div className={styles.photoPlaceholder}>{getInitials(name)}</div>
         )}
+        {clubBadges.length > 0 ? (
+          <div className={styles.clubBadges} aria-label="Duke club affiliations">
+            {clubBadges.map((c) => (
+              <span key={c.slug} className={styles.clubBadge} title={c.name ?? c.short_name}>
+                ★ {c.short_name}
+              </span>
+            ))}
+          </div>
+        ) : null}
       </div>
 
       {/* Body zone */}

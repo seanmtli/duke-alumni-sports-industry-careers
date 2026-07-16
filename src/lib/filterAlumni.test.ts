@@ -92,3 +92,19 @@ describe('filterAlumni company filter', () => {
     expect(results.map((a) => a.name)).not.toContain('Jane Smith');
   });
 });
+
+describe('filterAlumni club filter', () => {
+  it('filters verified alumni by club affiliation', () => {
+    const withClub = makeAlumni({
+      id: '4',
+      name: 'Club Member',
+      clubs: [{ slug: 'dsac', short_name: 'DSAC' }],
+    });
+    const without = makeAlumni({ id: '5', name: 'No Club' });
+    const results = filterAlumni([withClub, without], {
+      ...DEFAULT_FILTERS,
+      clubs: ['dsac'],
+    }, '');
+    expect(results.map((a) => a.name)).toEqual(['Club Member']);
+  });
+});

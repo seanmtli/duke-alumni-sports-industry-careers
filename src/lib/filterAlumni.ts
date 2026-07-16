@@ -140,6 +140,11 @@ export function filterAlumni(
       return pool.some((c) => filters.companies.includes(c));
     });
   }
+  if (filters.clubs.length > 0) {
+    results = results.filter((a) =>
+      a.clubs?.some((c) => filters.clubs.includes(c.slug))
+    );
+  }
 
   return results;
 }

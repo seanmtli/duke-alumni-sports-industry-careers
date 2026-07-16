@@ -2,12 +2,14 @@
 
 import type { FilterState } from '@/types/alumni';
 import { ORG_CATEGORY_LABELS, SPORTS_FUNCTION_LABELS } from '@/lib/constants';
+import { CLUB_SHORT_LABELS } from '@/lib/clubs';
 
 const SCHOOL_DISPLAY: Partial<Record<string, string>> = { Other: 'Other School' };
 
 const CHIP_LABELS: Record<string, string> = {
   ...ORG_CATEGORY_LABELS,
   ...SPORTS_FUNCTION_LABELS,
+  ...CLUB_SHORT_LABELS,
   Other: 'Other School',
 };
 
@@ -34,6 +36,7 @@ export function FilterChips({
     ...filters.orgCategories.map((v) => ({ key: 'orgCategories' as const, value: v })),
     ...filters.sportsFunctions.map((v) => ({ key: 'sportsFunctions' as const, value: v })),
     ...filters.schools.map((v) => ({ key: 'schools' as const, value: v })),
+    ...filters.clubs.map((v) => ({ key: 'clubs' as const, value: v })),
     ...filters.locations.map((v) => ({ key: 'locations' as const, value: v })),
     ...filters.companies.map((v) => ({ key: 'companies' as const, value: v })),
   ];

@@ -162,6 +162,36 @@
   color: #003087;
 }
 
+.clubList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.clubRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.clubStar {
+  color: #003087;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.clubName {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.clubRole {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-top: 1px;
+}
+
 /* Timeline */
 .timeline {
   list-style: none;
