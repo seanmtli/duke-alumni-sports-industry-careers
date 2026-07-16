@@ -32,6 +32,7 @@ export function AlumniDetailModal({ alumni, onClose, onLinkedInClick }: Props) {
   const {
     name, current_title, current_company, linkedin_url, location,
     headshot_url, sports_league_affiliation, work_history, bio, reach_out_for,
+    clubs,
   } = alumni;
 
   // Close on Escape; lock body scroll while open.
@@ -51,6 +52,7 @@ export function AlumniDetailModal({ alumni, onClose, onLinkedInClick }: Props) {
   const chips = degreeChips(alumni);
   const degreeLine = chips.map(formatChip).join(' · ');
   const roles = work_history ?? [];
+  const clubList = clubs ?? [];
 
   return (
     <div className={styles.backdrop} onClick={onClose} role="dialog" aria-modal="true" aria-label={name}>
@@ -88,6 +90,25 @@ export function AlumniDetailModal({ alumni, onClose, onLinkedInClick }: Props) {
             <section className={styles.section}>
               <p className={styles.sectionLabel}>About</p>
               <p className={styles.bio}>{bio}</p>
+            </section>
+          ) : null}
+
+          {clubList.length > 0 ? (
+            <section className={styles.section}>
+              <p className={styles.sectionLabel}>Duke clubs</p>
+              <div className={styles.clubList}>
+                {clubList.map((c) => (
+                  <div key={c.slug} className={styles.clubRow}>
+                    <span className={styles.clubStar} aria-hidden>★</span>
+                    <div>
+                      <div className={styles.clubName}>{c.name ?? c.short_name}</div>
+                      {c.role_title ? (
+                        <div className={styles.clubRole}>{c.role_title}</div>
+                      ) : null}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </section>
           ) : null}
 

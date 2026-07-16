@@ -49,6 +49,32 @@ def _get(path, params, retries=3):
             raise
 
 
+def _post(path, body, retries=3):
+    _require()
+    url = f"{API}{path}"
+    data = json.dumps(body).encode()
+    req = urllib.request.Request(url, data=data, method="POST", headers={
+        "Authorization": f"Token {TOKEN}",
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+    })
+    for attempt in range(retries):
+        try:
+            with urllib.request.urlopen(req, timeout=120) as resp:
+                return json.loads(resp.read().decode())
+        except urllib.error.HTTPError as e:
+            body_txt = e.read().decode()
+            if e.code in (429, 500, 502, 503) and attempt < retries - 1:
+                time.sleep(2 * (attempt + 1))
+                continue
+            raise SystemExit(f"Crustdata POST {path} failed: {e.code} {body_txt}")
+        except urllib.error.URLError:
+            if attempt < retries - 1:
+                time.sleep(2 * (attempt + 1))
+                continue
+            raise
+
+
 def enrich_people(linkedin_urls, fields=None, realtime=False):
     """Enrich up to 25 LinkedIn URLs. Returns a list of profile dicts."""
     params = {"linkedin_profile_url": ",".join(linkedin_urls)}
@@ -64,6 +90,34 @@ def enrich_people(linkedin_urls, fields=None, realtime=False):
         if isinstance(data, dict) and isinstance(data.get(k), list):
             return data[k]
     return [data] if isinstance(data, dict) else []
+
+
+def people_search_db(filters, limit=100, cursor=None, fields=None):
+    """Legacy PersonDB search (column/type/value filters).
+
+    Returns (profiles, next_cursor, total_count). Endpoint matches the MCP
+    people_search_db tool used by the discovery pipeline.
+    """
+    body = {"filters": filters, "limit": limit}
+    if cursor:
+        body["cursor"] = cursor
+    if fields:
+        body["fields"] = fields if isinstance(fields, str) else ",".join(fields)
+    data = _post("/screener/persondb/search", body)
+    if isinstance(data, list):
+        return data, None, len(data)
+    profiles = []
+    for k in ("profiles", "data", "results", "persons"):
+        if isinstance(data, dict) and isinstance(data.get(k), list):
+            profiles = data[k]
+            break
+    next_cursor = (
+        (data or {}).get("next_cursor")
+        or (data or {}).get("cursor")
+        or (data or {}).get("next")
+    )
+    total = (data or {}).get("total_count") or (data or {}).get("total") or len(profiles)
+    return profiles, next_cursor, total
 
 
 def enrich_companies(domains=None, names=None):

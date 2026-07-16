@@ -31,6 +31,7 @@ export function useAlumniFilter(initialData: Alumni[]) {
     filters.schools.length +
     filters.locations.length +
     filters.companies.length +
+    filters.clubs.length +
     (hasSearchQuery ? 1 : 0);
 
   return {

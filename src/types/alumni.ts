@@ -97,6 +97,13 @@ export interface Role {
   is_current: boolean;
 }
 
+export interface AlumniClubAffiliation {
+  slug: 'dsbc' | 'dsac' | 'fuqua-mes';
+  short_name: string;
+  name?: string;
+  role_title?: string;
+}
+
 export interface Alumni {
   id: string;
   // Supabase `people.id` (uuid). Present on records read from the DB; used as
@@ -117,6 +124,8 @@ export interface Alumni {
   sports_functions?: SportsFunction[];
   all_degrees?: DukeDegree[];
   work_history?: Role[];
+  /** Duke sports-club affiliations (DSBC / DSAC / MES). */
+  clubs?: AlumniClubAffiliation[];
   seniority_level: SeniorityLevel;
   linkedin_url: string;
   location: string;
@@ -137,6 +146,8 @@ export interface FilterState {
   /** When true, the company filter also matches past employers, not just the
    * current one. A modifier on the `companies` dimension, not its own filter. */
   includePastCompanies: boolean;
+  /** Club affiliation slugs (DSBC / DSAC / MES) — sports-directory only. */
+  clubs: Array<'dsbc' | 'dsac' | 'fuqua-mes'>;
 }
 
 export interface SortConfig {
@@ -164,6 +175,7 @@ export const DEFAULT_FILTERS: FilterState = {
   locations: [],
   companies: [],
   includePastCompanies: true,
+  clubs: [],
 };
 
 export function getYearsExperience(alumni: Alumni): number {

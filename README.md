@@ -15,6 +15,7 @@ A searchable, filterable directory of Duke University alumni working across the 
 - Filter by sub-industry (17 categories), company type, school, grad year range, seniority, and location
 - Profile cards with LinkedIn links, role, company, and sub-industry tags
 - Stats dashboard with breakdowns by sub-industry, company type, and grad year cohort
+- **Clubs** — dedicated alumni pages for DSBC, DSAC, and Fuqua MES; overlapping sports-directory profiles show a club star badge
 
 **Sub-industry taxonomy** covers: Fan Data/CDP, Ticketing, Sponsorship & Partnerships, Sports Gambling, Media & Broadcasting, Sports Analytics, Fan Experience, Venue & Event Tech, Athlete Tech, Sports at Big Tech, League/Team Front Office, VC/PE, Sports Consulting, Esports, Sports Data Infrastructure, Collegiate/Amateur Sports, and Fitness & Wellness Tech.
 
@@ -82,4 +83,25 @@ src/
   lib/             # Supabase client, utilities
   types/           # TypeScript types
 scripts/           # data pipeline (Crustdata discovery + Supabase import)
+```
+
+### Club alumni
+
+Dedicated pages under `/clubs` list Duke alumni who were part of DSBC, DSAC, or
+Fuqua’s MES Club (including people not currently in the sports industry). The
+main directory stays sports-only; overlapping profiles get a club star badge.
+
+```bash
+# Discover affiliations via Crustdata (activities + club employer roles)
+python scripts/discover_clubs.py --dry-run
+python scripts/discover_clubs.py
+
+# Apply schema (duke_clubs / person_clubs / club_alumni status) when you have
+# a Postgres URL, or paste supabase/migrations/20260716050000_duke_clubs.sql
+# into the Supabase SQL editor:
+python scripts/apply_club_schema.py
+
+# Gap-fill from club leadership LinkedIn lists
+python scripts/add_by_linkedin.py --club dsbc https://www.linkedin.com/in/...
+python scripts/export_club_csv.py
 ```

@@ -7,6 +7,7 @@ import {
   ORG_CATEGORIES, ORG_CATEGORY_LABELS,
   SPORTS_FUNCTIONS, SPORTS_FUNCTION_LABELS, SCHOOLS,
 } from '@/lib/constants';
+import { CLUB_SLUGS, CLUB_SHORT_LABELS, type ClubSlug } from '@/lib/clubs';
 
 interface FilterPanelProps {
   filters: FilterState;
@@ -305,6 +306,13 @@ export function FilterPanel({ filters, onChange, locationOptions, companyOptions
         selected={filters.schools}
         onToggle={(v) => toggle<School>('schools', v)}
         displayMap={{ Other: 'Other School' }}
+      />
+      <MultiCheckbox
+        label="Duke Clubs"
+        options={CLUB_SLUGS}
+        selected={filters.clubs}
+        onToggle={(v) => toggle<ClubSlug>('clubs', v)}
+        displayMap={CLUB_SHORT_LABELS}
       />
       <LocationFilter
         locationOptions={locationOptions}
