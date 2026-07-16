@@ -9,6 +9,7 @@ import styles from './AlumniDetailModal.module.css';
 interface Props {
   alumni: Alumni;
   onClose: () => void;
+  onLinkedInClick?: () => void;
 }
 
 function getInitials(name: string): string {
@@ -27,7 +28,7 @@ function dateRange(r: Role): string {
   return start || end || '';
 }
 
-export function AlumniDetailModal({ alumni, onClose }: Props) {
+export function AlumniDetailModal({ alumni, onClose, onLinkedInClick }: Props) {
   const {
     name, current_title, current_company, linkedin_url, location,
     headshot_url, sports_league_affiliation, work_history, bio, reach_out_for,
@@ -120,7 +121,13 @@ export function AlumniDetailModal({ alumni, onClose }: Props) {
 
         {linkedin_url ? (
           <div className={styles.footer}>
-            <a className={styles.linkedin} href={linkedin_url} target="_blank" rel="noopener noreferrer">
+            <a
+              className={styles.linkedin}
+              href={linkedin_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => onLinkedInClick?.()}
+            >
               {linkedin_url.includes('linkedin.com') ? 'View on LinkedIn →' : 'View Profile →'}
             </a>
           </div>

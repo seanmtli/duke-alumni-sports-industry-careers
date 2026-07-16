@@ -7,6 +7,7 @@ import {
   SPORTS_FUNCTIONS, SPORTS_FUNCTION_LABELS,
   SENIORITY_LEVELS, SCHOOLS, REACH_OUT_FOR_OPTIONS,
 } from '@/lib/constants';
+import { captureClientEvent, posthogIdentityHeaders } from '@/lib/posthog-client';
 
 type DegreeInput = {
   school: School;
@@ -114,7 +115,7 @@ export default function SubmitPage() {
     try {
       const res = await fetch('/api/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', ...posthogIdentityHeaders() },
         body: JSON.stringify({
           name: form.name,
           // Primary degree stays flat for existing consumers.
@@ -141,11 +142,21 @@ export default function SubmitPage() {
       });
       const data = await res.json();
       if (!res.ok) {
+        captureClientEvent('alumni_submission_failed', {
+          status: res.status,
+          error: typeof data.error === 'string' ? data.error : 'unknown',
+        });
         setSubmitError(data.error ?? 'Submission failed. Please try again.');
       } else {
+        captureClientEvent('alumni_submission_succeeded', {
+          school: form.degrees[0].school,
+          org_category: form.org_category || null,
+          sports_function_count: form.sports_functions.length,
+        });
         setSuccess(true);
       }
     } catch {
+      captureClientEvent('alumni_submission_failed', { error: 'network' });
       setSubmitError('Network error. Please check your connection and try again.');
     } finally {
       setLoading(false);

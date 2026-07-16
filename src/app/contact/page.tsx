@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { captureClientEvent, posthogIdentityHeaders } from '@/lib/posthog-client';
 
 type RequestType = 'removal' | 'contact';
 
@@ -37,18 +38,24 @@ export default function ContactPage() {
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', ...posthogIdentityHeaders() },
         body: JSON.stringify(form),
       });
       const data = await res.json() as { ok?: boolean; error?: string };
       if (res.ok) {
+        captureClientEvent('contact_request_submitted', { type: form.type });
         setStatus('success');
         setForm(EMPTY);
       } else {
+        captureClientEvent('contact_request_failed', {
+          type: form.type,
+          error: data.error ?? 'unknown',
+        });
         setStatus('error');
         setErrorMsg(data.error ?? 'Something went wrong. Please try again.');
       }
     } catch {
+      captureClientEvent('contact_request_failed', { type: form.type, error: 'network' });
       setStatus('error');
       setErrorMsg('Network error. Please try again.');
     }

@@ -9,6 +9,7 @@ import styles from './AlumniCard.module.css';
 interface AlumniCardProps {
   alumni: Alumni;
   onOpen: () => void;
+  onLinkedInClick?: () => void;
 }
 
 function getInitials(name: string): string {
@@ -20,7 +21,7 @@ function getInitials(name: string): string {
     .toUpperCase();
 }
 
-export function AlumniCard({ alumni, onOpen }: AlumniCardProps) {
+export function AlumniCard({ alumni, onOpen, onLinkedInClick }: AlumniCardProps) {
   const {
     name,
     current_title,
@@ -115,7 +116,10 @@ export function AlumniCard({ alumni, onOpen }: AlumniCardProps) {
           target="_blank"
           rel="noopener noreferrer"
           className={styles.ctaLink}
-          onClick={(e) => e.stopPropagation()}
+          onClick={(e) => {
+            e.stopPropagation();
+            onLinkedInClick?.();
+          }}
         >
           {linkedin_url?.includes('linkedin.com') ? 'View on LinkedIn →' : 'View Profile →'}
         </a>

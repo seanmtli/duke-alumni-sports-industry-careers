@@ -1,12 +1,14 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import posthog from 'posthog-js';
 import type { Alumni, Submission, ContactRequest, OrgCategory, SportsFunction, SeniorityLevel, School, DukeDegree } from '@/types/alumni';
 import {
   ORG_CATEGORIES, ORG_CATEGORY_LABELS,
   SPORTS_FUNCTIONS, SPORTS_FUNCTION_LABELS,
   SENIORITY_LEVELS, SCHOOLS,
 } from '@/lib/constants';
+import { captureClientEvent, posthogIdentityHeaders } from '@/lib/posthog-client';
 
 function slugify(name: string): string {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -359,22 +361,28 @@ export default function AdminPage() {
     try {
       const res = await fetch('/api/admin/login', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', ...posthogIdentityHeaders() },
         body: JSON.stringify({ password }),
       });
       if (res.ok) {
+        posthog.identify('admin', { role: 'admin' });
+        captureClientEvent('admin_login_succeeded');
         setAuthed(true);
         setPassword('');
         void loadAll();
       } else {
+        captureClientEvent('admin_login_failed');
         setPwError(true);
       }
     } catch {
+      captureClientEvent('admin_login_failed', { error: 'network' });
       setPwError(true);
     }
   }
 
   async function logout() {
+    captureClientEvent('admin_logout');
+    posthog.reset();
     await fetch('/api/admin/logout', { method: 'POST' });
     setAuthed(false);
     setSubmissions([]);

@@ -30,6 +30,7 @@ A searchable, filterable directory of Duke University alumni working across the 
 | Charts | Recharts |
 | Database | Supabase (Postgres) |
 | Deployment | Railway |
+| Analytics | PostHog (product analytics, session replay, error tracking) |
 
 ---
 
@@ -52,9 +53,15 @@ SUPABASE_SERVICE_KEY=
 NEXT_PUBLIC_SUPABASE_URL=
 NEXT_PUBLIC_SUPABASE_ANON_KEY=
 NEXT_PUBLIC_LOGO_DEV_PUBLISHABLE_KEY=
+NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN=
+NEXT_PUBLIC_POSTHOG_HOST=https://us.i.posthog.com
 ```
 
 `NEXT_PUBLIC_LOGO_DEV_PUBLISHABLE_KEY` is your Logo.dev publishable key (`pk_…`). It powers employer logos on the home page belt and stats page via `img.logo.dev`. See `.env.example`.
+
+`NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN` is your PostHog project API key. Client events are proxied through `/ingest` (see `next.config.ts`) to reduce ad-blocker interference. Without a token, PostHog stays disabled.
+
+For production on Railway, set the same two `NEXT_PUBLIC_POSTHOG_*` variables on the service (Variables tab), then redeploy so the client bundle picks them up.
 
 The directory page is statically generated at build time from the Supabase `people` table (status = `verified`). Running `npm run dev` will fetch live data from Supabase on each request in development mode.
 

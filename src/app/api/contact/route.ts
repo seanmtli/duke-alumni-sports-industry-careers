@@ -1,5 +1,6 @@
 import { sbInsert } from '@/lib/supabase';
 import { sendEmail } from '@/lib/resend';
+import { distinctIdFromRequest, getPostHogClient } from '@/lib/posthog-server';
 
 function sanitizeStr(v: unknown, max: number): string {
   return typeof v === 'string' ? v.trim().slice(0, max) : '';
@@ -108,6 +109,18 @@ export async function POST(request: Request) {
     // Fire the notification email; failures are logged but must not fail the
     // request, since the record is already safely stored in Supabase.
     await notifyOwner({ name, email, type, linkedin_url, message });
+
+    const posthog = getPostHogClient();
+    posthog?.capture({
+      distinctId: distinctIdFromRequest(request, email),
+      event: 'contact_request_created',
+      properties: {
+        type,
+        has_linkedin: Boolean(linkedin_url),
+        source: 'api',
+      },
+    });
+    await posthog?.flush();
 
     return Response.json({ ok: true });
   } catch {
