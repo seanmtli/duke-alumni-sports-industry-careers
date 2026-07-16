@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
-import type { Alumni, FilterState } from '@/types/alumni';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import type { Alumni, FilterState, SortConfig } from '@/types/alumni';
 import { useAlumniFilter } from '@/hooks/useAlumniFilter';
 import { useDebounce } from '@/hooks/useDebounce';
 import { AlumniGrid } from './AlumniGrid';
@@ -11,6 +11,7 @@ import { FilterChips } from './FilterChips';
 import { SortControls } from './SortControls';
 import { ResultsCount } from './ResultsCount';
 import { buildLocationOptions, buildCompanyOptions } from '@/lib/filterAlumni';
+import { captureClientEvent } from '@/lib/posthog-client';
 
 const PAGE_SIZE = 25;
 
@@ -42,6 +43,35 @@ export function DirectoryClient({ initialData }: DirectoryClientProps) {
     setSearchQuery(debouncedQuery);
   }, [debouncedQuery, setSearchQuery]);
 
+  // Capture directory search once the query is meaningful (debounced).
+  const lastSearchRef = useRef('');
+  useEffect(() => {
+    const q = debouncedQuery.trim();
+    if (q.length < 2 || q === lastSearchRef.current) return;
+    lastSearchRef.current = q;
+    captureClientEvent('directory_search', {
+      query_length: q.length,
+      result_count: filteredAlumni.length,
+    });
+  }, [debouncedQuery, filteredAlumni.length]);
+
+  // Capture filter changes (skip the empty initial state).
+  const filtersReady = useRef(false);
+  useEffect(() => {
+    if (!filtersReady.current) {
+      filtersReady.current = true;
+      return;
+    }
+    captureClientEvent('directory_filter_changed', {
+      org_categories: filters.orgCategories.length,
+      sports_functions: filters.sportsFunctions.length,
+      schools: filters.schools.length,
+      locations: filters.locations.length,
+      companies: filters.companies.length,
+      result_count: filteredAlumni.length,
+    });
+  }, [filters, filteredAlumni.length]);
+
   // Reset to page 1 whenever filtered results change
   useEffect(() => {
     setCurrentPage(1);
@@ -55,6 +85,22 @@ export function DirectoryClient({ initialData }: DirectoryClientProps) {
     (currentPage - 1) * PAGE_SIZE,
     currentPage * PAGE_SIZE
   );
+
+  function handleSortChange(next: SortConfig) {
+    setSortConfig(next);
+    captureClientEvent('directory_sort_changed', {
+      field: next.field,
+      direction: next.direction,
+    });
+  }
+
+  function handlePageChange(page: number) {
+    setCurrentPage(page);
+    captureClientEvent('directory_page_changed', {
+      page,
+      total_pages: totalPages,
+    });
+  }
 
   function removeFilter(key: keyof FilterState, value: string) {
     const current = filters[key] as string[];
@@ -80,7 +126,7 @@ export function DirectoryClient({ initialData }: DirectoryClientProps) {
             <div className="flex-1">
               <SearchBar value={rawQuery} onChange={setRawQuery} />
             </div>
-            <SortControls sortConfig={sortConfig} onChange={setSortConfig} />
+            <SortControls sortConfig={sortConfig} onChange={handleSortChange} />
             {/* Mobile filter toggle */}
             <button
               onClick={() => setMobileFiltersOpen((o) => !o)}
@@ -179,7 +225,7 @@ export function DirectoryClient({ initialData }: DirectoryClientProps) {
             {totalPages > 1 && (
               <div className="mt-8 flex items-center justify-center gap-2">
                 <button
-                  onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+                  onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
                   disabled={currentPage === 1}
                   className="flex items-center gap-1 px-3 py-1.5 text-sm font-medium rounded-md border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
                 >
@@ -210,7 +256,7 @@ export function DirectoryClient({ initialData }: DirectoryClientProps) {
                     ) : (
                       <button
                         key={p}
-                        onClick={() => setCurrentPage(p)}
+                        onClick={() => handlePageChange(p)}
                         className={`w-8 h-8 rounded-md text-sm font-medium transition-colors ${
                           p === currentPage
                             ? 'bg-[#003087] text-white'
@@ -224,7 +270,7 @@ export function DirectoryClient({ initialData }: DirectoryClientProps) {
                 })()}
 
                 <button
-                  onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+                  onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
                   disabled={currentPage === totalPages}
                   className="flex items-center gap-1 px-3 py-1.5 text-sm font-medium rounded-md border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
                 >

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import type { Alumni } from '@/types/alumni';
 import { AlumniCard } from './AlumniCard';
 import { AlumniDetailModal } from './AlumniDetailModal';
+import { captureClientEvent } from '@/lib/posthog-client';
 
 interface AlumniGridProps {
   alumni: Alumni[];
@@ -11,6 +12,16 @@ interface AlumniGridProps {
 
 export function AlumniGrid({ alumni }: AlumniGridProps) {
   const [selected, setSelected] = useState<Alumni | null>(null);
+
+  function openProfile(a: Alumni, source: 'card' | 'card_linkedin') {
+    captureClientEvent('alumni_profile_opened', {
+      alumni_id: a.id,
+      company: a.current_company,
+      org_category: a.org_category,
+      source,
+    });
+    setSelected(a);
+  }
 
   if (alumni.length === 0) {
     return (
@@ -32,10 +43,33 @@ export function AlumniGrid({ alumni }: AlumniGridProps) {
         }}
       >
         {alumni.map((a) => (
-          <AlumniCard key={a.id} alumni={a} onOpen={() => setSelected(a)} />
+          <AlumniCard
+            key={a.id}
+            alumni={a}
+            onOpen={() => openProfile(a, 'card')}
+            onLinkedInClick={() => {
+              captureClientEvent('alumni_linkedin_clicked', {
+                alumni_id: a.id,
+                company: a.current_company,
+                source: 'card_cta',
+              });
+            }}
+          />
         ))}
       </div>
-      {selected && <AlumniDetailModal alumni={selected} onClose={() => setSelected(null)} />}
+      {selected && (
+        <AlumniDetailModal
+          alumni={selected}
+          onClose={() => setSelected(null)}
+          onLinkedInClick={() => {
+            captureClientEvent('alumni_linkedin_clicked', {
+              alumni_id: selected.id,
+              company: selected.current_company,
+              source: 'profile_modal',
+            });
+          }}
+        />
+      )}
     </>
   );
 }

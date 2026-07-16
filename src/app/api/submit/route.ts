@@ -1,6 +1,7 @@
 import { SCHOOLS, ORG_CATEGORIES, SPORTS_FUNCTIONS, SENIORITY_LEVELS, REACH_OUT_FOR_OPTIONS } from '@/lib/constants';
 import type { School, OrgCategory, SportsFunction, SeniorityLevel, DukeDegree } from '@/types/alumni';
 import { sbSelect, sbInsert } from '@/lib/supabase';
+import { distinctIdFromRequest, getPostHogClient } from '@/lib/posthog-server';
 
 const VALID_SCHOOLS = new Set<string>(SCHOOLS);
 const VALID_ORG_CATEGORIES = new Set<string>(ORG_CATEGORIES);
@@ -131,6 +132,21 @@ export async function POST(request: Request) {
     }
 
     await sbInsert('submissions', submission);
+
+    const posthog = getPostHogClient();
+    posthog?.capture({
+      distinctId: distinctIdFromRequest(request),
+      event: 'alumni_submission_created',
+      properties: {
+        school,
+        org_category,
+        sports_function_count: sports_functions.length,
+        seniority_level,
+        source: 'api',
+      },
+    });
+    await posthog?.flush();
+
     return Response.json({ ok: true });
   } catch {
     return Response.json({ error: 'Internal server error' }, { status: 500 });
