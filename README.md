@@ -61,6 +61,8 @@ NEXT_PUBLIC_POSTHOG_HOST=https://us.i.posthog.com
 
 `NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN` is your PostHog project API key. Client events are proxied through `/ingest` (see `next.config.ts`) to reduce ad-blocker interference. Without a token, PostHog stays disabled.
 
+For production on Railway, set the same two `NEXT_PUBLIC_POSTHOG_*` variables on the service (Variables tab), then redeploy so the client bundle picks them up.
+
 The directory page is statically generated at build time from the Supabase `people` table (status = `verified`). Running `npm run dev` will fetch live data from Supabase on each request in development mode.
 
 ---
