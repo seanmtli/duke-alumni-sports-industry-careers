@@ -52,6 +52,36 @@ def norm_name(n):
     return re.sub(r"\s+", " ", n).strip()
 
 
+def name_keys(n):
+    """Keys used for fuzzy person matching (Blade Clark ≈ Blade Clarke)."""
+    nm = norm_name(n)
+    if not nm:
+        return set()
+    parts = nm.split()
+    keys = {nm}
+    if len(parts) >= 2:
+        first, last = parts[0], parts[-1]
+        keys.add(f"{first} {last}")
+        # Stem last name lightly (Clarke/Clark, Edwards/Edward)
+        if len(last) > 4 and last.endswith("s"):
+            keys.add(f"{first} {last[:-1]}")
+        if len(last) > 3:
+            keys.add(f"{first} {last[:4]}")
+        # Initial + last ("Bryan E" ≈ "Bryan Edwards")
+        keys.add(f"{first} {last[0]}")
+    return keys
+
+
+def linkedin_slug(u):
+    u = canon_linkedin(u) or ""
+    m = re.search(r"/in/([^/]+)/?$", u, re.I)
+    return (m.group(1) if m else "") or ""
+
+
+def is_urn_slug(slug):
+    return bool(slug) and slug.lower().startswith("acoa")
+
+
 def load_duke():
     return {r["entity"] for r in sb.select(
         "duke_school_entities", {"select": "entity", "include": "eq.true"})}
@@ -323,20 +353,26 @@ def index_existing():
         "people",
         {"select": "id,crustdata_person_id,linkedin_url,full_name,status,source"},
     )
-    by_pid, by_li, by_name = {}, {}, {}
+    by_pid, by_li, by_slug, by_name = {}, {}, {}, {}
     for r in rows:
         if r.get("crustdata_person_id"):
             by_pid[str(r["crustdata_person_id"])] = r
         li = canon_linkedin(r.get("linkedin_url"))
         if li:
             by_li[li] = r
-        nm = norm_name(r.get("full_name"))
-        if nm:
-            by_name.setdefault(nm, r)
-    return by_pid, by_li, by_name
+        slug = linkedin_slug(r.get("linkedin_url"))
+        if slug and not is_urn_slug(slug):
+            # Prefer vanity slug matches; first writer wins so verified seeds stay
+            by_slug.setdefault(slug.lower(), r)
+        for key in name_keys(r.get("full_name")):
+            # Prefer verified when multiple share a name key
+            prev = by_name.get(key)
+            if prev is None or (r.get("status") == "verified" and prev.get("status") != "verified"):
+                by_name[key] = r
+    return by_pid, by_li, by_slug, by_name
 
 
-def find_existing(prof, by_pid, by_li, by_name):
+def find_existing(prof, by_pid, by_li, by_slug, by_name):
     pid = prof.get("person_id")
     if pid is not None and str(pid) in by_pid:
         return by_pid[str(pid)]
@@ -344,13 +380,18 @@ def find_existing(prof, by_pid, by_li, by_name):
         prof.get("linkedin_flagship_url") or prof.get("linkedin_profile_url"))
     if li and li in by_li:
         return by_li[li]
-    nm = norm_name(prof.get("name"))
-    if nm and nm in by_name:
-        return by_name[nm]
+    slug = linkedin_slug(li)
+    if slug and not is_urn_slug(slug) and slug.lower() in by_slug:
+        return by_slug[slug.lower()]
+    # Fuzzy name — only against verified/review to avoid collapsing unrelated candidates
+    for key in name_keys(prof.get("name")):
+        hit = by_name.get(key)
+        if hit and hit.get("status") in ("verified", "review", "archived"):
+            return hit
     return None
 
 
-def process_club(club, profiles, duke_ok, by_pid, by_li, by_name,
+def process_club(club, profiles, duke_ok, by_pid, by_li, by_slug, by_name,
                  club_ids, affils, dry_run, stats, club_only_status):
     slug = club["slug"]
     for prof in profiles:
@@ -368,7 +409,7 @@ def process_club(club, profiles, duke_ok, by_pid, by_li, by_name,
             stats["ambiguous"] += 1
             continue
 
-        existing = find_existing(prof, by_pid, by_li, by_name)
+        existing = find_existing(prof, by_pid, by_li, by_slug, by_name)
         name = prof.get("name") or "?"
         li = canon_linkedin(
             prof.get("linkedin_flagship_url") or prof.get("linkedin_profile_url"))
@@ -439,9 +480,11 @@ def process_club(club, profiles, duke_ok, by_pid, by_li, by_name,
             by_pid[row["crustdata_person_id"]] = inserted[0]
         if row.get("linkedin_url"):
             by_li[row["linkedin_url"]] = inserted[0]
-        nm = norm_name(row.get("full_name"))
-        if nm:
-            by_name[nm] = inserted[0]
+        slug_li = linkedin_slug(row.get("linkedin_url"))
+        if slug_li and not is_urn_slug(slug_li):
+            by_slug.setdefault(slug_li.lower(), inserted[0])
+        for key in name_keys(row.get("full_name")):
+            by_name.setdefault(key, inserted[0])
 
         if club_ids.get(slug):
             sb.insert("person_clubs", [{
@@ -470,7 +513,7 @@ def main():
 
     clubs = [CLUBS_BY_SLUG[args.club]] if args.club else CLUBS
     duke_ok = load_duke()
-    by_pid, by_li, by_name = index_existing()
+    by_pid, by_li, by_slug, by_name = index_existing()
     club_ids = {} if args.dry_run else ensure_club_rows()
     if not args.dry_run and not club_ids:
         print("NOTE: person_clubs table missing — writing JSON fallback only.",
@@ -496,7 +539,7 @@ def main():
         else:
             profiles, total = fetch_club_profiles(club, limit=args.limit)
         stats = {k: 0 for k in grand}
-        process_club(club, profiles, duke_ok, by_pid, by_li, by_name,
+        process_club(club, profiles, duke_ok, by_pid, by_li, by_slug, by_name,
                      club_ids, affils, args.dry_run, stats, club_only_status)
         print(f"  stats: {json.dumps(stats)}", file=sys.stderr)
         for k, v in stats.items():
