@@ -241,6 +241,8 @@ def main():
             "headshot_url": prof.get("profile_picture_permalink") or prof.get("profile_picture_url"),
             "last_enriched": "now()",
         }
+        if prof.get("person_id") is not None:
+            patch["crustdata_person_id"] = str(prof["person_id"])
         if org:
             patch["org_category"] = org
             patch["sports_functions"] = fns

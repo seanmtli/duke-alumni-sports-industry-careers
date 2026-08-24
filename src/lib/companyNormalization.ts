@@ -27,6 +27,11 @@ const CANONICAL_COMPANY: Record<string, string> = {
   'us soccer federation': 'U.S. Soccer Federation',
   '(usta) united states tennis association': 'USTA',
   'major league baseball': 'Major League Baseball (MLB)',
+  'major league baseball players association': 'MLBPA',
+  'mlb players association': 'MLBPA',
+  'mlb players inc.': 'MLBPA',
+  'mlb players, inc.': 'MLBPA',
+  'mlb players inc': 'MLBPA',
   'us olympic committee': 'United States Olympic & Paralympic Committee',
 };
 
