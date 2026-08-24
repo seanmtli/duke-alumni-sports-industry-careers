@@ -257,6 +257,38 @@
       ]
     },
     {
+      "id": "cd-90444681",
+      "name": "Alex Goodman",
+      "grad_year": null,
+      "school": "Trinity",
+      "degree": "Bachelor of Science - BS",
+      "major": "Economics",
+      "current_company": "MLBPA",
+      "current_title": "Director of Baseball Cards and Memorabilia",
+      "company_type": "League",
+      "sub_industries": [],
+      "seniority_level": "VP/Director",
+      "linkedin_url": "https://www.linkedin.com/in/alex-goodman-33125b112",
+      "location": "New York City Metropolitan Area",
+      "headshot_url": "https://crustdata-media.s3.us-east-2.amazonaws.com/person/caa2f6f8be51dadd5be7b36b83cf0f7b573d18d6855ec7df8f89ddc2047695f7.jpg",
+      "sports_league_affiliation": null,
+      "added_date": "2026-08-24",
+      "last_verified": null,
+      "org_category": "leagues_governing",
+      "sports_functions": [
+        "partnerships",
+        "front_office"
+      ],
+      "all_degrees": [
+        {
+          "school": "Trinity",
+          "degree": "Bachelor of Science - BS",
+          "grad_year": null,
+          "major": "Economics"
+        }
+      ]
+    },
+    {
       "id": "cd-52508845",
       "name": "Alex Tian",
       "grad_year": 2021,
