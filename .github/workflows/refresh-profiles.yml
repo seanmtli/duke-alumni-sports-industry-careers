@@ -1,0 +1,40 @@
+name: Refresh alumni profiles
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Noon UTC on the 1st of even months (Feb, Apr, Jun, Aug, Oct, Dec).
+    - cron: "0 12 1 2,4,6,8,10,12 *"
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Unit tests
+        run: python scripts/refresh_profiles_test.py
+
+      - name: Refresh stale profiles
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          CRUSTDATA_API_KEY: ${{ secrets.CRUSTDATA_API_KEY }}
+        run: >
+          python scripts/refresh_profiles.py
+          --apply
+          --stale-days 50
+          --changelog refresh-changelog.txt
+
+      - name: Upload changelog
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: refresh-changelog
+          path: refresh-changelog.txt
+          if-no-files-found: ignore

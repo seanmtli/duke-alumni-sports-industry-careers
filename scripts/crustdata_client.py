@@ -75,6 +75,35 @@ def _post(path, body, retries=3):
             raise
 
 
+def credits_balance():
+    """Remaining Crustdata credits, or None if the account endpoint is unavailable.
+
+    Used as a preflight so a 669-person refresh can abort before spending.
+    Never raises — a miss just means the caller cannot enforce a floor.
+    """
+    if not TOKEN:
+        return None
+    url = f"{API}/account/credits"
+    req = urllib.request.Request(url, headers={
+        "Authorization": f"Token {TOKEN}",
+        "Accept": "application/json",
+    })
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            data = json.loads(resp.read().decode() or "null")
+    except (urllib.error.HTTPError, urllib.error.URLError, json.JSONDecodeError, TimeoutError):
+        return None
+    if not isinstance(data, dict):
+        return None
+    acct = data.get("account") if isinstance(data.get("account"), dict) else data
+    credits = acct.get("credits")
+    if isinstance(credits, dict):
+        credits = credits.get("balance") or credits.get("remaining") or credits.get("credits")
+    if isinstance(credits, (int, float)):
+        return float(credits)
+    return None
+
+
 def enrich_people(linkedin_urls, fields=None, realtime=False):
     """Enrich up to 25 LinkedIn URLs. Returns a list of profile dicts."""
     params = {"linkedin_profile_url": ",".join(linkedin_urls)}

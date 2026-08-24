@@ -47,6 +47,7 @@ test-*.png
 dukesportsclaudebackup
 # machine-generated Crustdata enrichment cache (large; contains third-party PII)
 scripts/data/backfill_profiles.json
+scripts/data/refresh_profiles.json
 
 # playwright dev session artifacts
 .playwright-mcp/
