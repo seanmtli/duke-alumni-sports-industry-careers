@@ -46,7 +46,7 @@ _COMPANY_STOPWORDS = {
     "group", "management", "holdings", "holding", "partners", "partner",
     "llc", "inc", "ltd", "corp", "corporation", "company", "co", "plc",
     "the", "of", "and", "fsm", "lp", "llp", "llc", "pc", "llc.",
-    "fc", "afc", "cfc", "sc",
+    "fc", "afc", "cfc", "sc", "by",
 }
 _NON_ALNUM = re.compile(r"[^a-z0-9]+")
 _WHITESPACE = re.compile(r"\s+")
@@ -63,23 +63,106 @@ def _norm_text(value):
     return _WHITESPACE.sub(" ", s).strip()
 
 
+def _strip_host(value):
+    """Turn spscommerce.com / https://goodgoodgolf.com into a comparable label."""
+    s = (value or "").strip().lower()
+    s = re.sub(r"^https?://", "", s)
+    s = re.sub(r"^www\.", "", s)
+    s = re.sub(r"\.(com|org|net|io|co|us|edu|gov)(/.*)?$", "", s)
+    return s.replace(".", " ")
+
+
+_TOKEN_SYNONYMS = {
+    "bulls": "bull",
+}
+
+# Expand well-known league acronyms so "MLB Players Association" matches
+# "Major League Baseball Players Association".
+_ACRONYM_EXPAND = {
+    "mlb": ("major", "league", "baseball"),
+    "nba": ("national", "basketball", "association"),
+    "nfl": ("national", "football", "league"),
+    "nhl": ("national", "hockey", "league"),
+    "mls": ("major", "league", "soccer"),
+    "mlbpa": ("major", "league", "baseball", "players", "association"),
+}
+
+
+def _looks_like_host(value):
+    s = str(value or "")
+    if re.search(r"\.(com|org|net|io|edu|gov)\b", s, re.I):
+        return True
+    return "." in s and " " not in s.strip()
+
+
 def _company_tokens(value):
-    s = _norm_text(value)
+    raw = _strip_host(value) if _looks_like_host(value) else value
+    s = _norm_text(raw)
     if not s:
         return []
     tokens = s.split()
     while tokens and tokens[-1] in _LEGAL_SUFFIXES:
         tokens.pop()
-    return [t for t in tokens if t and t not in _COMPANY_STOPWORDS]
+    out = []
+    for t in tokens:
+        if not t or t in _COMPANY_STOPWORDS:
+            continue
+        t = _TOKEN_SYNONYMS.get(t, t)
+        if t in _ACRONYM_EXPAND:
+            out.extend(_ACRONYM_EXPAND[t])
+        else:
+            out.append(t)
+    return out
+
+
+_ALIAS_INDEX = None  # compact-name -> cluster id
+
+
+def _alias_index():
+    """Map compact employer names that the seed treats as the same org."""
+    global _ALIAS_INDEX
+    if _ALIAS_INDEX is not None:
+        return _ALIAS_INDEX
+    index = {}
+    path = Path(__file__).parent / "data" / "sports_companies_seed.json"
+    try:
+        payload = json.loads(path.read_text())
+    except (OSError, json.JSONDecodeError):
+        _ALIAS_INDEX = {}
+        return _ALIAS_INDEX
+    for c in payload.get("companies") or []:
+        names = [c.get("name") or ""]
+        names.extend(c.get("aliases") or [])
+        if c.get("domain"):
+            names.append(c["domain"])
+        keys = []
+        for n in names:
+            compact = "".join(_company_tokens(n))
+            if compact:
+                keys.append(compact)
+        if not keys:
+            continue
+        canon = keys[0]
+        for k in keys:
+            index.setdefault(k, canon)
+    _ALIAS_INDEX = index
+    return index
+
+
+def _employer_name(emp):
+    if not isinstance(emp, dict):
+        return ""
+    return (emp.get("employer_name") or emp.get("company_name") or "").strip()
 
 
 def same_company(a, b):
     """True when two employer strings look like the same org, not a job change.
 
     Handles case/whitespace, Inc./LLC suffixes, subset names ("Fanatics" vs
-    "Fanatics Betting & Gaming"), and stopword-only diffs ("Fenway Sports
-    Group" vs "Fenway Sports Management"). Does not collapse "New York
-    Yankees" into "New York Mets".
+    "Fanatics Betting & Gaming"), stopword-only diffs ("Fenway Sports Group"
+    vs "Fenway Sports Management"), domain labels (spscommerce.com), acronyms
+    (CAA / Creative Artists Agency, MLBPA / full name), and curated seed aliases.
+    Does not collapse "New York Yankees" into "New York Mets".
     """
     ta, tb = _company_tokens(a), _company_tokens(b)
     if not ta or not tb:
@@ -89,14 +172,49 @@ def same_company(a, b):
     sa, sb = set(ta), set(tb)
     if sa == sb:
         return True
-    # One name is a more specific spelling of the other.
     if sa.issubset(sb) or sb.issubset(sa):
+        return True
+    ca, cb = "".join(ta), "".join(tb)
+    if ca == cb:
+        return True
+    # Initials of the longer name match the shorter (CAA <-> Creative Artists Agency).
+    if len(ta) >= 3:
+        initials_a = "".join(t[0] for t in ta)
+        if len(initials_a) >= 3 and (initials_a == cb or initials_a in tb):
+            return True
+    if len(tb) >= 3:
+        initials_b = "".join(t[0] for t in tb)
+        if len(initials_b) >= 3 and (initials_b == ca or initials_b in ta):
+            return True
+    idx = _alias_index()
+    if idx.get(ca) and idx.get(ca) == idx.get(cb):
         return True
     return False
 
 
+_TITLE_ABBREV = (
+    ("svp", "senior vice president"),
+    ("evp", "executive vice president"),
+    ("vp", "vice president"),
+    ("ceo", "chief executive officer"),
+    ("cfo", "chief financial officer"),
+    ("coo", "chief operating officer"),
+    ("cto", "chief technology officer"),
+    ("cmo", "chief marketing officer"),
+    ("sr", "senior"),
+    ("jr", "junior"),
+)
+
+
+def _norm_title(value):
+    s = _norm_text(value)
+    for abbr, full in _TITLE_ABBREV:
+        s = re.sub(rf"(?<!\w){re.escape(abbr)}(?!\w)", full, s)
+    return _WHITESPACE.sub(" ", s).strip()
+
+
 def same_title(a, b):
-    return _norm_text(a) == _norm_text(b)
+    return _norm_title(a) == _norm_title(b)
 
 
 def _parse_date(value):
@@ -153,7 +271,8 @@ def is_stale(last_enriched, now, stale_days):
 
 
 def should_apply_job_change(old_co, old_title, new_co, new_title,
-                            last_verified, today, recent_days=RECENT_VERIFY_DAYS):
+                            last_verified, today, recent_days=RECENT_VERIFY_DAYS,
+                            current_employers=None):
     """Return (apply: bool, reason: str)."""
     if not (new_co or "").strip():
         return False, "no_new_company"
@@ -164,7 +283,14 @@ def should_apply_job_change(old_co, old_title, new_co, new_title,
     if co_same and title_same:
         return False, "unchanged"
     if co_same:
+        if not (new_title or "").strip():
+            return False, "unchanged"
         return True, "title_change"
+    # Still listed at the stored employer — another concurrent role ranked higher.
+    # Not a job change (Amber Scott still at the NBA; Beau Dure still writing).
+    for emp in current_employers or []:
+        if same_company(old_co, _employer_name(emp)):
+            return False, "still_current"
     return True, "company_change"
 
 
@@ -280,6 +406,7 @@ def plan_person(person, prof, today):
 
     apply, reason = should_apply_job_change(
         old_co, old_title, new_co, new_title, person.get("last_verified"), today,
+        current_employers=prof.get("current_employers") or [],
     )
     if apply:
         result["patch"]["current_company"] = new_co
@@ -318,6 +445,7 @@ def format_changelog(plans, targets, no_profile):
     headshots = [p for p in plans if p["headshot"]]
     no_role = [p for p in plans if p["no_current_role"]]
     skipped_recent = [p for p in plans if p["job_skip"] == "recently_verified"]
+    still_current = [p for p in plans if p["job_skip"] == "still_current"]
     unchanged = [p for p in plans if p["job_skip"] == "unchanged"]
     lines = []
     w = lines.append
@@ -327,6 +455,7 @@ def format_changelog(plans, targets, no_profile):
     w(f"no Crustdata profile          : {len(no_profile)}")
     w(f"job changes to apply          : {len(job_changes)}")
     w(f"unchanged (still in role)     : {len(unchanged)}")
+    w(f"skipped, concurrent other role: {len(still_current)}")
     w(f"skipped, recently verified    : {len(skipped_recent)}")
     w(f"headshots to fill             : {len(headshots)}")
     w(f"no current role (review)      : {len(no_role)}")
@@ -357,6 +486,12 @@ def format_changelog(plans, targets, no_profile):
             w(f"  {person.get('full_name') or person['id']}"
               f"  was: {person.get('current_title') or '—'} @ "
               f"{person.get('current_company') or '—'}")
+
+    if still_current:
+        w("")
+        w(f"STILL AT STORED EMPLOYER — concurrent role not applied ({len(still_current)})")
+        for p in still_current:
+            w(f"  {p['person'].get('full_name') or p['person']['id']}")
 
     if skipped_recent:
         w("")

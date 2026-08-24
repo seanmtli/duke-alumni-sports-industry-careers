@@ -30,7 +30,29 @@ class SameCompanyTests(unittest.TestCase):
         self.assertTrue(same_company("Fanatics", "Fanatics Betting & Gaming"))
         self.assertTrue(same_company("CAA", "CAA Sports"))
 
-    def test_real_job_change_is_not_churn(self):
+    def test_acronym_is_churn(self):
+        self.assertTrue(same_company("CAA Sports", "Creative Artists Agency"))
+        self.assertTrue(same_company("MLBPA", "Major League Baseball Players Association"))
+        self.assertTrue(same_company("CAA", "Creative Artists Agency"))
+
+    def test_domain_label_is_churn(self):
+        self.assertTrue(same_company("spscommerce.com", "SPS Commerce"))
+        self.assertTrue(same_company("goodgoodgolf.com", "Good Good Golf"))
+        self.assertTrue(same_company("xogosgaming.com", "Xogos Gaming Inc"))
+
+    def test_mlb_players_association_is_churn(self):
+        self.assertTrue(same_company(
+            "MLB Players Association",
+            "Major League Baseball Players Association",
+        ))
+
+    def test_red_bull_word_order(self):
+        self.assertTrue(same_company("New York Red Bulls", "Red Bull New York"))
+
+    def test_seed_alias_parent_team(self):
+        self.assertTrue(same_company(
+            "Harris Blitzer Sports & Entertainment", "Philadelphia 76ers"
+        ))
         self.assertFalse(same_company("Minnesota United FC", "Fanatics"))
         self.assertFalse(same_company("New York Yankees", "New York Mets"))
         self.assertFalse(same_company("University of Tennessee", "Minnesota United FC"))
@@ -48,6 +70,11 @@ class SameTitleTests(unittest.TestCase):
 
     def test_promotion_is_different(self):
         self.assertFalse(same_title("Analyst", "Senior Analyst"))
+        self.assertFalse(same_title("Incoming Analyst I", "Analyst I"))
+
+    def test_title_abbrev_is_same(self):
+        self.assertTrue(same_title("CEO", "Chief Executive Officer"))
+        self.assertTrue(same_title("SVP, Media Consulting", "Senior Vice President, Media Consulting"))
 
     def test_empty(self):
         self.assertTrue(same_title(None, None))
@@ -104,7 +131,14 @@ class ShouldApplyJobChangeTests(unittest.TestCase):
         self.assertTrue(apply)
         self.assertEqual(reason, "company_change")
 
-    def test_title_only_change_applies(self):
+    def test_empty_new_title_does_not_blank_existing(self):
+        apply, reason = should_apply_job_change(
+            "Dallas Mavericks", "NBA manager",
+            "Dallas Mavericks", None,
+            last_verified="2026-06-22", today=self.today,
+        )
+        self.assertFalse(apply)
+        self.assertEqual(reason, "unchanged")
         apply, reason = should_apply_job_change(
             "Fanatics", "Analyst",
             "Fanatics", "Senior Analyst",
@@ -158,6 +192,29 @@ class ShouldApplyJobChangeTests(unittest.TestCase):
         )
         self.assertFalse(apply)
         self.assertEqual(reason, "no_new_company")
+
+    def test_still_listed_at_stored_employer_skips(self):
+        apply, reason = should_apply_job_change(
+            "National Basketball Association (NBA)", "Director, Social Impact & Inclusion",
+            "Waters Memorial AME Church", "Senior Pastor",
+            last_verified="2026-06-22", today=self.today,
+            current_employers=[
+                {"employer_name": "National Basketball Association (NBA)"},
+                {"employer_name": "Waters Memorial AME Church"},
+            ],
+        )
+        self.assertFalse(apply)
+        self.assertEqual(reason, "still_current")
+
+    def test_stored_employer_gone_applies(self):
+        apply, reason = should_apply_job_change(
+            "DraftKings", "Senior Data Science Engineer",
+            "Los Angeles Dodgers", "Quantitative Analyst",
+            last_verified="2026-06-22", today=self.today,
+            current_employers=[{"employer_name": "Los Angeles Dodgers"}],
+        )
+        self.assertTrue(apply)
+        self.assertEqual(reason, "company_change")
 
 
 class StableHeadshotTests(unittest.TestCase):
