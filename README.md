@@ -105,3 +105,26 @@ python scripts/apply_club_schema.py
 python scripts/add_by_linkedin.py --club dsbc https://www.linkedin.com/in/...
 python scripts/export_club_csv.py
 ```
+
+### Profile refresh (job titles, headshots, work history)
+
+Verified alumni are re-checked against Crustdata so current company/title, missing headshots, location, and work history stay current. Cached enrich is the default (~3 credits/profile, ~2,000 credits for ~670 people). There is no recurring Crustdata grant on this account, so top up before a run if the wallet is below that.
+
+```bash
+# Dry run (still spends credits on the Crustdata fetch; results are cached)
+python scripts/refresh_profiles.py
+
+# Write the dry-run plan to Supabase (reuses the cache, no extra credits)
+python scripts/refresh_profiles.py --apply
+
+# Cron / re-run: skip anyone enriched in the last 50 days
+python scripts/refresh_profiles.py --apply --stale-days 50
+```
+
+A GitHub Action (`.github/workflows/refresh-profiles.yml`) runs the same `--apply --stale-days 50` command at noon UTC on the 1st of even months, and can be triggered manually. It needs these repository secrets:
+
+- `SUPABASE_URL`
+- `SUPABASE_SERVICE_KEY`
+- `CRUSTDATA_API_KEY`
+
+The job uploads a changelog artifact listing job changes, filled headshots, and profiles with no current role (those are logged for review, never auto-archived). Live directory pages pick up writes within ~5 minutes.
