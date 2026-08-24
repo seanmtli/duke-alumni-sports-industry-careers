@@ -53,7 +53,7 @@
       "confidence": 0.85,
       "linkedin_url": "https://www.linkedin.com/in/ACoAADJf16EB2nzqMCLIjtuVaHjLz6Xj-XVkloA",
       "full_name": "Julia Bateman",
-      "directory_status": "candidate"
+      "directory_status": "verified"
     },
     {
       "person_id": "d4f86906-16b9-47f1-a4ef-6739dc031c9d",
@@ -437,7 +437,7 @@
       "role_title": "Co-President",
       "confidence": 0.8,
       "linkedin_url": "https://www.linkedin.com/in/ACoAAD2mbFIBpq6VafSpokFS7aGJuEyBXjl-bRI",
-      "full_name": "Sydney  Girvin",
+      "full_name": "Sydney Girvin",
       "directory_status": "verified"
     },
     {
@@ -603,7 +603,7 @@
       "confidence": 0.85,
       "linkedin_url": "https://www.linkedin.com/in/ACoAAEZBHHQBxXvdzX1j1u8xRfkDb_tBA3eVqdA",
       "full_name": "Nate Stewart",
-      "directory_status": "candidate"
+      "directory_status": "verified"
     },
     {
       "person_id": "1021360c-4d23-42c6-b8a4-cd3719868f9f",
@@ -617,15 +617,15 @@
       "directory_status": "candidate"
     },
     {
-      "person_id": "3980d5ce-0e01-4c84-a14d-599fa2439728",
+      "person_id": "882b053c-8569-468c-8155-46409b49f750",
       "club_slug": "dsbc",
       "source": "crustdata_employer",
       "evidence": "President @ Duke Sports Business Conference",
       "role_title": "President",
       "confidence": 0.8,
       "linkedin_url": "https://www.linkedin.com/in/ACoAAC1GGioBRLBWrKe5hb_4VWbYNvDXfKBcqnY",
-      "full_name": "Blade Clarke",
-      "directory_status": "candidate"
+      "full_name": "Blade Clark",
+      "directory_status": "verified"
     },
     {
       "person_id": "1f7c2053-90b2-43bf-b713-ee372b876a6d",
@@ -636,7 +636,7 @@
       "confidence": 0.85,
       "linkedin_url": "https://www.linkedin.com/in/ACoAADbfMrUB2EZtt9KcKIPqNWzdXzqo3w0fNJc",
       "full_name": "Jackson McManus",
-      "directory_status": "candidate"
+      "directory_status": "verified"
     },
     {
       "person_id": "d92897ac-0bc8-4461-96e1-06c85fe19a39",
@@ -661,15 +661,15 @@
       "directory_status": "candidate"
     },
     {
-      "person_id": "9ffc5542-b6c1-491d-9c1a-3c24d69e17fc",
+      "person_id": "10303a06-01e9-4b7b-90ac-0c2bd3f248d5",
       "club_slug": "dsbc",
       "source": "crustdata_activities",
       "evidence": "Duke Sports Business Conference (Co-Founder & President) // Duke Football (Recruiting Assistant) // Duke Student Government (Senator for Durham and Community Affairs Committee) // Markets and Management Studies Student Ambassador // GANO (Tutor)",
       "role_title": null,
       "confidence": 0.85,
       "linkedin_url": "https://www.linkedin.com/in/ACoAABWGoVIBGauueKGW1wl9ukO5jRbJHcKS8y0",
-      "full_name": "Bryan E.",
-      "directory_status": "candidate"
+      "full_name": "Bryan Edwards",
+      "directory_status": "verified"
     },
     {
       "person_id": "da394730-42f1-4a09-94db-d4bdf0d6c606",
@@ -691,7 +691,7 @@
       "confidence": 0.85,
       "linkedin_url": "https://www.linkedin.com/in/ACoAAENpHPoBPIQWlid_DBS1gfBt-8h4fCirkfU",
       "full_name": "Jonathan Odom Jr",
-      "directory_status": "candidate"
+      "directory_status": "verified"
     },
     {
       "person_id": "aee20bad-bbe9-4b4c-a077-3b4d99174333",
@@ -801,7 +801,7 @@
       "confidence": 0.85,
       "linkedin_url": "https://www.linkedin.com/in/ACoAADCScSkB1DVhn_wcDiRLeCY1nypqH5ffc1Y",
       "full_name": "Piper Hampsch",
-      "directory_status": "candidate"
+      "directory_status": "verified"
     },
     {
       "person_id": "bcab2cdb-664e-428b-ab74-27c25f0c9603",
@@ -1527,7 +1527,7 @@
       "confidence": 0.85,
       "linkedin_url": "https://www.linkedin.com/in/ACoAAAjRSNQBgFSGTNGbO3405FAJLy0ZDxi5VcY",
       "full_name": "Alex Bartholomew",
-      "directory_status": "candidate"
+      "directory_status": "verified"
     },
     {
       "person_id": "827af6f4-cc27-421a-8b0c-a8738f12cf02",
@@ -1604,7 +1604,7 @@
       "confidence": 0.85,
       "linkedin_url": "https://www.linkedin.com/in/ACoAACJ_AL0BiZSMT2dmqeI00ljR8XZQMojhitA",
       "full_name": "Hayley London",
-      "directory_status": "candidate"
+      "directory_status": "verified"
     },
     {
       "person_id": "3bf203a1-ba4f-4cf0-9fd5-c858179cf055",
@@ -1681,7 +1681,7 @@
       "confidence": 0.85,
       "linkedin_url": "https://www.linkedin.com/in/ACoAACVjvUsBkU-dnO3hmj0EIDZwDYIXhH3UtxE",
       "full_name": "Caroline Keyes",
-      "directory_status": "candidate"
+      "directory_status": "verified"
     },
     {
       "person_id": "e0706b1e-128f-4120-bd89-b2e76f643321",
@@ -1926,6 +1926,6 @@
       "directory_status": "candidate"
     }
   ],
-  "updated_at": "2026-07-16T04:57:02.360339+00:00",
-  "note": "Written by scripts/discover_clubs.py. Synced into Supabase person_clubs when that table exists."
+  "updated_at": "2026-07-16T05:17:38.081835+00:00",
+  "note": "Updated by promote_club_to_directory.py / discover_clubs.py"
 }
