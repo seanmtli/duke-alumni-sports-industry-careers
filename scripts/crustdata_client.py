@@ -83,7 +83,7 @@ def credits_balance():
     """
     if not TOKEN:
         return None
-    url = f"{API}/account/credits"
+    url = f"{API}/user/credits"
     req = urllib.request.Request(url, headers={
         "Authorization": f"Token {TOKEN}",
         "Accept": "application/json",
